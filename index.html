@@ -3,283 +3,568 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
 <title>Jatin Satyam — Robotics &amp; Autonomous Systems Engineer</title>
 <meta name="description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
+<link rel="canonical" href="https://jatinsatyam.in/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jatin Satyam — I build machines that move and think">
+<meta property="og:description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
+<meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
+<meta property="og:url" content="https://jatinsatyam.in/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jatin Satyam — I build machines that move and think">
+<meta name="twitter:description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
+<meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%23070A0E'/%3E%3Cpath%20fill='none'%20stroke='%23E0763C'%20stroke-width='3'%20d='M10%2022V10h12M42%2010h12v12M54%2042v12H42M22%2054H10V42'/%3E%3Ccircle%20cx='32'%20cy='32'%20r='4'%20fill='%23E0763C'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Space+Grotesk:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Jatin Satyam", "url": "https://jatinsatyam.in/", "email": "mailto:jsatyam@asu.edu", "sameAs": ["https://linkedin.com/in/jatin-satyam", "https://github.com/JatinSatyam26"], "jobTitle": "Robotics & Autonomous Systems Engineer", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Arizona State University"}, {"@type": "CollegeOrUniversity", "name": "University of Mumbai"}], "knowsAbout": ["Robotics", "Mechatronics", "Control Systems", "Mechanical Design", "Autonomous Systems"]}</script>
 <style>
-:root{--bg:#0A0D12;--panel:#10141B;--ink:#EDEFF3;--mut:#9AA5B3;
---line:rgba(255,255,255,.09);--acc:#E0763C;--acc-dim:rgba(224,118,60,.14)}
+:root{--bg:#070A0E;--panel:#0D1117;--panel-2:#111722;--ink:#E8ECF1;
+--mut:#8B96A5;--line:rgba(139,150,165,.16);--grid:rgba(139,150,165,.05);
+--acc:#E0763C;--acc-dim:rgba(224,118,60,.13);--ok:#57C77A;
+--scan:rgba(232,236,241,.022);--brk:rgba(139,150,165,.55)}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);
-font:16px/1.6 "Instrument Sans","Segoe UI",system-ui,sans-serif}
-.mono{font-family:"IBM Plex Mono",Consolas,monospace}
+body{color:var(--ink);
+font:500 15.5px/1.6 Archivo,"Segoe UI",system-ui,sans-serif;
+background:linear-gradient(var(--grid) 1px,transparent 1px),
+linear-gradient(90deg,var(--grid) 1px,transparent 1px),var(--bg);
+background-size:56px 56px,56px 56px,auto}
+.mono{font-family:"Space Mono",Consolas,monospace}
 a{color:inherit}
 section{padding:88px 6vw;max-width:1240px;margin:0 auto}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.18em;
-color:var(--acc);margin-bottom:10px}
-h2{font-family:Anton,Impact,sans-serif;font-size:clamp(30px,4.5vw,54px);
-letter-spacing:.01em;font-weight:400;text-transform:uppercase;margin-bottom:26px}
-/* hero */
-.hero{position:relative;height:100svh;min-height:560px;display:flex;
+#about,#contact{content-visibility:auto;contain-intrinsic-size:auto 760px}
+#projects{content-visibility:auto;contain-intrinsic-size:auto 2400px}
+.eyebrow{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+color:var(--acc);text-transform:uppercase;margin-bottom:10px}
+h2{font-family:"Space Grotesk",Archivo,sans-serif;font-weight:700;
+font-size:clamp(28px,4vw,46px);letter-spacing:-.01em;line-height:1.05;
+text-transform:uppercase;margin-bottom:28px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;
+clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+/* corner brackets: two elements draw four corners */
+.cnr{position:absolute;inset:0;pointer-events:none;z-index:2}
+.cnr::before,.cnr::after{content:"";position:absolute;width:14px;height:14px;
+border:0 solid var(--brk)}
+.cnr::before{top:-1px;left:-1px;border-width:1.5px 0 0 1.5px}
+.cnr::after{bottom:-1px;right:-1px;border-width:0 1.5px 1.5px 0}
+.cnr.x::before{left:auto;top:-1px;right:-1px;border-width:1.5px 1.5px 0 0}
+.cnr.x::after{right:auto;bottom:-1px;left:-1px;border-width:0 0 1.5px 1.5px}
+/* ------- persistent HUD frame (the one risk) ------- */
+.hud{position:fixed;inset:10px;pointer-events:none;z-index:50;
+font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+color:var(--mut);text-transform:uppercase}
+.js .hud{opacity:0;transition:opacity .3s ease}
+.js.booted .hud{opacity:1}
+.hudframe{position:absolute;inset:0;border:1px solid var(--line)}
+.hudtop{position:absolute;top:0;left:0;right:0;display:flex;
+justify-content:space-between;gap:14px;padding:8px 18px;white-space:nowrap}
+.hudtop .hc{position:absolute;left:50%;transform:translateX(-50%)}
+.hudtop #utc{color:var(--ink)}
+.hudbot{position:absolute;bottom:0;left:0;display:flex;gap:20px;
+padding:8px 18px;white-space:nowrap}
+/* ------- hero ------- */
+.hero{position:relative;height:100svh;min-height:580px;display:flex;
 align-items:flex-end;overflow:hidden}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-filter:brightness(.5) saturate(.9)}
-.hero::after{content:"";position:absolute;inset:0;
-background:linear-gradient(180deg,rgba(10,13,18,.25) 0%,rgba(10,13,18,.35) 55%,var(--bg) 98%)}
-.hwrap{position:relative;z-index:2;padding:0 6vw 64px;width:100%}
-.hname{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
-font-size:clamp(64px,14vw,190px);line-height:.92;letter-spacing:.01em}
+.hero .hbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+filter:brightness(.48) saturate(.65) contrast(1.08)}
+.hshade{position:absolute;inset:0;
+background:linear-gradient(180deg,rgba(7,10,14,.22) 0%,rgba(7,10,14,.36) 55%,var(--bg) 98%)}
+.hwrap{position:relative;z-index:2;padding:0 6vw 58px;width:100%}
+.hname{font-family:"Space Grotesk",Archivo,sans-serif;font-weight:700;
+text-transform:uppercase;font-size:clamp(58px,12.5vw,168px);line-height:.94;
+letter-spacing:-.02em}
 .hname span{display:block}
-.hname span:last-child{color:transparent;-webkit-text-stroke:2px var(--ink)}
-.htag{margin-top:18px;font-size:clamp(16px,2vw,21px);color:var(--ink)}
-.hsub{color:var(--mut);margin-top:6px;font-size:14.5px}
+.htag{margin-top:16px;font-size:clamp(16px,1.9vw,20px)}
 .hcta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 22px;font-family:"IBM Plex Mono",monospace;
-font-size:13px;letter-spacing:.08em;text-decoration:none;border:1px solid var(--line);
-border-radius:4px;transition:transform .15s ease,background .15s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn.acc{background:var(--acc);border-color:var(--acc);color:#14100C;font-weight:600}
+.btn{display:inline-block;padding:13px 20px;font-family:"Space Mono",monospace;
+font-size:12px;letter-spacing:.1em;text-decoration:none;color:var(--ink);
+border:1px solid var(--line);border-radius:2px;white-space:nowrap;
+transition:box-shadow .18s ease,border-color .18s ease,background .18s ease}
+.btn:hover,.btn:focus-visible{box-shadow:0 0 0 1px rgba(224,118,60,.35);
+border-color:rgba(224,118,60,.55)}
+.btn.acc{background:var(--acc);border-color:var(--acc);color:#14100C;font-weight:700}
 .btn.acc:hover{background:#EE8A4F}
-.hcredit{position:absolute;right:6vw;bottom:16px;z-index:2;font-family:"IBM Plex Mono",monospace;
-font-size:10.5px;color:rgba(237,239,243,.4);letter-spacing:.06em}
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+.hcredit{display:none;margin-top:18px;font-family:"Space Mono",monospace;
+font-size:10.5px;letter-spacing:.08em;color:rgba(232,236,241,.72)}
+/* target designator */
+.desig{position:absolute;right:6vw;bottom:64px;z-index:2;min-width:208px;
+border:1px solid rgba(139,150,165,.4);background:rgba(7,10,14,.55);
+padding:12px 14px 13px;font-family:"Space Mono",monospace;font-size:10.5px;
+letter-spacing:.08em;color:var(--mut);text-transform:uppercase}
+.desig .dt{color:var(--ink);font-weight:700;margin-bottom:7px}
+.desig .dr{margin-top:3px;overflow:hidden;white-space:nowrap}
+.desig .dr span{display:inline-block;white-space:nowrap}
+.js .desig{opacity:0;transform:scale(1.15)}
+.js.booted .desig{animation:acq .45s cubic-bezier(.2,.8,.2,1) .7s forwards}
+.js .desig .dr span{width:0;overflow:hidden;vertical-align:bottom}
+.js.booted .desig .dr span{animation:typw .5s steps(24,end) forwards}
+/* .dt is p:nth-of-type(1); the three .dr rows are p 2..4 */
+.js.booted .desig .dr:nth-of-type(2) span{animation-delay:.85s}
+.js.booted .desig .dr:nth-of-type(3) span{animation-delay:.95s}
+.js.booted .desig .dr:nth-of-type(4) span{animation-delay:1.05s}
+@keyframes acq{to{opacity:1;transform:scale(1)}}
+@keyframes typw{from{width:0}to{width:100%}}
+/* hero load choreography */
+.js .hey,.js .hname,.js .htag,.js .hero .hcta,.js .hcredit{opacity:0}
+.js.booted .hey{animation:rise .45s ease .05s forwards}
+.js.booted .hname{animation:rise .5s cubic-bezier(.2,.8,.2,1) .15s forwards}
+.js.booted .htag{animation:rise .45s ease .4s forwards}
+.js.booted .hero .hcta{animation:rise .45s ease .52s forwards}
+.js.booted .hcredit{animation:rise .45s ease .6s forwards}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+/* ------- status dots ------- */
+.dot{width:5px;height:5px;border-radius:50%;background:var(--ok);
+display:inline-block;flex:none;animation:pulse 2.4s ease-in-out infinite}
+.dot.rd{background:var(--acc);animation-duration:3s}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+/* ------- telemetry strip ------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
 gap:1px;background:var(--line);border-block:1px solid var(--line)}
-.stat{background:var(--bg);padding:26px 22px}
-.stat b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:34px;
-letter-spacing:.02em;color:var(--ink)}
-.stat span{display:block;margin-top:4px;font-family:"IBM Plex Mono",monospace;
-font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
-/* lenses */
-.lensrow{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 30px}
-.lens{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;
-background:none;border:1px solid var(--line);color:var(--mut);border-radius:20px;
-padding:7px 16px;cursor:pointer}
-.lens.on{background:var(--acc-dim);border-color:var(--acc);color:var(--acc)}
-/* feature */
-.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:38px;align-items:center;
-background:var(--panel);border:1px solid var(--line);border-radius:10px;
-padding:28px;margin-bottom:26px}
-.fmedia video,.cmedia video{width:100%;display:block;border-radius:6px}
-.fbody h3{font-size:clamp(22px,2.6vw,32px);line-height:1.15;margin-bottom:14px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.chip{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--acc);
-background:var(--acc-dim);border-radius:4px;padding:4px 10px}
-.blurb{color:var(--mut);font-size:15px}
-.tech{margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;
-color:var(--mut);letter-spacing:.04em}
-.plink{display:inline-block;margin-top:16px;font-family:"IBM Plex Mono",monospace;
-font-size:12px;letter-spacing:.1em;color:var(--acc);text-decoration:none;
-border-bottom:1px solid var(--acc)}
-/* cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-overflow:hidden;transition:transform .18s ease,border-color .18s ease}
-.card:hover{transform:translateY(-4px);border-color:rgba(224,118,60,.5)}
-.card a{text-decoration:none;display:block}
-.cbody{padding:16px 18px 20px}
-.cbody h4{font-size:16.5px;line-height:1.3;margin-bottom:8px}
-.cline{color:var(--mut);font-size:13.5px}
-/* confidential */
-.conf{display:flex;gap:24px;align-items:center;justify-content:space-between;
-flex-wrap:wrap;background:var(--panel);border:1px dashed rgba(224,118,60,.45);
-border-radius:10px;padding:24px 28px;margin-top:18px}
-.conf h4{font-size:19px;margin:6px 0 8px}
-.conf p{color:var(--mut);font-size:14px;max-width:640px}
-.badge{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
-color:var(--acc);border:1px solid var(--acc);border-radius:4px;padding:8px 14px;
+.stat{background:var(--panel);padding:26px 24px 30px}
+.slab{display:flex;align-items:center;gap:8px;font-family:"Space Mono",monospace;
+font-size:11px;letter-spacing:.14em;color:var(--mut);text-transform:uppercase}
+.stat b{display:block;margin-top:12px;font-family:"Space Mono",monospace;
+font-weight:700;font-size:clamp(30px,3.4vw,44px);line-height:1;
+letter-spacing:-.02em;color:var(--acc);font-variant-numeric:tabular-nums;
 white-space:nowrap}
-/* experience */
-.xrow{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px 0;
+/* ------- section headers ------- */
+.shead{display:flex;align-items:center;gap:12px;margin-bottom:16px;
+font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+text-transform:uppercase}
+.sidx{color:var(--acc)}
+.slbl{color:var(--mut)}
+.srule{flex:1;height:1px;background:var(--line)}
+/* h2 clip-path wipe */
+.js .wipe{clip-path:inset(0 100% 0 0);
+transition:clip-path .7s cubic-bezier(.2,.8,.2,1)}
+.js .wipe.in{clip-path:inset(0 -2% 0 0)}
+/* ------- lenses ------- */
+.lensrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 30px}
+.lenslab{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+color:var(--mut)}
+.lens{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.12em;
+background:none;border:1px solid var(--line);color:var(--mut);border-radius:2px;
+padding:7px 14px;cursor:pointer;
+transition:box-shadow .18s ease,border-color .18s ease,color .18s ease}
+.lens:hover,.lens:focus-visible{box-shadow:0 0 0 1px rgba(224,118,60,.35)}
+.lens.on{background:var(--acc-dim);border-color:var(--acc);color:var(--acc)}
+.lens.on::before{content:"▸ "}
+@keyframes refade{from{opacity:0;transform:translateY(8px)}}
+.rf{animation:refade .38s ease backwards}
+/* ------- video viewports ------- */
+.vport{position:relative;background:#070A0E;overflow:hidden}
+.vport video{filter:brightness(.82) saturate(.72) contrast(1.06);
+display:block;width:100%;height:auto}
+.vport::after{content:"";position:absolute;inset:0;pointer-events:none;
+background:linear-gradient(180deg,rgba(7,10,14,.18),rgba(7,10,14,.34)),
+repeating-linear-gradient(0deg,transparent 0 3px,var(--scan) 3px 4px)}
+.vcap{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;
+justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;
+font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;
+color:rgba(232,236,241,.78);text-transform:uppercase;
+background:linear-gradient(180deg,transparent,rgba(7,10,14,.74))}
+.vst{display:flex;align-items:center;gap:6px;white-space:nowrap}
+/* ------- readout rows ------- */
+.readouts{display:grid;gap:8px;margin-bottom:16px}
+.rrow{display:flex;align-items:baseline;gap:10px;
+font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.08em;
+text-transform:uppercase}
+.rrow>*{min-width:0}
+.rlab{color:var(--mut);white-space:nowrap}
+.rdots{flex:1;min-width:24px;border-bottom:1px dotted rgba(139,150,165,.35);
+transform:translateY(-3px)}
+.rval{color:var(--acc);font-weight:700;white-space:nowrap;
+font-variant-numeric:tabular-nums;text-transform:none}
+.rval.txt{white-space:normal;text-align:right}
+/* ------- feature ------- */
+.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;
+align-items:center;background:var(--panel);border:1px solid var(--line);
+border-radius:2px;padding:26px;margin-bottom:26px}
+.fbody h3{font-weight:600;font-size:clamp(21px,2.4vw,30px);line-height:1.2;
+margin:0 0 16px}
+.blurb{color:var(--mut);font-size:15px}
+.tech{margin-top:12px;font-family:"Space Mono",monospace;font-size:11px;
+color:var(--mut);letter-spacing:.06em}
+.plink{display:inline-block;margin-top:16px;font-family:"Space Mono",monospace;
+font-size:12px;letter-spacing:.1em;color:var(--acc);text-decoration:none;
+border-bottom:1px solid var(--acc);transition:color .18s ease}
+.plink:hover,.plink:focus-visible{color:#EE8A4F}
+/* ------- cards ------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:2px;
+overflow:hidden;transition:transform .18s ease,border-color .18s ease}
+.card:hover,.card:focus-within{transform:translateY(-3px);
+border-color:rgba(224,118,60,.55)}
+.idbar{display:flex;justify-content:space-between;align-items:center;gap:10px;
+padding:9px 14px;border-bottom:1px solid var(--line);
+font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+color:var(--mut);text-transform:uppercase;transition:color .18s ease}
+.aid{color:var(--acc);font-weight:700;transition:color .18s ease}
+.card:hover .idbar,.card:hover .aid,
+.card:focus-within .idbar,.card:focus-within .aid{color:var(--ink)}
+.ast{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.ast.rst{color:var(--acc)}
+.card a{text-decoration:none;display:block;color:inherit}
+.cbody{padding:16px 16px 18px}
+.cbody h4{font-weight:600;font-size:17px;line-height:1.3;margin:6px 0 8px}
+.cline{color:var(--mut);font-size:13.5px;margin-bottom:12px}
+.cbody .rrow{font-size:11px}
+/* ------- SipSafe: the redaction IS the design ------- */
+.conf{background:var(--panel);border:1px dashed rgba(224,118,60,.55);
+border-radius:2px;margin-top:18px;overflow:hidden;position:relative}
+.conf .idbar{border-bottom:1px dashed rgba(224,118,60,.35)}
+.confbody{display:flex;gap:24px;align-items:center;justify-content:space-between;
+flex-wrap:wrap;padding:22px 26px 24px}
+.conf h4{font-weight:600;font-size:19px;margin:6px 0 8px}
+.ctext{color:var(--mut);font-size:14px;max-width:640px;margin-bottom:14px}
+.redrows{display:grid;gap:6px;max-width:420px;position:relative}
+.blocks{color:var(--mut);font-weight:400;letter-spacing:0;
+user-select:none;-webkit-user-select:none}
+.badge{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;
+color:var(--acc);border:1px solid var(--acc);border-radius:2px;
+padding:9px 14px;white-space:nowrap}
+/* ------- experience: mission-log spine ------- */
+.xwrap{position:relative}
+.xwrap::before{content:"";position:absolute;top:0;bottom:0;left:184px;
+width:1px;background:var(--line)}
+.xrow{display:grid;grid-template-columns:156px 1fr;gap:56px;padding:22px 0;
 border-top:1px solid var(--line)}
 .xrow:last-of-type{border-bottom:1px solid var(--line)}
-.xwhen{color:var(--mut);font-size:12px;letter-spacing:.06em;padding-top:4px}
+.xwhen{color:var(--mut);font-size:12px;letter-spacing:.08em;padding-top:4px;
+white-space:nowrap}
+.xwhen .tick{color:var(--acc)}
+.xmain h4{font-weight:600;font-size:16.5px}
 .xorg{color:var(--mut);font-weight:400}
-.xrow p{color:var(--mut);font-size:14.5px;margin-top:5px}
-.edu{margin-top:30px;display:grid;gap:8px}
+.xmain p{color:var(--mut);font-size:14.5px;margin-top:5px}
+.edu{margin-top:34px;display:grid;gap:10px}
 .edu p{color:var(--mut);font-size:14.5px}
 .edu b{color:var(--ink);font-weight:600}
-.certs{font-size:12px !important;letter-spacing:.04em}
-/* contact */
-.contact{text-align:center;padding-bottom:60px}
-.strip{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
-font-size:clamp(22px,3.6vw,44px);line-height:1.15;max-width:900px;margin:0 auto 30px}
+.eduro{max-width:340px;margin:2px 0 6px}
+.xdate{font-size:11px;letter-spacing:.06em;color:var(--mut)}
+.edu p.certs{font-size:11.5px;letter-spacing:.05em}
+/* ------- contact ------- */
+.contact{text-align:center;padding-bottom:90px}
+.contact .shead{text-align:left}
+.strip{font-family:"Space Grotesk",Archivo,sans-serif;font-weight:700;
+text-transform:uppercase;font-size:clamp(24px,3.6vw,44px);line-height:1.15;
+letter-spacing:-.01em;max-width:900px;margin:14px auto 30px}
 .strip em{font-style:normal;color:var(--acc)}
-.meta{margin-top:40px;color:var(--mut);font-size:13px}
+.meta{margin-top:40px;color:var(--mut);font-family:"Space Mono",monospace;
+font-size:12px;letter-spacing:.04em}
 .meta b{color:var(--ink)}
-footer{padding:26px 6vw;border-top:1px solid var(--line);display:flex;
-justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--mut);
-font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.06em}
-/* reveal */
-.reveal{opacity:0;transform:translateY(18px);
-transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
+/* ------- footer (extra bottom padding clears the fixed hudbot readout) */
+footer{padding:30px 6vw 72px;border-top:1px solid var(--line);
+font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.08em;
+color:var(--mut);text-transform:uppercase}
+.frow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.eot{text-align:center;margin-top:28px;letter-spacing:.32em;
+color:var(--mut)}
+/* ------- FEED toggle: pause/resume all footage (WCAG 2.2.2) ------- */
+.mbtn{position:fixed;right:10px;bottom:10px;z-index:60;cursor:pointer;
+font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.12em;
+text-transform:uppercase;color:var(--mut);background:rgba(7,10,14,.82);
+border:1px solid var(--line);border-radius:2px;padding:7px 12px;
+transition:box-shadow .18s ease,border-color .18s ease,color .18s ease}
+.mbtn:hover,.mbtn:focus-visible{box-shadow:0 0 0 1px rgba(224,118,60,.35);
+border-color:rgba(224,118,60,.55);color:var(--ink)}
+.js .mbtn{opacity:0;transition:opacity .3s ease}
+.js.booted .mbtn{opacity:1}
+/* ------- reveal ------- */
+.js .reveal{opacity:0;transform:translateY(14px);
+transition:opacity .5s ease,transform .5s ease}
+.js .reveal.in{opacity:1;transform:none}
+/* ------- reduced motion ------- */
 @media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
+  .js .reveal,.js .wipe{opacity:1;transform:none;transition:none;clip-path:none}
+  .dot{animation:none}
+  .js .hud,.js .mbtn{opacity:1;transition:none}
+  .js .hey,.js .hname,.js .htag,.js .hero .hcta,.js .hcredit,.js .desig{
+    opacity:1;transform:none;animation:none}
+  .js .desig .dr span{width:auto;animation:none}
+  .rf{animation:none}
   html{scroll-behavior:auto}}
-@media (max-width:820px){
+/* ------- responsive ------- */
+@media (max-width:900px){
   .feature{grid-template-columns:1fr}
+  .desig{display:none}
+  .hcredit{display:block}}
+@media (max-width:820px){
   .xrow{grid-template-columns:1fr;gap:4px}
+  .xwrap::before{display:none}
   section{padding:64px 6vw}}
+@media (max-width:768px){
+  .hud{inset:6px}
+  .hudtop{padding:6px 12px}
+  .hudbot{padding:6px 12px}
+  .hudtop .hc{display:none}}
+@media (max-width:480px){
+  .hudframe{border-left:0;border-right:0;border-bottom:0}
+  .hudframe .cnr{display:none}
+  .hudbot{display:none}}
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <video autoplay muted loop playsinline poster="assets/hero_bg.jpg"
-    src="assets/hero_bg.mp4"></video>
+<div class="hud" aria-hidden="true">
+  <div class="hudframe"><i class="cnr"></i><i class="cnr x"></i></div>
+  <div class="hudtop">
+    <span>JSAT — GROUND STATION</span>
+    <span class="hc">33.42°N 111.93°W / TEMPE AZ</span>
+    <span>T+ <span id="utc">--:--:--</span> UTC</span>
+  </div>
+  <div class="hudbot">
+    <span id="hview">VIEW: 00 · GROUND STATION</span>
+    <span id="hscroll">SCROLL 000%</span>
+  </div>
+</div>
+
+<button id="feed" class="mbtn" aria-pressed="false"
+  aria-label="Pause or resume all background footage">[ ⏸ FEED: LIVE ]</button>
+
+<header class="hero" data-view="00 · GROUND STATION">
+  <video class="hbg" autoplay muted loop playsinline width="1440" height="810"
+    poster="assets/hero_bg.jpg" src="assets/hero_bg.mp4"></video>
+  <div class="hshade"></div>
   <div class="hwrap">
-    <p class="eyebrow">ROBOTICS &amp; AUTONOMOUS SYSTEMS - MS @ ASU</p>
+    <p class="eyebrow hey">TRACKING: ROBOTICS &amp; AUTONOMOUS SYSTEMS — MS @ ASU</p>
     <h1 class="hname"><span>JATIN</span><span>SATYAM</span></h1>
     <p class="htag">I build machines that move and think.</p>
-    <p class="hsub">Mechanical foundations · mechatronic builds · autonomous systems</p>
     <div class="hcta">
-      <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">GRAB MY RESUME ↗</a>
-      <a class="btn" href="#projects">SEE THE ROBOTS ↓</a>
+      <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">[ ↓ RESUME.PDF — 1 PAGE ]</a>
+      <a class="btn" href="#projects">[ VIEW TRACKED ASSETS ]</a>
     </div>
+    <p class="hcredit">BG: robots I met at Automate 2026 — the ones below are mine.</p>
   </div>
-  <p class="hcredit">background: robots I met at Automate 2026 - the ones below are mine</p>
+  <aside class="desig">
+    <i class="cnr"></i><i class="cnr x"></i>
+    <p class="dt">OBJ-01 · HUMANOID</p>
+    <p class="dr"><span>SOURCE: AUTOMATE 2026</span></p><p class="dr"><span>AFFILIATION: MET, NOT MINE</span></p><p class="dr"><span>MY UNITS: SCROLL ↓</span></p>
+  </aside>
 </header>
 
-<div class="stats"><div class="stat reveal"><b>9</b><span>robots &amp; systems built</span></div><div class="stat reveal"><b>3</b><span>engineering internships</span></div><div class="stat reveal"><b>28,000</b><span>rpm rotor, flight-proven</span></div><div class="stat reveal"><b>±2 mm</b><span>vision-guided precision</span></div></div>
+<div class="stats" data-view="01 · TELEMETRY"><div class="stat reveal"><span class="slab"><i class="dot ok"></i>robots &amp; systems built</span><b data-val="09" data-pad="2">09</b></div><div class="stat reveal"><span class="slab"><i class="dot ok"></i>engineering internships</span><b data-val="03" data-pad="2">03</b></div><div class="stat reveal"><span class="slab"><i class="dot ok"></i>rpm rotor, flight-proven</span><b data-val="28000" data-group="1">28,000</b></div><div class="stat reveal"><span class="slab"><i class="dot ok"></i>vision-guided precision</span><b data-val="2" data-pre="±" data-suf=" mm">±2 mm</b></div></div>
 
-<section id="projects">
-  <p class="eyebrow">THE WORK</p>
-  <h2>Robots I've built &amp; taught</h2>
-  <div class="lensrow"><button class="lens on" data-lens="all">ALL</button><button class="lens" data-lens="robotics">ROBOTICS</button><button class="lens" data-lens="mechatronics">MECHATRONICS</button><button class="lens" data-lens="controls">CONTROLS</button><button class="lens" data-lens="systems">SYSTEMS</button><button class="lens" data-lens="mechanical">MECHANICAL</button></div>
+<section id="projects" data-view="02 · TRACKED ASSETS">
+  <div class="shead reveal"><span class="sidx">[ 02 ]</span><span class="slbl">TRACKED ASSETS</span><span class="srule"></span></div>
+  <h2 class="wipe">Robots I&#x27;ve built &amp; taught</h2>
+  <div class="lensrow"><span class="lenslab">FILTER:</span><button class="lens on" data-lens="all" aria-pressed="true">ALL</button><button class="lens" data-lens="robotics" aria-pressed="false">ROBOTICS</button><button class="lens" data-lens="mechatronics" aria-pressed="false">MECHATRONICS</button><button class="lens" data-lens="controls" aria-pressed="false">CONTROLS</button><button class="lens" data-lens="systems" aria-pressed="false">SYSTEMS</button><button class="lens" data-lens="mechanical" aria-pressed="false">MECHANICAL</button><span id="lenslive" class="vh" aria-live="polite"></span></div>
   
   <article class="feature reveal" data-lens="robotics systems">
-    <div class="fmedia"><video autoplay muted loop playsinline
-      poster="assets/mars.jpg"
-      src="assets/mars.mp4"></video></div>
+    <div class="vport"><video autoplay muted loop playsinline width="720" height="540" poster="assets/mars.jpg" src="assets/mars.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>JS-05 · JEZERO CRATER SIM · ROS 2 / GAZEBO</span><span class="vst"><i class="dot ok"></i>SIM NOMINAL</span></div></div>
     <div class="fbody">
       <p class="eyebrow">PLANETARY AUTONOMY · ROS 2 + GAZEBO</p>
       <h3>Aerial-Ground Cooperative Autonomy on Mars Terrain</h3>
-      <div class="chips"><span class="chip">18/18 waypoints</span><span class="chip">0.73 m final accuracy</span><span class="chip">+24% localization</span></div>
+      <div class="readouts"><div class="rrow"><span class="rlab">WAYPOINTS</span><span class="rdots"></span><span class="rval" data-val="18" data-suf="/18">18/18</span></div><div class="rrow"><span class="rlab">FINAL ACCURACY</span><span class="rdots"></span><span class="rval" data-val="0.73" data-dec="2" data-suf=" m">0.73 m</span></div><div class="rrow"><span class="rlab">LOCALIZATION GAIN</span><span class="rdots"></span><span class="rval" data-val="24" data-pre="+" data-suf=" %">+24 %</span></div></div>
       <p class="blurb">A drone surveys real HiRISE Jezero Crater terrain and builds a Bayesian occupancy map; a six-wheel rover uses it to navigate with terrain-relative localization and A* replanning. Every number physics-simulated, none scripted.</p>
       <p class="tech">ROS 2 · Gazebo · Python · NumPy · 2026</p>
-      <a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026" target="_blank" rel="noopener">CODE &amp; FULL REPORT ↗</a>
+      <a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026" target="_blank" rel="noopener">▸ CODE &amp; FULL REPORT</a>
     </div>
   </article>
   <div class="grid">
     <article class="card reveal" data-lens="robotics mechatronics">
+      <div class="idbar"><span class="aid">JS-01</span><span class="ast"><i class="dot ok"></i>DEPLOYED</span></div>
       <a href="https://youtube.com/shorts/_HYQI9ThReQ" target="_blank" rel="noopener">
-        <div class="cmedia"><video autoplay muted loop playsinline
-          poster="assets/dobot.jpg"
-          src="assets/dobot.mp4"></video></div>
+        <div class="vport"><video autoplay muted loop playsinline width="640" height="482" poster="assets/dobot.jpg" src="assets/dobot.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 01 · REAL HARDWARE · PHONE FOOTAGE</span></div></div>
         <div class="cbody">
           <p class="eyebrow">LLM × PHYSICAL ROBOT</p>
           <h4>Natural-Language Robotic Manipulation with LLM Control</h4>
           <p class="cline">Talk to a robot arm - an LLM parses the command, vision finds the blocks, the arm executes at ±2 mm.</p>
+          <div class="rrow"><span class="rlab">PRECISION</span><span class="rdots"></span><span class="rval" data-val="2" data-pre="±" data-suf=" mm">±2 mm</span></div>
         </div>
       </a>
     </article>
     <article class="card reveal" data-lens="robotics controls mechatronics">
+      <div class="idbar"><span class="aid">JS-02</span><span class="ast"><i class="dot ok"></i>DEPLOYED</span></div>
       <a href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">
-        <div class="cmedia"><video autoplay muted loop playsinline
-          poster="assets/mambo.jpg"
-          src="assets/mambo.mp4"></video></div>
+        <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/mambo.jpg" src="assets/mambo.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 02 · REAL HARDWARE · FLIGHT TEST</span></div></div>
         <div class="cbody">
           <p class="eyebrow">FLIGHT CONTROL · REAL HARDWARE</p>
           <h4>Quadrotor Flight Control Suite - Attitude, Hover &amp; Waypoint Following</h4>
           <p class="cline">Simulink attitude, hover, and waypoint controllers - flight-tested on a physical Parrot Mambo.</p>
+          <div class="rrow"><span class="rlab">PLATFORM</span><span class="rdots"></span><span class="rval txt">PARROT MAMBO / FLOWN</span></div>
         </div>
       </a>
     </article>
     <article class="card reveal" data-lens="mechanical systems">
+      <div class="idbar"><span class="aid">JS-03</span><span class="ast"><i class="dot ok"></i>DEPLOYED</span></div>
       <a href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">
-        <div class="cmedia"><video autoplay muted loop playsinline
-          poster="assets/gyro.jpg"
-          src="assets/gyro.mp4"></video></div>
+        <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/gyro.jpg" src="assets/gyro.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 03 · REAL HARDWARE · BENCH TEST</span></div></div>
         <div class="cbody">
           <p class="eyebrow">ROTORDYNAMICS · DEFENCE HARDWARE</p>
           <h4>Gyro Motor Rotor Development</h4>
           <p class="cline">8 rotor designs screened in ANSYS, the winner built and FFT-validated at a 28,000 rpm operating point.</p>
+          <div class="rrow"><span class="rlab">ROTOR</span><span class="rdots"></span><span class="rval" data-val="28000" data-group="1" data-suf=" RPM">28,000 RPM</span></div>
         </div>
       </a>
     </article>
     <article class="card reveal" data-lens="controls systems robotics">
+      <div class="idbar"><span class="aid">JS-04</span><span class="ast"><i class="dot ok"></i>SIM VERIFIED</span></div>
       <a href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">
-        <div class="cmedia"><video autoplay muted loop playsinline
-          poster="assets/stretch3.jpg"
-          src="assets/stretch3.mp4"></video></div>
+        <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/stretch3.jpg" src="assets/stretch3.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 04 · SIMULATION · MUJOCO</span></div></div>
         <div class="cbody">
           <p class="eyebrow">MODELING &amp; CONTROL · MUJOCO</p>
           <h4>Mobile-Manipulator Pick &amp; Place - State-Space Modeling and Control</h4>
           <p class="cline">A Stretch3 mobile manipulator modeled, formally proven controllable &amp; stable, and simulated across 8 DOF.</p>
+          <div class="rrow"><span class="rlab">LQR STABILITY</span><span class="rdots"></span><span class="rval" data-val="9.69" data-dec="2" data-suf="/10">9.69/10</span></div>
         </div>
       </a>
     </article></div>
-  <div class="conf reveal">
-    <div>
-      <p class="eyebrow">ASSISTIVE DEVICE · WITH DIGNITY HEALTH</p>
-      <h4>SipSafe Smart Cup</h4>
-      <p>An assistive smart cup for dysphagia patients, built with a clinical team at Dignity Health. I owned the initial concept and the complete mechanical design. Details stay under wraps while the invention disclosure is with ASU&#x27;s technology transfer office - ask me about it in person.</p>
+  
+  <article class="conf reveal" data-lens="mechanical systems">
+    <div class="idbar"><span class="aid">JS-06</span><span class="ast rst"><i class="dot rd"></i>RESTRICTED</span></div>
+    <div class="confbody">
+      <div class="confl">
+        <p class="eyebrow">ASSISTIVE DEVICE · WITH DIGNITY HEALTH</p>
+        <h4>SipSafe Smart Cup</h4>
+        <p class="ctext">An assistive smart cup for dysphagia patients, built with a clinical team at Dignity Health. I owned the initial concept and the complete mechanical design. Details stay under wraps while the invention disclosure is with ASU&#x27;s technology transfer office - ask me about it in person.</p>
+        <div class="redrows"><div class="rrow"><span class="rlab">MECHANISM</span><span class="rdots"></span><span class="rval blocks" aria-hidden="true">▓▓▓▓▓▓▓▓</span></div><div class="rrow"><span class="rlab">CLINICAL DATA</span><span class="rdots"></span><span class="rval blocks" aria-hidden="true">▓▓▓▓▓▓</span></div><span class="vh">details confidential</span></div>
+      </div>
+      <span class="badge">PATENT PROCESS UNDERWAY</span>
     </div>
-    <span class="badge">PATENT PROCESS UNDERWAY</span>
-  </div>
+  </article>
 </section>
 
-<section id="about">
-  <p class="eyebrow">THE ENGINEER</p>
-  <h2>Experience</h2>
-  
+<section id="about" data-view="03 · FLIGHT CREW RECORDS">
+  <div class="shead reveal"><span class="sidx">[ 03 ]</span><span class="slbl">FLIGHT CREW RECORDS</span><span class="srule"></span></div>
+  <h2 class="wipe">Experience</h2>
+  <div class="xwrap">
       <div class="xrow reveal">
-        <div class="xwhen mono">Jan - Jul 2025</div>
-        <div><h4>Mechatronics Engineer Intern <span class="xorg">· Paras Defence &amp; Space Technologies</span></h4>
+        <div class="xwhen mono"><span class="tick">▸</span> 2025.01–07</div>
+        <div class="xmain"><h4>Mechatronics Engineer Intern <span class="xorg">· Paras Defence &amp; Space Technologies</span></h4>
         <p>Full-time at graduate-engineer scope: cryocooler mechanisms in SolidWorks/NX, 25+ instrumented thermal runs, design changes that cut prototype rework 12%.</p></div>
       </div>
       <div class="xrow reveal">
-        <div class="xwhen mono">Aug - Nov 2024</div>
-        <div><h4>CFD Intern <span class="xorg">· MARS Exploration</span></h4>
+        <div class="xwhen mono"><span class="tick">▸</span> 2024.08–11</div>
+        <div class="xmain"><h4>CFD Intern <span class="xorg">· MARS Exploration</span></h4>
         <p>3D airfoil CFD in ANSYS Fluent - meshing, boundary layers, and lift/drag studies for aircraft wing efficiency.</p></div>
       </div>
       <div class="xrow reveal">
-        <div class="xwhen mono">May - Aug 2023</div>
-        <div><h4>R&amp;D Engineer Intern <span class="xorg">· TriQual Cryogenics</span></h4>
+        <div class="xwhen mono"><span class="tick">▸</span> 2023.05–08</div>
+        <div class="xmain"><h4>R&amp;D Engineer Intern <span class="xorg">· TriQual Cryogenics</span></h4>
         <p>Stirling-cycle cryocoolers near 70 K - mechanical design and vibration control on reciprocating assemblies.</p></div>
-      </div>
-  <div class="edu reveal"><p><b>M.S. Robotics and Autonomous Systems (Systems Engineering)</b> — Arizona State University · GPA 3.67/4.0 <span class="mono xwhen">Expected May 2027</span></p><p><b>B.E. Mechanical Engineering</b> — University of Mumbai <span class="mono xwhen">2020 - 2024</span></p><p class="mono certs">MATLAB Onramp - MathWorks, 2026 · Simulink Onramp - MathWorks, 2026</p></div>
+      </div></div>
+  <div class="edu reveal"><p><b>M.S. Robotics and Autonomous Systems (Systems Engineering)</b> — Arizona State University <span class="mono xdate">Expected May 2027</span></p><div class="readouts eduro"><div class="rrow"><span class="rlab">MS GPA</span><span class="rdots"></span><span class="rval" data-val="3.67" data-dec="2" data-suf="/4.0">3.67/4.0</span></div></div><p><b>B.E. Mechanical Engineering</b> — University of Mumbai <span class="mono xdate">2020 - 2024</span></p><p class="mono certs">MATLAB Onramp - MathWorks, 2026 · Simulink Onramp - MathWorks, 2026</p></div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact" id="contact" data-view="04 · ESTABLISH LINK">
+  <div class="shead reveal"><span class="sidx">[ 04 ]</span><span class="slbl">ESTABLISH LINK</span><span class="srule"></span></div>
   <p class="strip reveal">OPEN TO <em>ROBOTICS</em> INTERNSHIPS &amp; FULL-TIME ROLES - GRADUATING MAY 2027</p>
   <div class="hcta" style="justify-content:center">
-    <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME ↗</a>
-    <a class="btn" href="mailto:jsatyam@asu.edu">EMAIL</a>
-    <a class="btn" href="https://linkedin.com/in/jatin-satyam" target="_blank" rel="noopener">LINKEDIN</a>
-    <a class="btn" href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">GITHUB</a>
+    <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">[ ↓ RESUME.PDF ]</a>
+    <a class="btn" href="mailto:jsatyam@asu.edu">[ EMAIL ]</a>
+    <a class="btn" href="https://linkedin.com/in/jatin-satyam" target="_blank" rel="noopener">[ LINKEDIN ]</a>
+    <a class="btn" href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">[ GITHUB ]</a>
   </div>
-  <p class="meta reveal">One memory file drives my resumes and this site - both generated by an agent pipeline I built.</p>
+  <p class="meta reveal">NOTE: One memory file drives my resumes and this site - both generated by an agent pipeline I built.</p>
 </section>
 
 <footer>
-  <span>© 2026 Jatin Satyam</span>
-  <span>jatinsatyam.in</span>
+  <div class="frow">
+    <span>© 2026 Jatin Satyam</span>
+    <span>jatinsatyam.in</span>
+    <span>LAST DEPLOY: 2026.08</span>
+  </div>
+  <p class="eot">END OF TRANSMISSION</p>
 </footer>
 
 <script>
-const lenses=document.querySelectorAll('.lens');
-const items=document.querySelectorAll('[data-lens]');
-function applyLens(l){
-  lenses.forEach(b=>b.classList.toggle('on',b.dataset.lens===l));
-  items.forEach(it=>{
-    const show = l==='all' || it.dataset.lens.split(' ').includes(l);
-    it.style.display = show ? '' : 'none';
-  });
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var H=document.documentElement;H.classList.add('booted');
+/* scroll reveals - registered FIRST so no later failure can blank the page.
+   threshold:0 + rootMargin, not a ratio threshold: the .wipe h2 is clipped
+   to zero visible area by its own clip-path, so its ratio never leaves 0 */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},
+  {rootMargin:'0px 0px -10% 0px'});
+document.querySelectorAll('.reveal,.wipe').forEach(function(el){io.observe(el)});
+/* footage control (WCAG 2.2.2): reduced-motion holds all video; everyone
+   gets a global FEED pause toggle; offscreen clips pause via IO */
+var vids=[].slice.call(document.querySelectorAll('video')),held=RM;
+function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+vids.forEach(function(v){if(RM){v.pause();v.removeAttribute('autoplay')}});
+var pio=new IntersectionObserver(function(es){es.forEach(function(e){
+  var v=e.target;v.dataset.vis=e.isIntersecting?'1':'';
+  if(held||!e.isIntersecting)v.pause();else tryPlay(v)})},
+  {rootMargin:'80px'});
+vids.forEach(function(v){pio.observe(v)});
+var mb=document.getElementById('feed');
+function feedUi(){mb.textContent=held?'[ \u25B8 FEED: HELD ]':'[ \u23F8 FEED: LIVE ]';
+  mb.setAttribute('aria-pressed',held?'true':'false')}
+if(mb){feedUi();
+  mb.addEventListener('click',function(){held=!held;feedUi();
+    vids.forEach(function(v){if(held)v.pause();
+      else if(v.dataset.vis)tryPlay(v)})})}
+/* UTC clock (information, not decoration - runs under reduced motion) */
+var uel=document.getElementById('utc');
+function p2(n){return (n<10?'0':'')+n}
+function utc(){var d=new Date();
+  uel.textContent=p2(d.getUTCHours())+':'+p2(d.getUTCMinutes())+':'+p2(d.getUTCSeconds())}
+utc();setInterval(utc,1000);
+/* lens filters - V1 contract: buttons + ?lens= param + scroll-to */
+var lens=document.querySelectorAll('.lens'),
+    items=document.querySelectorAll('article[data-lens]'),
+    live=document.getElementById('lenslive');
+function applyLens(l,first){
+  lens.forEach(function(b){var on=b.dataset.lens===l;
+    b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false')});
+  var i=0,n=0;
+  items.forEach(function(it){
+    var show=l==='all'||it.dataset.lens.split(' ').indexOf(l)>-1;
+    it.style.display=show?'':'none';
+    if(show){n++;
+      if(!RM&&!first){
+        it.classList.remove('rf');void it.offsetWidth;
+        it.style.animationDelay=(i++*40)+'ms';it.classList.add('rf');
+        it.addEventListener('animationend',function h2(){
+          it.classList.remove('rf');it.style.animationDelay='';
+          it.removeEventListener('animationend',h2)});
+      }}});
+  if(live&&!first)live.textContent=n+' tracked assets shown';
 }
-lenses.forEach(b=>b.addEventListener('click',()=>applyLens(b.dataset.lens)));
-const q=new URLSearchParams(location.search).get('lens');
-if(q){const valid=[...lenses].some(b=>b.dataset.lens===q);
-  if(valid){applyLens(q);document.getElementById('projects')
-    .scrollIntoView({behavior:'instant'});}}
-const io=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),
-  {threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+lens.forEach(function(b){b.addEventListener('click',function(){applyLens(b.dataset.lens)})});
+var q=new URLSearchParams(location.search).get('lens');
+if(q){var ok=false;lens.forEach(function(b){if(b.dataset.lens===q)ok=true});
+  if(ok){applyLens(q,true);
+    try{var pj=document.getElementById('projects');
+      pj.style.contentVisibility='visible';
+      H.style.scrollBehavior='auto';pj.scrollIntoView();
+      H.style.scrollBehavior='';}catch(err){}}}
+/* animated counters (skipped under reduced motion - HTML holds finals) */
+function fmt(n,dec,grp,pad){var s=dec?n.toFixed(dec):String(Math.round(n));
+  if(grp)s=s.replace(/\B(?=(\d{3})+(?!\d))/g,',');
+  while(s.length<pad)s='0'+s;return s}
+function anim(el){var t=parseFloat(el.dataset.val),dec=+(el.dataset.dec||0),
+  pad=+(el.dataset.pad||0),grp=el.dataset.group==='1',
+  pre=el.dataset.pre||'',suf=el.dataset.suf||'',st=null;
+  function step(ts){if(st===null)st=ts;
+    var x=Math.min((ts-st)/900,1),e=1-Math.pow(1-x,3);
+    el.textContent=pre+fmt(t*e,dec,grp,pad)+suf;
+    if(x<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step)}
+if(!RM){var cio=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){anim(e.target);cio.unobserve(e.target)}})},{threshold:.5});
+  document.querySelectorAll('[data-val]').forEach(function(el){cio.observe(el)});}
+/* HUD bottom-left: current view + scroll % */
+var hv=document.getElementById('hview'),hs=document.getElementById('hscroll');
+if(hv){
+  var vio=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting)hv.textContent='VIEW: '+e.target.dataset.view})},
+    {rootMargin:'-45% 0px -45% 0px'});
+  document.querySelectorAll('[data-view]').forEach(function(el){vio.observe(el)});
+  var tk=false;
+  var sc=function(){if(tk)return;tk=true;requestAnimationFrame(function(){
+    var m=H.scrollHeight-innerHeight,p=m>0?Math.round(scrollY/m*100):0;
+    var s=String(p);while(s.length<3)s='0'+s;
+    hs.textContent='SCROLL '+s+'%';tk=false})};
+  addEventListener('scroll',sc,{passive:true});sc();
+}
+})();
 </script>
 </body>
 </html>
