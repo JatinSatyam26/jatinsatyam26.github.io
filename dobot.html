@@ -217,12 +217,6 @@ letter-spacing:.06em}
 footer .fbrand{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
 font-size:17px;color:var(--ink);letter-spacing:-.02em}
 footer .fbrand span{color:var(--acc)}
-/* motion pause (accessibility) */
-.mbtn{position:fixed;right:12px;bottom:12px;z-index:60;cursor:pointer;
-font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;
-color:var(--mut);background:rgba(10,13,18,.85);border:1px solid var(--line);
-border-radius:6px;padding:7px 11px}
-.mbtn:hover,.mbtn:focus-visible{color:var(--ink);border-color:rgba(224,118,60,.5)}
 /* reveal */
 .js .reveal{opacity:0;transform:translateY(18px);
 transition:opacity .6s ease,transform .6s ease}
@@ -244,7 +238,6 @@ transition:opacity .6s ease,transform .6s ease}
 </style>
 </head>
 <body>
-<button id="feed" class="mbtn" aria-pressed="false" aria-label="Pause or resume all motion">❚❚ pause motion</button>
 <nav id="nav"><a class="brand" href="index.html" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="index.html#top">HOME</a><a href="index.html#work">WORK</a><a href="index.html#experience">EXPERIENCE</a><a href="index.html#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="index.html#contact">CONTACT</a></div></nav>
 <section class="subhead">
   <a class="back mono" href="index.html#work">← ALL WORK</a>
@@ -400,12 +393,6 @@ var pio=new IntersectionObserver(function(es){es.forEach(function(e){
   if(held||!e.isIntersecting)v.pause();else tryPlay(v)})},{rootMargin:'80px'});
 vids.forEach(function(v){pio.observe(v)});
 if(RM)document.body.classList.add('still');
-var mb=document.getElementById('feed');
-function ui(){mb.textContent=held?'\u25B8 play motion':'\u275A\u275A pause motion';
-  mb.setAttribute('aria-pressed',held?'true':'false')}
-if(mb){ui();mb.addEventListener('click',function(){held=!held;ui();
-  document.body.classList.toggle('still',held);
-  vids.forEach(function(v){if(held)v.pause();else if(v.dataset.vis)tryPlay(v)})})}
 })();
 </script>
 </body>
