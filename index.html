@@ -20,7 +20,7 @@
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Jatin Satyam", "url": "https://jatinsatyam.in/", "email": "mailto:jsatyam@asu.edu", "sameAs": ["https://linkedin.com/in/jatin-satyam", "https://github.com/JatinSatyam26"], "jobTitle": "Robotics & Autonomous Systems Engineer", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Arizona State University"}, {"@type": "CollegeOrUniversity", "name": "University of Mumbai"}], "knowsAbout": ["Robotics", "Mechatronics", "Control Systems", "Mechanical Design", "Autonomous Systems"]}</script>
 <style>
 :root{--bg:#0A0D12;--panel:#10141B;--ink:#EDEFF3;--mut:#98A2B3;
@@ -28,12 +28,13 @@
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);
-font:16px/1.6 "Instrument Sans","Segoe UI",system-ui,sans-serif}
+font:16px/1.7 "DM Sans","Segoe UI",system-ui,sans-serif}
 .mono{font-family:"IBM Plex Mono",Consolas,monospace}
 a{color:inherit}
 section{padding:96px 6vw;max-width:1240px;margin:0 auto}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;
-letter-spacing:.16em;color:var(--acc);text-transform:uppercase;margin-bottom:10px}
+.eyebrow{font-family:Syne,"Arial Black",sans-serif;font-weight:600;
+font-size:12px;letter-spacing:.15em;color:var(--mut);
+text-transform:uppercase;margin-bottom:12px}
 h2{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
 font-size:clamp(32px,4.8vw,60px);line-height:1.02;letter-spacing:-.01em;
 text-transform:uppercase;margin-bottom:26px}
@@ -51,8 +52,8 @@ border-bottom-color:var(--line)}
 letter-spacing:-.02em;text-decoration:none;line-height:1}
 .brand span{color:var(--acc)}
 .nlinks{display:flex;gap:clamp(12px,2.4vw,26px);flex-wrap:wrap;justify-content:flex-end}
-.nlinks a{font-family:"IBM Plex Mono",monospace;font-size:11px;
-letter-spacing:.12em;color:var(--mut);text-decoration:none}
+.nlinks a{font-family:Syne,"Arial Black",sans-serif;font-weight:600;
+font-size:11.5px;letter-spacing:.14em;color:var(--mut);text-decoration:none}
 .nlinks a:hover,.nlinks a:focus-visible{color:var(--ink)}
 /* hero: pinned scroll story */
 .heropin{position:relative;height:100svh}
@@ -86,9 +87,10 @@ html:not(.js) .hrole,html.rm .hrole{opacity:1}
 html:not(.js) .hstage,html.rm .hstage{height:auto}
 html.rm .hstage{font-size:clamp(38px,7.6vw,110px)}
 .hcta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 22px;font-family:"IBM Plex Mono",monospace;
-font-size:13px;letter-spacing:.08em;text-decoration:none;border:1px solid var(--line);
-border-radius:6px;transition:transform .15s ease,background .15s ease}
+.btn{display:inline-block;padding:13px 22px;font-family:Syne,"Arial Black",sans-serif;
+font-weight:600;font-size:12.5px;letter-spacing:.12em;text-decoration:none;
+border:1px solid var(--line);border-radius:6px;text-transform:uppercase;
+transition:transform .15s ease,background .15s ease}
 .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
 .btn.acc{background:var(--acc);border-color:var(--acc);color:#14100C;font-weight:600}
 .btn.acc:hover{background:#EE8A4F}
@@ -103,11 +105,32 @@ text-transform:uppercase;transition:border-color .2s ease,transform .15s ease}
 .js .hf{opacity:0}
 .js.booted .hf{animation:rise .55s ease forwards}
 @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-/* statement */
-.statement{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:start}
+/* about: photo + statement + education + certs */
+.aboutgrid{display:grid;grid-template-columns:minmax(220px,330px) 1fr;
+gap:clamp(36px,5vw,76px);align-items:start}
+.pphoto{width:100%;max-width:320px;aspect-ratio:1/1;border-radius:50%;
+object-fit:cover;display:block;margin:0 auto}
 .lead{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
 font-size:clamp(26px,3.6vw,46px);line-height:1.1;letter-spacing:-.01em}
+.lead em{font-style:normal;color:var(--acc)}
 .sbody{color:var(--mut);font-size:16px;margin-top:22px;max-width:58ch}
+.arule{border:0;border-top:1px solid var(--line);margin:34px 0 28px}
+.edugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:18px;margin-bottom:34px}
+.edurow{display:flex;gap:14px;align-items:center}
+.eduname{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
+font-size:15px;color:var(--ink);line-height:1.3}
+.edudeg{font-size:12.5px;font-weight:500;color:#C0C4CC;margin-top:2px}
+.edudates{font-size:11.5px;color:var(--mut);margin-top:1px}
+.certrow{display:flex;gap:26px;flex-wrap:wrap}
+.certcell{display:flex;flex-direction:column;align-items:center;gap:9px;
+max-width:120px;text-align:center}
+.certcell img{width:72px;height:72px;object-fit:contain;border-radius:50%;
+background:#fff;padding:5px}
+.certcell span{font-size:11.5px;font-weight:500;color:#C0C4CC;line-height:1.35}
+.certghost{width:72px;height:72px;border-radius:50%;flex:none;
+border:1px dashed rgba(255,255,255,.22);display:flex;align-items:center;
+justify-content:center;color:var(--mut);font-size:22px}
 /* work chapters */
 .chap{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(26px,4.5vw,60px);
 align-items:center;padding:58px 0;border-top:1px solid var(--line)}
@@ -148,23 +171,16 @@ font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
 .xrow{display:grid;grid-template-columns:170px 1fr;gap:22px;padding:24px 0;
 border-top:1px solid var(--line)}
 .xrow:last-of-type{border-bottom:1px solid var(--line)}
-.xwhen{color:var(--mut);font-size:12px;letter-spacing:.06em;padding-top:4px;
-white-space:nowrap}
+.xwhen{color:var(--mut);font-size:12.5px;font-weight:500;
+letter-spacing:.05em;padding-top:4px;white-space:nowrap}
 .xmain h4{font-weight:600;font-size:16.5px}
 .xorg{color:var(--mut);font-weight:400}
 .xmain p{color:var(--mut);font-size:14.5px;margin-top:6px}
-/* education */
-.edurow{display:flex;gap:14px;align-items:center;margin-bottom:16px}
-.edurow p{color:var(--mut);font-size:14px;line-height:1.5}
-.edurow b{color:var(--ink);font-weight:600}
-.gpa{color:var(--acc)}
-.elogo{width:46px;height:46px;flex:none;object-fit:contain;
-background:rgba(237,239,243,.06);border:1px solid var(--line);
-border-radius:6px;padding:5px}
+.elogo{width:48px;height:48px;flex:none;object-fit:contain;
+background:#fff;border-radius:50%;padding:6px}
 .chipl{display:flex;align-items:center;justify-content:center;
-font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
-color:var(--acc);letter-spacing:.05em}
-.xdate{font-size:11px;letter-spacing:.06em;color:var(--mut)}
+font-family:Syne,"Arial Black",sans-serif;font-size:13px;font-weight:700;
+color:#14100C;letter-spacing:.03em}
 /* skills tickers */
 #skills{padding-bottom:34px}
 .tickers{border-block:1px solid var(--line);padding:30px 0;overflow:hidden}
@@ -228,7 +244,8 @@ transition:opacity .6s ease,transform .6s ease}
   .tk{animation:none}
   html{scroll-behavior:auto}}
 @media (max-width:860px){
-  .statement{grid-template-columns:1fr;gap:36px}
+  .aboutgrid{grid-template-columns:1fr;gap:36px}
+  .pphoto{max-width:220px}
   .chap{grid-template-columns:1fr;gap:20px;padding:44px 0}
   .chap.alt .ctext{order:1}
   .chap.alt .cvid,.chap.alt .confpanel{order:2}
@@ -260,18 +277,23 @@ transition:opacity .6s ease,transform .6s ease}
 </div>
 
 <section id="about">
-  <div class="statement">
+  <div class="aboutgrid">
+    <div class="reveal"><img class="pphoto" src="assets/photo.jpg"
+      alt="Jatin Satyam" width="640" height="640"></div>
     <div class="reveal">
-      <p class="lead">I build machines that move and think.</p>
+      <p class="lead">I build machines that move and <em>think</em>.</p>
       <p class="sbody">I am a mechanical engineer who crossed into robotics and stayed. My work runs from cryocooler mechanisms and rotor dynamics on defence hardware to robot arms, drones, and autonomous systems at Arizona State. I like my engineering physical: designed, built, tested, and proven on real machines.</p>
-    </div>
-    <div class="reveal">
+      <hr class="arule">
       <p class="eyebrow">EDUCATION</p>
-      <div class="edurow"><img class="elogo" src="assets/logo_asu.png" alt="" loading="lazy">
-          <p><b>M.S. Robotics and Autonomous Systems (Systems Engineering)</b> · Arizona State University · <b class="gpa">GPA 3.67/4.0</b><br>
-          <span class="mono xdate">Expected May 2027</span></p></div><div class="edurow"><img class="elogo" src="assets/logo_mumbai.png" alt="" loading="lazy">
-          <p><b>B.E. Mechanical Engineering</b> · University of Mumbai<br>
-          <span class="mono xdate">2020 · 2024</span></p></div>
+      <div class="edugrid"><div class="edurow"><img class="elogo" src="assets/logo_asu.png" alt="" loading="lazy">
+          <div><p class="eduname">Arizona State University</p>
+          <p class="edudeg">MS Robotics &amp; Autonomous Systems</p>
+          <p class="edudates">Expected May 2027</p></div></div><div class="edurow"><img class="elogo" src="assets/logo_mumbai.png" alt="" loading="lazy">
+          <div><p class="eduname">University of Mumbai</p>
+          <p class="edudeg">BE Mechanical Engineering</p>
+          <p class="edudates">2020 · 2024</p></div></div></div>
+      <p class="eyebrow">CERTIFICATIONS &amp; AWARDS</p>
+      <div class="certrow"><div class="certghost" aria-hidden="true">+</div><div class="certghost" aria-hidden="true">+</div></div>
     </div>
   </div>
 </section>
@@ -352,17 +374,17 @@ transition:opacity .6s ease,transform .6s ease}
   <h2>Experience</h2>
   
       <div class="xrow reveal">
-        <div class="xwhen mono">JAN 2025 · JUL 2025</div>
+        <div class="xwhen">JAN 2025 · JUL 2025</div>
         <div class="xmain"><h4>Mechatronics Engineer Intern <span class="xorg">· Paras Defence &amp; Space Technologies</span></h4>
         <p>Full time at graduate engineer scope on cryogenic cooling hardware for defence and space platforms: Gifford-McMahon cryocooler mechanisms designed and iterated in SolidWorks and NX.</p><p>Led performance testing across 3 cooling assemblies and 25+ instrumented thermal runs. The loss data drove mechanism level design changes that cut prototype rework by 12%.</p><p>Built a vacuum insulated LN2 generation unit, ran a UAV lightweighting study to an 8% mass cut, delivered 30+ CAD releases with review turnaround down 20%, and owned PLM lifecycles across 3 projects.</p></div>
       </div>
       <div class="xrow reveal">
-        <div class="xwhen mono">AUG 2024 · NOV 2024</div>
+        <div class="xwhen">AUG 2024 · NOV 2024</div>
         <div class="xmain"><h4>CFD Intern <span class="xorg">· MARS Exploration</span></h4>
         <p>3D CFD of NACA 23012 vs 4412 airfoils in ANSYS Fluent: aerodynamic efficiency of an aircraft wing at 10° angle of attack and 48 m/s.</p><p>Owned the full workflow: geometry, boundary layer meshing with quality checks, solver convergence, and post processing of pressure, turbulence, and pathline fields.</p></div>
       </div>
       <div class="xrow reveal">
-        <div class="xwhen mono">MAY 2023 · AUG 2023</div>
+        <div class="xwhen">MAY 2023 · AUG 2023</div>
         <div class="xmain"><h4>R&amp;D Engineer Intern <span class="xorg">· TriQual Cryogenics</span></h4>
         <p>Stirling cycle cryocoolers operating near 70 K. Mechanical design and vibration control on reciprocating assemblies, alongside senior engineers.</p><p>The gyro motor thread here became my year long BE industry project: 8 rotor designs screened in ANSYS, the winner built and FFT validated at 28,000 rpm.</p></div>
       </div>
