@@ -4,23 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>Jatin Satyam — Robotics &amp; Autonomous Systems Engineer</title>
-<meta name="description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
+<title>Jatin Satyam · Robotics Engineer</title>
+<meta name="description" content="Jatin Satyam builds machines that move and think. Robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems at ASU.">
 <link rel="canonical" href="https://jatinsatyam.in/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Jatin Satyam — I build machines that move and think">
-<meta property="og:description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
+<meta property="og:title" content="Jatin Satyam — Robotics Engineer">
+<meta property="og:description" content="Jatin Satyam builds machines that move and think. Robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems at ASU.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
 <meta property="og:url" content="https://jatinsatyam.in/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jatin Satyam — I build machines that move and think">
-<meta name="twitter:description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
+<meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
+<meta name="twitter:description" content="Jatin Satyam builds machines that move and think. Robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems at ASU.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%230A0D12'/%3E%3Cpath%20fill='none'%20stroke='%23E0763C'%20stroke-width='3'%20d='M10%2022V10h12M42%2010h12v12M54%2042v12H42M22%2054H10V42'/%3E%3Ccircle%20cx='32'%20cy='32'%20r='4'%20fill='%23E0763C'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Jatin Satyam", "url": "https://jatinsatyam.in/", "email": "mailto:jsatyam@asu.edu", "sameAs": ["https://linkedin.com/in/jatin-satyam", "https://github.com/JatinSatyam26"], "jobTitle": "Robotics & Autonomous Systems Engineer", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Arizona State University"}, {"@type": "CollegeOrUniversity", "name": "University of Mumbai"}], "knowsAbout": ["Robotics", "Mechatronics", "Control Systems", "Mechanical Design", "Autonomous Systems"]}</script>
 <style>
 :root{--bg:#0A0D12;--panel:#10141B;--ink:#EDEFF3;--mut:#98A2B3;
@@ -31,72 +31,139 @@ body{background:var(--bg);color:var(--ink);
 font:16px/1.6 "Instrument Sans","Segoe UI",system-ui,sans-serif}
 .mono{font-family:"IBM Plex Mono",Consolas,monospace}
 a{color:inherit}
-section{padding:88px 6vw;max-width:1240px;margin:0 auto}
+section{padding:96px 6vw;max-width:1240px;margin:0 auto}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;
 letter-spacing:.16em;color:var(--acc);text-transform:uppercase;margin-bottom:10px}
-h2{font-family:Anton,Impact,sans-serif;font-size:clamp(30px,4.5vw,54px);
-letter-spacing:.01em;font-weight:400;text-transform:uppercase;margin-bottom:26px}
+h2{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:clamp(32px,4.8vw,60px);line-height:1.02;letter-spacing:-.01em;
+text-transform:uppercase;margin-bottom:26px}
+/* nav */
+#nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;
+align-items:center;justify-content:space-between;padding:14px 5vw;
+transition:background .25s ease,border-color .25s ease;border-bottom:1px solid transparent}
+#nav.solid{background:rgba(10,13,18,.88);backdrop-filter:blur(10px);
+border-bottom-color:var(--line)}
+.brand{font-family:Syne,"Arial Black",sans-serif;font-weight:800;font-size:23px;
+letter-spacing:-.02em;text-decoration:none;line-height:1}
+.brand span{color:var(--acc)}
+.nlinks{display:flex;gap:clamp(12px,2.4vw,26px);flex-wrap:wrap;justify-content:flex-end}
+.nlinks a{font-family:"IBM Plex Mono",monospace;font-size:11px;
+letter-spacing:.12em;color:var(--mut);text-decoration:none}
+.nlinks a:hover,.nlinks a:focus-visible{color:var(--ink)}
 /* hero */
-.hero{position:relative;height:100svh;min-height:560px;display:flex;
+.hero{position:relative;height:100svh;min-height:600px;display:flex;
 align-items:flex-end;overflow:hidden}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-filter:brightness(.5) saturate(.9)}
+filter:brightness(.48) saturate(.9)}
 .hero::after{content:"";position:absolute;inset:0;
-background:linear-gradient(180deg,rgba(10,13,18,.25) 0%,rgba(10,13,18,.35) 55%,var(--bg) 98%)}
-.hwrap{position:relative;z-index:2;padding:0 6vw 64px;width:100%}
-.hname{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
-font-size:clamp(64px,14vw,190px);line-height:.92;letter-spacing:.01em}
+background:linear-gradient(180deg,rgba(10,13,18,.3) 0%,rgba(10,13,18,.34) 55%,var(--bg) 98%)}
+.hwrap{position:relative;z-index:2;padding:0 6vw 56px;width:100%;will-change:transform,opacity}
+.hname{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+text-transform:uppercase;font-size:clamp(46px,10.6vw,148px);line-height:.95;
+letter-spacing:-.015em}
 .hname span{display:block}
-.hname span:last-child{color:transparent;-webkit-text-stroke:2px var(--ink)}
-.htag{margin-top:18px;font-size:clamp(16px,2vw,21px)}
-.hcta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.hname span.ol{color:transparent;-webkit-text-stroke:2.5px var(--ink)}
+.hcta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;padding:13px 22px;font-family:"IBM Plex Mono",monospace;
 font-size:13px;letter-spacing:.08em;text-decoration:none;border:1px solid var(--line);
 border-radius:6px;transition:transform .15s ease,background .15s ease}
 .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
 .btn.acc{background:var(--acc);border-color:var(--acc);color:#14100C;font-weight:600}
 .btn.acc:hover{background:#EE8A4F}
-.hcredit{margin-top:18px;font-family:"IBM Plex Mono",monospace;
+.btn.sm{margin-top:22px;padding:11px 18px;font-size:11.5px;color:var(--acc);
+border-color:rgba(224,118,60,.5)}
+.hcredit{margin-top:20px;font-family:"IBM Plex Mono",monospace;
 font-size:10.5px;letter-spacing:.08em;color:rgba(237,239,243,.45)}
 /* hero load-in */
-.js .hwrap>*{opacity:0}
-.js.booted .hwrap>*{animation:rise .5s ease forwards}
-.js.booted .hwrap>*:nth-child(2){animation-delay:.08s}
-.js.booted .hwrap>*:nth-child(3){animation-delay:.22s}
-.js.booted .hwrap>*:nth-child(4){animation-delay:.34s}
-.js.booted .hwrap>*:nth-child(5){animation-delay:.44s}
-@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:1px;background:var(--line);border-block:1px solid var(--line)}
-.stat{background:var(--bg);padding:26px 22px}
-.stat b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:34px;
-letter-spacing:.02em}
-.stat span{display:block;margin-top:4px;font-family:"IBM Plex Mono",monospace;
-font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
-/* project group cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-overflow:hidden;display:flex;flex-direction:column;text-decoration:none;
-transition:transform .18s ease,border-color .18s ease}
-.card:hover,.card:focus-visible{transform:translateY(-4px);
-border-color:rgba(224,118,60,.5)}
-.cmedia{position:relative}
-.cmedia video,.emedia video,.emedia img{width:100%;display:block;height:auto}
+.js .hf{opacity:0}
+.js.booted .hf{animation:rise .55s ease forwards}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+/* statement */
+.statement{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:start}
+.lead{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
+font-size:clamp(26px,3.6vw,46px);line-height:1.1;letter-spacing:-.01em}
+.sbody{color:var(--mut);font-size:16px;margin-top:22px;max-width:58ch}
+/* work chapters */
+.chap{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(26px,4.5vw,60px);
+align-items:center;padding:58px 0;border-top:1px solid var(--line)}
+.chap:first-of-type{border-top:0;padding-top:16px}
+.chap.alt .ctext{order:2}
+.chap.alt .cvid,.chap.alt .confpanel{order:1}
+.cnum{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:clamp(42px,5.6vw,72px);line-height:1;color:transparent;
+-webkit-text-stroke:1.5px rgba(237,239,243,.26);margin-bottom:16px}
+.ctext h3{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
+font-size:clamp(23px,2.9vw,36px);line-height:1.08;text-transform:uppercase;
+letter-spacing:-.01em;margin-bottom:14px}
+.cline{color:var(--mut);font-size:15px;max-width:58ch}
+.cvid{position:relative;border-radius:12px;overflow:hidden;
+border:1px solid var(--line)}
+.cvid video,.emedia video,.emedia img{width:100%;display:block;height:auto}
+.confpanel{border:1px dashed rgba(224,118,60,.5);border-radius:12px;
+min-height:240px;display:flex;align-items:center;justify-content:center;padding:36px}
+.badge{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;
+color:var(--acc);border:1px solid var(--acc);border-radius:4px;
+padding:10px 16px;white-space:nowrap}
 .simtag{position:absolute;top:10px;right:10px;font-family:"IBM Plex Mono",monospace;
 font-size:9.5px;letter-spacing:.12em;color:rgba(237,239,243,.85);
 background:rgba(10,13,18,.62);border-radius:4px;padding:3px 8px}
-.cbody{padding:16px 18px 20px;display:flex;flex-direction:column;flex:1}
-.cbody h3{font-size:17.5px;line-height:1.3;margin-bottom:8px;font-weight:600}
-.cline{color:var(--mut);font-size:13.5px}
-.more{margin-top:auto;padding-top:14px;font-family:"IBM Plex Mono",monospace;
-font-size:11px;letter-spacing:.1em;color:var(--acc)}
-.card.conf{border:1px dashed rgba(224,118,60,.45)}
-.badge{align-self:flex-start;margin-top:14px;font-family:"IBM Plex Mono",monospace;
-font-size:11px;letter-spacing:.14em;color:var(--acc);border:1px solid var(--acc);
-border-radius:4px;padding:7px 12px;white-space:nowrap}
+/* bands (video-backed) */
+.band{position:relative;overflow:hidden;border-block:1px solid var(--line)}
+.band>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+filter:brightness(.32) saturate(.85)}
+.band .inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;
+padding:64px 6vw}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px}
+.stat b{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:clamp(32px,4.2vw,54px);letter-spacing:-.01em;line-height:1}
+.stat span{display:block;margin-top:8px;font-family:"IBM Plex Mono",monospace;
+font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+/* experience */
+.xrow{display:grid;grid-template-columns:170px 1fr;gap:22px;padding:24px 0;
+border-top:1px solid var(--line)}
+.xrow:last-of-type{border-bottom:1px solid var(--line)}
+.xwhen{color:var(--mut);font-size:12px;letter-spacing:.06em;padding-top:4px;
+white-space:nowrap}
+.xmain h4{font-weight:600;font-size:16.5px}
+.xorg{color:var(--mut);font-weight:400}
+.xmain p{color:var(--mut);font-size:14.5px;margin-top:6px}
+/* education */
+.edurow{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.edurow p{color:var(--mut);font-size:14px;line-height:1.5}
+.edurow b{color:var(--ink);font-weight:600}
+.gpa{color:var(--acc)}
+.elogo{width:46px;height:46px;flex:none;object-fit:contain;
+background:rgba(237,239,243,.06);border:1px solid var(--line);
+border-radius:6px;padding:5px}
+.chipl{display:flex;align-items:center;justify-content:center;
+font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+color:var(--acc);letter-spacing:.05em}
+.xdate{font-size:11px;letter-spacing:.06em;color:var(--mut)}
+/* skills tickers */
+#skills{padding-bottom:34px}
+.tickers{border-block:1px solid var(--line);padding:30px 0;overflow:hidden}
+.trow{display:flex;white-space:nowrap;overflow:hidden}
+.trow+.trow{margin-top:18px}
+.tk{display:inline-flex;align-items:center;flex:none;
+animation:tkA 36s linear infinite}
+.trow.rev .tk{animation-direction:reverse}
+.tk span{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
+font-size:clamp(19px,2.5vw,32px);letter-spacing:.01em;text-transform:uppercase;
+padding:0 20px}
+.trow+.trow .tk span{color:var(--mut)}
+.tk i{color:var(--acc);font-style:normal;font-size:22px}
+@keyframes tkA{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.still .tk{animation-play-state:paused}
+/* film strip */
+.stripsec{padding-bottom:26px}
+.filmwrap{padding:0 6vw 40px;overflow-x:auto;scrollbar-width:thin}
+.film{display:flex;gap:12px;width:max-content;padding-bottom:8px}
+.cellv{height:300px;border-radius:10px;overflow:hidden;
+border:1px solid var(--line);flex:none}
+.cellv video{height:100%;width:auto;display:block}
 /* subpages */
-.subhead{padding-top:110px;padding-bottom:8px}
+.subhead{padding-top:130px;padding-bottom:8px}
 .back{display:inline-block;margin-bottom:26px;font-size:11.5px;
 letter-spacing:.1em;color:var(--mut);text-decoration:none;text-transform:uppercase}
 .back:hover,.back:focus-visible{color:var(--acc)}
@@ -120,37 +187,20 @@ color:var(--mut);letter-spacing:.04em}
 font-size:12px;letter-spacing:.1em;color:var(--acc);text-decoration:none;
 border-bottom:1px solid var(--acc)}
 .plink:hover,.plink:focus-visible{color:#EE8A4F}
-/* experience */
-.xrow{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px 0;
-border-top:1px solid var(--line)}
-.xrow:last-of-type{border-bottom:1px solid var(--line)}
-.xwhen{color:var(--mut);font-size:12px;letter-spacing:.06em;padding-top:4px;
-white-space:nowrap}
-.xmain h4{font-weight:600;font-size:16.5px}
-.xorg{color:var(--mut);font-weight:400}
-.xmain p{color:var(--mut);font-size:14.5px;margin-top:6px}
-/* education */
-.edu{margin-top:34px;display:grid;gap:12px}
-.edurow{display:flex;gap:14px;align-items:center}
-.edurow p{color:var(--mut);font-size:14.5px}
-.edurow b{color:var(--ink);font-weight:600}
-.gpa{color:var(--acc)}
-.elogo{width:44px;height:44px;flex:none;object-fit:contain;
-background:rgba(237,239,243,.06);border:1px solid var(--line);
-border-radius:6px;padding:5px}
-.chipl{display:flex;align-items:center;justify-content:center;
-font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
-color:var(--acc);letter-spacing:.05em}
-.xdate{font-size:11px;letter-spacing:.06em;color:var(--mut)}
 /* contact */
-.contact{text-align:center;padding-bottom:60px}
-.strip{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
-font-size:clamp(22px,3.6vw,44px);line-height:1.15;max-width:900px;margin:0 auto 30px}
-.strip em{font-style:normal;color:var(--acc)}
+.contact .inner{text-align:center;padding-top:110px;padding-bottom:96px}
+.cstrip{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+text-transform:uppercase;font-size:clamp(24px,4.4vw,56px);line-height:1.06;
+letter-spacing:-.01em;max-width:980px;margin:0 auto 34px}
+.cstrip em{font-style:normal;color:var(--acc)}
 .meta{margin-top:40px;color:var(--mut);font-size:13px}
 footer{padding:26px 6vw;border-top:1px solid var(--line);display:flex;
-justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--mut);
-font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.06em}
+align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+color:var(--mut);font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+letter-spacing:.06em}
+footer .fbrand{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:17px;color:var(--ink);letter-spacing:-.02em}
+footer .fbrand span{color:var(--acc)}
 /* motion pause (accessibility) */
 .mbtn{position:fixed;right:12px;bottom:12px;z-index:60;cursor:pointer;
 font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;
@@ -163,132 +213,214 @@ transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   .js .reveal{opacity:1;transform:none;transition:none}
-  .js .hwrap>*{opacity:1;animation:none !important}
+  .js .hf{opacity:1;animation:none !important}
+  .tk{animation:none}
   html{scroll-behavior:auto}}
 @media (max-width:860px){
+  .statement{grid-template-columns:1fr;gap:36px}
+  .chap{grid-template-columns:1fr;gap:20px;padding:44px 0}
+  .chap.alt .ctext{order:1}
+  .chap.alt .cvid,.chap.alt .confpanel{order:2}
   .entry{grid-template-columns:1fr}
   .xrow{grid-template-columns:1fr;gap:4px}
+  .cellv{height:220px}
+  .hname span.ol{-webkit-text-stroke-width:1.6px}
   section{padding:64px 6vw}}
 </style>
 </head>
-<body>
-<button id="feed" class="mbtn" aria-pressed="false" aria-label="Pause or resume all background footage">❚❚ pause motion</button>
+<body id="top">
+<button id="feed" class="mbtn" aria-pressed="false" aria-label="Pause or resume all motion">❚❚ pause motion</button>
+<nav id="nav"><a class="brand" href="#top" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="#top">HOME</a><a href="#work">WORK</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="#contact">CONTACT</a></div></nav>
 <header class="hero">
-  <video autoplay muted loop playsinline width="1440" height="810" poster="assets/hero_bg.jpg" src="assets/hero_bg.mp4"></video>
+  <video autoplay muted loop playsinline width="1600" height="900" poster="assets/hero5.jpg" src="assets/hero5.mp4"></video>
   <div class="hwrap">
-    <p class="eyebrow">ROBOTICS &amp; AUTONOMOUS SYSTEMS — MS @ ASU</p>
-    <h1 class="hname"><span>JATIN</span><span>SATYAM</span></h1>
-    <p class="htag">I build machines that move and think.</p>
-    <div class="hcta">
-      <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">↓ RESUME.PDF — 1 PAGE</a>
-      <a class="btn" href="#projects">SEE THE ROBOTS ↓</a>
+    <p class="eyebrow hf" style="animation-delay:.02s">MS ROBOTICS &amp; AUTONOMOUS SYSTEMS · ARIZONA STATE UNIVERSITY</p>
+    <h1 class="hname"><span class="hf" style="animation-delay:0.08s">JATIN</span><span class="hf ol" style="animation-delay:0.17s">SATYAM</span><span class="hf" style="animation-delay:0.26s">ROBOTICS</span><span class="hf ol" style="animation-delay:0.35s">ENGINEER</span></h1>
+    <div class="hcta hf" style="animation-delay:.52s">
+      <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">GRAB MY RESUME ↗</a>
+      <a class="btn" href="#work">SEE THE WORK ↓</a>
     </div>
-    <p class="hcredit">BG: AUTOMATE 2026 SHOW FLOOR</p>
+    <p class="hcredit hf" style="animation-delay:.62s">BACKGROUND: AUTOMATE 2026, CHICAGO. SHOT ON MY PHONE.</p>
   </div>
 </header>
 
-<div class="stats"><div class="stat reveal"><b>09</b><span>robots &amp; systems built</span></div><div class="stat reveal"><b>03</b><span>engineering internships</span></div><div class="stat reveal"><b>28,000</b><span>rpm rotor, flight-proven</span></div><div class="stat reveal"><b>±2 mm</b><span>vision-guided precision</span></div></div>
-
-<section id="projects">
-  <p class="eyebrow">THE WORK</p>
-  <h2>Robots I've built &amp; taught</h2>
-  <div class="grid"><a class="card reveal" href="dobot.html">
-      <div class="cmedia"><video autoplay muted loop playsinline width="640" height="482" poster="assets/dobot.jpg" src="assets/dobot.mp4"></video><span class="simtag">HARDWARE</span></div>
-      <div class="cbody">
-        <p class="eyebrow">LLM CONTROL · VISION · KINEMATICS</p>
-        <h3>Robot Arm Manipulation Lab</h3>
-        <p class="cline">A semester of physical robot-arm work on the Dobot Magician Lite - from natural-language control to drawing games, mazes, kinematics, and end-effector builds.</p>
-        <span class="more">ALL 6 PROJECTS →</span>
-      </div></a><a class="card reveal" href="mambo.html">
-      <div class="cmedia"><video autoplay muted loop playsinline width="640" height="480" poster="assets/mambo.jpg" src="assets/mambo.mp4"></video><span class="simtag">HARDWARE</span></div>
-      <div class="cbody">
-        <p class="eyebrow">FLIGHT CONTROL · REAL DRONE</p>
-        <h3>Parrot Mambo Flight Test Program</h3>
-        <p class="cline">Simulink flight controllers deployed to a physical Parrot Mambo - attitude, hover, waypoints, line following, and autonomous landings.</p>
-        <span class="more">ALL 4 PROJECTS →</span>
-      </div></a><article class="card reveal">
-      <div class="cmedia"><video autoplay muted loop playsinline width="640" height="480" poster="assets/gyro.jpg" src="assets/gyro.mp4"></video><span class="simtag">HARDWARE</span></div>
-      <div class="cbody">
-        <p class="eyebrow">ROTORDYNAMICS · DEFENCE HARDWARE</p>
-        <h3>Gyro Motor Rotor Development</h3>
-        <p class="cline">8 rotor designs screened in ANSYS rotordynamics; the winner built and FFT-validated on an instrumented bench at a 28,000 rpm operating point.</p>
-        
-      </div></article><article class="card reveal">
-      <div class="cmedia"><video autoplay muted loop playsinline width="640" height="480" poster="assets/stretch3.jpg" src="assets/stretch3.mp4"></video><span class="simtag">SIMULATION</span></div>
-      <div class="cbody">
-        <p class="eyebrow">STATE-SPACE · FORMALLY PROVEN</p>
-        <h3>MuJoCo Mobile Manipulation</h3>
-        <p class="cline">A Stretch3 mobile manipulator modeled analytically, formally proven controllable, observable, and stable, then simulated across 8 DOF with PD and LQR.</p>
-        
-      </div></article><a class="card reveal" href="space.html">
-      <div class="cmedia"><video autoplay muted loop playsinline width="720" height="540" poster="assets/mars.jpg" src="assets/mars.mp4"></video><span class="simtag">SIMULATION</span></div>
-      <div class="cbody">
-        <p class="eyebrow">PLANETARY AUTONOMY · ROS 2</p>
-        <h3>Space Robotics &amp; AI</h3>
-        <p class="cline">Autonomy on planetary terrain - cooperative drone-rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.</p>
-        <span class="more">ALL 5 PROJECTS →</span>
-      </div></a>
-    <article class="card conf reveal">
-      <div class="cbody">
-        <p class="eyebrow">ASSISTIVE DEVICE · WITH DIGNITY HEALTH</p>
-        <h3>SipSafe Smart Cup</h3>
-        <p class="cline">An assistive smart cup for dysphagia patients, built with a clinical team at Dignity Health. I owned the initial concept and the complete mechanical design. Details stay under wraps while the invention disclosure is with ASU&#x27;s technology transfer office - ask me about it in person.</p>
-        <span class="badge">PATENT PROCESS UNDERWAY</span>
-      </div>
-    </article></div>
+<section id="about">
+  <div class="statement">
+    <div class="reveal">
+      <p class="lead">I build machines that move and think.</p>
+      <p class="sbody">I am a mechanical engineer who crossed into robotics and stayed. My work runs from cryocooler mechanisms and rotor dynamics on defence hardware to robot arms, drones, and autonomous systems at Arizona State. I like my engineering physical: designed, built, tested, and proven on real machines.</p>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">EDUCATION</p>
+      <div class="edurow"><img class="elogo" src="assets/logo_asu.png" alt="" loading="lazy">
+          <p><b>M.S. Robotics and Autonomous Systems (Systems Engineering)</b> · Arizona State University · <b class="gpa">GPA 3.67/4.0</b><br>
+          <span class="mono xdate">Expected May 2027</span></p></div><div class="edurow"><img class="elogo" src="assets/logo_mumbai.png" alt="" loading="lazy">
+          <p><b>B.E. Mechanical Engineering</b> · University of Mumbai<br>
+          <span class="mono xdate">2020 · 2024</span></p></div>
+    </div>
+  </div>
 </section>
 
-<section id="about">
+<section id="work" style="padding-top:24px">
+  <p class="eyebrow">SELECTED WORK</p>
+  <h2>The work</h2>
+  
+  <article class="chap reveal" id="w-dobot">
+    <div class="ctext">
+      <div class="cnum" aria-hidden="true">01</div>
+      <p class="eyebrow">MANIPULATION · MACHINE VISION</p>
+      <h3>Robot Arm Manipulation Lab</h3>
+      <p class="cline">A semester of physical robot arm work on the Dobot Magician Lite, from natural language control to drawing games, mazes, kinematics, and end effector builds.</p>
+      <a class="btn sm" href="dobot.html">ALL 6 PROJECTS →</a>
+    </div>
+    <div class="cvid"><video autoplay muted loop playsinline width="640" height="482" poster="assets/dobot.jpg" src="assets/dobot.mp4"></video><span class="simtag">HARDWARE</span></div>
+  </article>
+  <article class="chap reveal alt" id="w-mambo">
+    <div class="ctext">
+      <div class="cnum" aria-hidden="true">02</div>
+      <p class="eyebrow">FLIGHT CONTROL · REAL DRONE</p>
+      <h3>Parrot Mambo Flight Test Program</h3>
+      <p class="cline">Simulink flight controllers deployed to a physical Parrot Mambo: attitude, hover, waypoints, line following, and autonomous landings.</p>
+      <a class="btn sm" href="mambo.html">ALL 4 PROJECTS →</a>
+    </div>
+    <div class="cvid"><video autoplay muted loop playsinline width="640" height="480" poster="assets/mambo.jpg" src="assets/mambo.mp4"></video><span class="simtag">HARDWARE</span></div>
+  </article>
+  <article class="chap reveal" id="w-mechanical">
+    <div class="ctext">
+      <div class="cnum" aria-hidden="true">03</div>
+      <p class="eyebrow">ROTORDYNAMICS · DEFENCE HARDWARE</p>
+      <h3>Gyro Motor Rotor Development</h3>
+      <p class="cline">8 rotor designs screened in ANSYS rotordynamics. The winner was built and FFT validated on an instrumented bench at a 28,000 rpm operating point.</p>
+      
+    </div>
+    <div class="cvid"><video autoplay muted loop playsinline width="640" height="480" poster="assets/gyro.jpg" src="assets/gyro.mp4"></video><span class="simtag">HARDWARE</span></div>
+  </article>
+  <article class="chap reveal alt" id="w-controls">
+    <div class="ctext">
+      <div class="cnum" aria-hidden="true">04</div>
+      <p class="eyebrow">STATE-SPACE · FORMALLY PROVEN</p>
+      <h3>MuJoCo Mobile Manipulation</h3>
+      <p class="cline">A Stretch3 mobile manipulator modeled analytically, formally proven controllable, observable, and stable, then simulated across 8 degrees of freedom with PD and LQR.</p>
+      
+    </div>
+    <div class="cvid"><video autoplay muted loop playsinline width="640" height="480" poster="assets/stretch3.jpg" src="assets/stretch3.mp4"></video><span class="simtag">SIMULATION</span></div>
+  </article>
+  <article class="chap reveal" id="w-space">
+    <div class="ctext">
+      <div class="cnum" aria-hidden="true">05</div>
+      <p class="eyebrow">PLANETARY AUTONOMY · ROS 2</p>
+      <h3>Space Robotics &amp; AI</h3>
+      <p class="cline">Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.</p>
+      <a class="btn sm" href="space.html">ALL 5 PROJECTS →</a>
+    </div>
+    <div class="cvid"><video autoplay muted loop playsinline width="720" height="538" poster="assets/mars.jpg" src="assets/mars.mp4"></video><span class="simtag">SIMULATION</span></div>
+  </article>
+  <article class="chap reveal alt" id="w-innovation">
+    <div class="ctext">
+      <div class="cnum" aria-hidden="true">06</div>
+      <p class="eyebrow">ASSISTIVE DEVICE · WITH DIGNITY HEALTH</p>
+      <h3>SipSafe Smart Cup</h3>
+      <p class="cline">An assistive smart cup for dysphagia patients, built with a clinical team at Dignity Health. I owned the initial concept and the complete mechanical design. Details stay under wraps while the invention disclosure is with ASU&#x27;s technology transfer office. Ask me about it in person.</p>
+      
+    </div>
+    <div class="confpanel"><span class="badge">PATENT PROCESS UNDERWAY</span></div>
+  </article>
+</section>
+
+<div class="band">
+  <video autoplay muted loop playsinline preload="none" width="1280" height="720" poster="assets/amb_floor.jpg" src="assets/amb_floor.mp4"></video>
+  <div class="inner"><div class="stats"><div class="stat reveal"><b>09</b><span>robots &amp; systems built</span></div><div class="stat reveal"><b>03</b><span>engineering internships</span></div><div class="stat reveal"><b>28,000</b><span>rpm rotor, flight proven</span></div><div class="stat reveal"><b>±2 mm</b><span>vision guided precision</span></div></div></div>
+</div>
+
+<section id="experience">
   <p class="eyebrow">THE ENGINEER</p>
   <h2>Experience</h2>
   
       <div class="xrow reveal">
-        <div class="xwhen mono">Jan - Jul 2025</div>
+        <div class="xwhen mono">JAN 2025 · JUL 2025</div>
         <div class="xmain"><h4>Mechatronics Engineer Intern <span class="xorg">· Paras Defence &amp; Space Technologies</span></h4>
-        <p>Full-time at graduate-engineer scope on cryogenic cooling hardware for defence and space platforms: Gifford-McMahon cryocooler mechanisms designed and iterated in SolidWorks and NX.</p><p>Led performance testing across 3 cooling assemblies and 25+ instrumented thermal runs - the loss data drove mechanism-level design changes that cut prototype rework by 12%.</p><p>Built a vacuum-insulated LN2 generation unit, ran a UAV lightweighting study to an 8% mass cut, delivered 30+ CAD releases (review turnaround down 20%), and owned PLM lifecycles across 3 projects.</p></div>
+        <p>Full time at graduate engineer scope on cryogenic cooling hardware for defence and space platforms: Gifford-McMahon cryocooler mechanisms designed and iterated in SolidWorks and NX.</p><p>Led performance testing across 3 cooling assemblies and 25+ instrumented thermal runs. The loss data drove mechanism level design changes that cut prototype rework by 12%.</p><p>Built a vacuum insulated LN2 generation unit, ran a UAV lightweighting study to an 8% mass cut, delivered 30+ CAD releases with review turnaround down 20%, and owned PLM lifecycles across 3 projects.</p></div>
       </div>
       <div class="xrow reveal">
-        <div class="xwhen mono">Aug - Nov 2024</div>
+        <div class="xwhen mono">AUG 2024 · NOV 2024</div>
         <div class="xmain"><h4>CFD Intern <span class="xorg">· MARS Exploration</span></h4>
-        <p>3D CFD of NACA 23012 vs 4412 airfoils in ANSYS Fluent - aerodynamic efficiency of an aircraft wing at 10° angle of attack and 48 m/s.</p><p>Owned the full workflow: geometry, boundary-layer meshing with quality checks, solver convergence, and post-processing of pressure, turbulence, and pathline fields.</p></div>
+        <p>3D CFD of NACA 23012 vs 4412 airfoils in ANSYS Fluent: aerodynamic efficiency of an aircraft wing at 10° angle of attack and 48 m/s.</p><p>Owned the full workflow: geometry, boundary layer meshing with quality checks, solver convergence, and post processing of pressure, turbulence, and pathline fields.</p></div>
       </div>
       <div class="xrow reveal">
-        <div class="xwhen mono">May - Aug 2023</div>
+        <div class="xwhen mono">MAY 2023 · AUG 2023</div>
         <div class="xmain"><h4>R&amp;D Engineer Intern <span class="xorg">· TriQual Cryogenics</span></h4>
-        <p>Stirling-cycle cryocoolers operating near 70 K - mechanical design and vibration control on reciprocating assemblies, alongside senior engineers.</p><p>The gyro motor thread here became my year-long BE industry project: 8 rotor designs screened in ANSYS, the winner built and FFT-validated at 28,000 rpm.</p></div>
+        <p>Stirling cycle cryocoolers operating near 70 K. Mechanical design and vibration control on reciprocating assemblies, alongside senior engineers.</p><p>The gyro motor thread here became my year long BE industry project: 8 rotor designs screened in ANSYS, the winner built and FFT validated at 28,000 rpm.</p></div>
       </div>
-  <div class="edu reveal"><div class="edurow"><img class="elogo" src="assets/logo_asu.png" alt="" loading="lazy">
-          <p><b>M.S. Robotics and Autonomous Systems (Systems Engineering)</b> — Arizona State University · <b class="gpa">GPA 3.67/4.0</b>
-          <span class="mono xdate">Expected May 2027</span></p></div><div class="edurow"><img class="elogo" src="assets/logo_mumbai.png" alt="" loading="lazy">
-          <p><b>B.E. Mechanical Engineering</b> — University of Mumbai
-          <span class="mono xdate">2020 - 2024</span></p></div></div>
 </section>
 
-<section class="contact" id="contact">
-  <p class="strip reveal">OPEN TO <em>ROBOTICS</em> INTERNSHIPS &amp; FULL-TIME ROLES - GRADUATING MAY 2027</p>
-  <div class="hcta" style="justify-content:center">
-    <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME ↗</a>
-    <a class="btn" href="mailto:jsatyam@asu.edu">EMAIL</a>
-    <a class="btn" href="https://linkedin.com/in/jatin-satyam" target="_blank" rel="noopener">LINKEDIN</a>
-    <a class="btn" href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">GITHUB</a>
-  </div>
-  <p class="meta reveal">One memory file drives my resumes and this site - both generated by an agent pipeline I built.</p>
+<section id="skills" >
+  <p class="eyebrow">TOOLBOX</p>
+  <h2>Skills</h2>
 </section>
+<div class="tickers"><div class="trow" aria-hidden="true"><div class="tk"><span>PYTHON</span><i>·</i><span>C++</span><i>·</i><span>MATLAB</span><i>·</i><span>SIMULINK</span><i>·</i><span>ROS 2</span><i>·</i><span>GAZEBO</span><i>·</i><span>MUJOCO</span><i>·</i><span>OPENCV</span><i>·</i><span>PYTORCH</span><i>·</i><span>SOLIDWORKS</span><i>·</i><span>SIEMENS NX</span><i>·</i><span>ANSYS</span><i>·</i><span>FLUENT</span><i>·</i><span>GIT</span><i>·</i></div><div class="tk"><span>PYTHON</span><i>·</i><span>C++</span><i>·</i><span>MATLAB</span><i>·</i><span>SIMULINK</span><i>·</i><span>ROS 2</span><i>·</i><span>GAZEBO</span><i>·</i><span>MUJOCO</span><i>·</i><span>OPENCV</span><i>·</i><span>PYTORCH</span><i>·</i><span>SOLIDWORKS</span><i>·</i><span>SIEMENS NX</span><i>·</i><span>ANSYS</span><i>·</i><span>FLUENT</span><i>·</i><span>GIT</span><i>·</i></div></div><div class="trow rev" aria-hidden="true"><div class="tk"><span>KINEMATICS</span><i>·</i><span>CONTROL SYSTEMS</span><i>·</i><span>STATE ESTIMATION</span><i>·</i><span>MACHINE VISION</span><i>·</i><span>SLAM</span><i>·</i><span>MECHANICAL DESIGN</span><i>·</i><span>GD&amp;T</span><i>·</i><span>FEA</span><i>·</i><span>CFD</span><i>·</i><span>RAPID PROTOTYPING</span><i>·</i><span>PLM</span><i>·</i></div><div class="tk"><span>KINEMATICS</span><i>·</i><span>CONTROL SYSTEMS</span><i>·</i><span>STATE ESTIMATION</span><i>·</i><span>MACHINE VISION</span><i>·</i><span>SLAM</span><i>·</i><span>MECHANICAL DESIGN</span><i>·</i><span>GD&amp;T</span><i>·</i><span>FEA</span><i>·</i><span>CFD</span><i>·</i><span>RAPID PROTOTYPING</span><i>·</i><span>PLM</span><i>·</i></div></div></div>
+
+
+<section id="floor" class="stripsec">
+  <p class="eyebrow">FIELD NOTES</p>
+  <h2>On the show floor</h2>
+  <p class="cline">Automate 2026, Chicago. Robots I met on the floor, shot on my phone.</p>
+</section>
+<div class="filmwrap"><div class="film"><div class="cellv"><video autoplay muted loop playsinline preload="none" width="304" height="540" poster="assets/s_human.jpg" src="assets/s_human.mp4"></video></div><div class="cellv"><video autoplay muted loop playsinline preload="none" width="960" height="540" poster="assets/s_fanuc.jpg" src="assets/s_fanuc.mp4"></video></div><div class="cellv"><video autoplay muted loop playsinline preload="none" width="304" height="540" poster="assets/s_regolith.jpg" src="assets/s_regolith.mp4"></video></div><div class="cellv"><video autoplay muted loop playsinline preload="none" width="304" height="540" poster="assets/s_weld.jpg" src="assets/s_weld.mp4"></video></div><div class="cellv"><video autoplay muted loop playsinline preload="none" width="304" height="540" poster="assets/s_cell.jpg" src="assets/s_cell.mp4"></video></div><div class="cellv"><video autoplay muted loop playsinline preload="none" width="960" height="540" poster="assets/s_crate.jpg" src="assets/s_crate.mp4"></video></div><div class="cellv"><video autoplay muted loop playsinline preload="none" width="960" height="540" poster="assets/s_cobot.jpg" src="assets/s_cobot.mp4"></video></div><div class="cellv"><video autoplay muted loop playsinline preload="none" width="960" height="540" poster="assets/s_popcorn.jpg" src="assets/s_popcorn.mp4"></video></div></div></div>
+
+<div class="band contact" id="contact">
+  <video autoplay muted loop playsinline preload="none" width="1280" height="720" poster="assets/amb_walk.jpg" src="assets/amb_walk.mp4"></video>
+  <div class="inner">
+    <p class="cstrip reveal">OPEN TO <em>ROBOTICS</em> INTERNSHIPS &amp; FULL-TIME ROLES. GRADUATING MAY 2027.</p>
+    <div class="hcta" style="justify-content:center">
+      <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME ↗</a>
+      <a class="btn" href="mailto:jsatyam@asu.edu">EMAIL</a>
+      <a class="btn" href="https://linkedin.com/in/jatin-satyam" target="_blank" rel="noopener">LINKEDIN</a>
+      <a class="btn" href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">GITHUB</a>
+    </div>
+    <p class="meta reveal">One memory file drives my resumes and this site. Both are generated by an agent pipeline I built.</p>
+  </div>
+</div>
 
 <footer>
   <span>© 2026 Jatin Satyam</span>
-  <span>jatinsatyam.in</span>
-  <span>UPDATED 2026.08</span>
+  <span class="fbrand">JS<span>.</span></span>
+  <span>jatinsatyam.in · UPDATED 2026.08</span>
 </footer>
 
 <script>
 (function(){
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var H=document.documentElement;H.classList.add('booted');
+var nav=document.getElementById('nav'),hw=document.querySelector('.hwrap');
+var hh=Math.max(window.innerHeight,1);
+window.addEventListener('scroll',function(){var y=window.scrollY;
+  if(nav)nav.classList.toggle('solid',y>40);
+  if(hw&&!RM){if(y<hh){hw.style.transform='translateY('+(y*0.22)+'px)';
+    hw.style.opacity=Math.max(0,1-y/(hh*0.72))}}},{passive:true});
+if(nav)nav.classList.toggle('solid',window.scrollY>40);
 var io=new IntersectionObserver(function(es){es.forEach(function(e){
   if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},
   {rootMargin:'0px 0px -10% 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+/* stat count-up */
+function pad(v,l){v=String(v);while(v.length<l)v='0'+v;return v}
+var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;sio.unobserve(e.target);
+  var el=e.target,raw=el.dataset.v,m=raw.match(/^([^0-9]*)([0-9,.]+)(.*)$/);
+  if(!m||RM){el.textContent=raw;return}
+  var digits=m[2].replace(/,/g,''),num=parseFloat(digits),
+      dec=(digits.split('.')[1]||'').length,t0=null;
+  function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/900);
+    p=1-Math.pow(1-p,3);var v=(num*p).toFixed(dec);
+    if(m[2].indexOf(',')>-1)v=Number(v).toLocaleString('en-US');
+    else if(digits.charAt(0)==='0'&&dec===0)v=pad(Math.round(num*p),digits.length);
+    el.textContent=m[1]+v+m[3];if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step)})},{threshold:.4});
+document.querySelectorAll('.stat b').forEach(function(el){
+  el.dataset.v=el.textContent;
+  if(!RM)el.textContent=el.dataset.v.replace(/[0-9]/g,'0');
+  sio.observe(el)});
+/* video visibility + motion toggle */
 var vids=[].slice.call(document.querySelectorAll('video')),held=RM;
 function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}
 vids.forEach(function(v){if(RM){v.pause();v.removeAttribute('autoplay')}});
@@ -296,10 +428,12 @@ var pio=new IntersectionObserver(function(es){es.forEach(function(e){
   var v=e.target;v.dataset.vis=e.isIntersecting?'1':'';
   if(held||!e.isIntersecting)v.pause();else tryPlay(v)})},{rootMargin:'80px'});
 vids.forEach(function(v){pio.observe(v)});
+if(RM)document.body.classList.add('still');
 var mb=document.getElementById('feed');
 function ui(){mb.textContent=held?'\u25B8 play motion':'\u275A\u275A pause motion';
   mb.setAttribute('aria-pressed',held?'true':'false')}
 if(mb){ui();mb.addEventListener('click',function(){held=!held;ui();
+  document.body.classList.toggle('still',held);
   vids.forEach(function(v){if(held)v.pause();else if(v.dataset.vis)tryPlay(v)})})}
 })();
 </script>

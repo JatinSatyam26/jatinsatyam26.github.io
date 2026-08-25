@@ -4,23 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>Space Robotics &amp; AI — Jatin Satyam</title>
-<meta name="description" content="Autonomy on planetary terrain - cooperative drone-rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
+<title>Space Robotics &amp; AI · Jatin Satyam</title>
+<meta name="description" content="Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
 <link rel="canonical" href="https://jatinsatyam.in/space.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Jatin Satyam — I build machines that move and think">
-<meta property="og:description" content="Autonomy on planetary terrain - cooperative drone-rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
+<meta property="og:title" content="Jatin Satyam — Robotics Engineer">
+<meta property="og:description" content="Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
 <meta property="og:url" content="https://jatinsatyam.in/space.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jatin Satyam — I build machines that move and think">
-<meta name="twitter:description" content="Autonomy on planetary terrain - cooperative drone-rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
+<meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
+<meta name="twitter:description" content="Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%230A0D12'/%3E%3Cpath%20fill='none'%20stroke='%23E0763C'%20stroke-width='3'%20d='M10%2022V10h12M42%2010h12v12M54%2042v12H42M22%2054H10V42'/%3E%3Ccircle%20cx='32'%20cy='32'%20r='4'%20fill='%23E0763C'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0A0D12;--panel:#10141B;--ink:#EDEFF3;--mut:#98A2B3;
 --line:rgba(255,255,255,.09);--acc:#E0763C;--acc-dim:rgba(224,118,60,.13)}
@@ -30,72 +30,139 @@ body{background:var(--bg);color:var(--ink);
 font:16px/1.6 "Instrument Sans","Segoe UI",system-ui,sans-serif}
 .mono{font-family:"IBM Plex Mono",Consolas,monospace}
 a{color:inherit}
-section{padding:88px 6vw;max-width:1240px;margin:0 auto}
+section{padding:96px 6vw;max-width:1240px;margin:0 auto}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;
 letter-spacing:.16em;color:var(--acc);text-transform:uppercase;margin-bottom:10px}
-h2{font-family:Anton,Impact,sans-serif;font-size:clamp(30px,4.5vw,54px);
-letter-spacing:.01em;font-weight:400;text-transform:uppercase;margin-bottom:26px}
+h2{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:clamp(32px,4.8vw,60px);line-height:1.02;letter-spacing:-.01em;
+text-transform:uppercase;margin-bottom:26px}
+/* nav */
+#nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;
+align-items:center;justify-content:space-between;padding:14px 5vw;
+transition:background .25s ease,border-color .25s ease;border-bottom:1px solid transparent}
+#nav.solid{background:rgba(10,13,18,.88);backdrop-filter:blur(10px);
+border-bottom-color:var(--line)}
+.brand{font-family:Syne,"Arial Black",sans-serif;font-weight:800;font-size:23px;
+letter-spacing:-.02em;text-decoration:none;line-height:1}
+.brand span{color:var(--acc)}
+.nlinks{display:flex;gap:clamp(12px,2.4vw,26px);flex-wrap:wrap;justify-content:flex-end}
+.nlinks a{font-family:"IBM Plex Mono",monospace;font-size:11px;
+letter-spacing:.12em;color:var(--mut);text-decoration:none}
+.nlinks a:hover,.nlinks a:focus-visible{color:var(--ink)}
 /* hero */
-.hero{position:relative;height:100svh;min-height:560px;display:flex;
+.hero{position:relative;height:100svh;min-height:600px;display:flex;
 align-items:flex-end;overflow:hidden}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-filter:brightness(.5) saturate(.9)}
+filter:brightness(.48) saturate(.9)}
 .hero::after{content:"";position:absolute;inset:0;
-background:linear-gradient(180deg,rgba(10,13,18,.25) 0%,rgba(10,13,18,.35) 55%,var(--bg) 98%)}
-.hwrap{position:relative;z-index:2;padding:0 6vw 64px;width:100%}
-.hname{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
-font-size:clamp(64px,14vw,190px);line-height:.92;letter-spacing:.01em}
+background:linear-gradient(180deg,rgba(10,13,18,.3) 0%,rgba(10,13,18,.34) 55%,var(--bg) 98%)}
+.hwrap{position:relative;z-index:2;padding:0 6vw 56px;width:100%;will-change:transform,opacity}
+.hname{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+text-transform:uppercase;font-size:clamp(46px,10.6vw,148px);line-height:.95;
+letter-spacing:-.015em}
 .hname span{display:block}
-.hname span:last-child{color:transparent;-webkit-text-stroke:2px var(--ink)}
-.htag{margin-top:18px;font-size:clamp(16px,2vw,21px)}
-.hcta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.hname span.ol{color:transparent;-webkit-text-stroke:2.5px var(--ink)}
+.hcta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;padding:13px 22px;font-family:"IBM Plex Mono",monospace;
 font-size:13px;letter-spacing:.08em;text-decoration:none;border:1px solid var(--line);
 border-radius:6px;transition:transform .15s ease,background .15s ease}
 .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
 .btn.acc{background:var(--acc);border-color:var(--acc);color:#14100C;font-weight:600}
 .btn.acc:hover{background:#EE8A4F}
-.hcredit{margin-top:18px;font-family:"IBM Plex Mono",monospace;
+.btn.sm{margin-top:22px;padding:11px 18px;font-size:11.5px;color:var(--acc);
+border-color:rgba(224,118,60,.5)}
+.hcredit{margin-top:20px;font-family:"IBM Plex Mono",monospace;
 font-size:10.5px;letter-spacing:.08em;color:rgba(237,239,243,.45)}
 /* hero load-in */
-.js .hwrap>*{opacity:0}
-.js.booted .hwrap>*{animation:rise .5s ease forwards}
-.js.booted .hwrap>*:nth-child(2){animation-delay:.08s}
-.js.booted .hwrap>*:nth-child(3){animation-delay:.22s}
-.js.booted .hwrap>*:nth-child(4){animation-delay:.34s}
-.js.booted .hwrap>*:nth-child(5){animation-delay:.44s}
-@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:1px;background:var(--line);border-block:1px solid var(--line)}
-.stat{background:var(--bg);padding:26px 22px}
-.stat b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:34px;
-letter-spacing:.02em}
-.stat span{display:block;margin-top:4px;font-family:"IBM Plex Mono",monospace;
-font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
-/* project group cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-overflow:hidden;display:flex;flex-direction:column;text-decoration:none;
-transition:transform .18s ease,border-color .18s ease}
-.card:hover,.card:focus-visible{transform:translateY(-4px);
-border-color:rgba(224,118,60,.5)}
-.cmedia{position:relative}
-.cmedia video,.emedia video,.emedia img{width:100%;display:block;height:auto}
+.js .hf{opacity:0}
+.js.booted .hf{animation:rise .55s ease forwards}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+/* statement */
+.statement{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:start}
+.lead{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
+font-size:clamp(26px,3.6vw,46px);line-height:1.1;letter-spacing:-.01em}
+.sbody{color:var(--mut);font-size:16px;margin-top:22px;max-width:58ch}
+/* work chapters */
+.chap{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(26px,4.5vw,60px);
+align-items:center;padding:58px 0;border-top:1px solid var(--line)}
+.chap:first-of-type{border-top:0;padding-top:16px}
+.chap.alt .ctext{order:2}
+.chap.alt .cvid,.chap.alt .confpanel{order:1}
+.cnum{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:clamp(42px,5.6vw,72px);line-height:1;color:transparent;
+-webkit-text-stroke:1.5px rgba(237,239,243,.26);margin-bottom:16px}
+.ctext h3{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
+font-size:clamp(23px,2.9vw,36px);line-height:1.08;text-transform:uppercase;
+letter-spacing:-.01em;margin-bottom:14px}
+.cline{color:var(--mut);font-size:15px;max-width:58ch}
+.cvid{position:relative;border-radius:12px;overflow:hidden;
+border:1px solid var(--line)}
+.cvid video,.emedia video,.emedia img{width:100%;display:block;height:auto}
+.confpanel{border:1px dashed rgba(224,118,60,.5);border-radius:12px;
+min-height:240px;display:flex;align-items:center;justify-content:center;padding:36px}
+.badge{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;
+color:var(--acc);border:1px solid var(--acc);border-radius:4px;
+padding:10px 16px;white-space:nowrap}
 .simtag{position:absolute;top:10px;right:10px;font-family:"IBM Plex Mono",monospace;
 font-size:9.5px;letter-spacing:.12em;color:rgba(237,239,243,.85);
 background:rgba(10,13,18,.62);border-radius:4px;padding:3px 8px}
-.cbody{padding:16px 18px 20px;display:flex;flex-direction:column;flex:1}
-.cbody h3{font-size:17.5px;line-height:1.3;margin-bottom:8px;font-weight:600}
-.cline{color:var(--mut);font-size:13.5px}
-.more{margin-top:auto;padding-top:14px;font-family:"IBM Plex Mono",monospace;
-font-size:11px;letter-spacing:.1em;color:var(--acc)}
-.card.conf{border:1px dashed rgba(224,118,60,.45)}
-.badge{align-self:flex-start;margin-top:14px;font-family:"IBM Plex Mono",monospace;
-font-size:11px;letter-spacing:.14em;color:var(--acc);border:1px solid var(--acc);
-border-radius:4px;padding:7px 12px;white-space:nowrap}
+/* bands (video-backed) */
+.band{position:relative;overflow:hidden;border-block:1px solid var(--line)}
+.band>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+filter:brightness(.32) saturate(.85)}
+.band .inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;
+padding:64px 6vw}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px}
+.stat b{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:clamp(32px,4.2vw,54px);letter-spacing:-.01em;line-height:1}
+.stat span{display:block;margin-top:8px;font-family:"IBM Plex Mono",monospace;
+font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+/* experience */
+.xrow{display:grid;grid-template-columns:170px 1fr;gap:22px;padding:24px 0;
+border-top:1px solid var(--line)}
+.xrow:last-of-type{border-bottom:1px solid var(--line)}
+.xwhen{color:var(--mut);font-size:12px;letter-spacing:.06em;padding-top:4px;
+white-space:nowrap}
+.xmain h4{font-weight:600;font-size:16.5px}
+.xorg{color:var(--mut);font-weight:400}
+.xmain p{color:var(--mut);font-size:14.5px;margin-top:6px}
+/* education */
+.edurow{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.edurow p{color:var(--mut);font-size:14px;line-height:1.5}
+.edurow b{color:var(--ink);font-weight:600}
+.gpa{color:var(--acc)}
+.elogo{width:46px;height:46px;flex:none;object-fit:contain;
+background:rgba(237,239,243,.06);border:1px solid var(--line);
+border-radius:6px;padding:5px}
+.chipl{display:flex;align-items:center;justify-content:center;
+font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+color:var(--acc);letter-spacing:.05em}
+.xdate{font-size:11px;letter-spacing:.06em;color:var(--mut)}
+/* skills tickers */
+#skills{padding-bottom:34px}
+.tickers{border-block:1px solid var(--line);padding:30px 0;overflow:hidden}
+.trow{display:flex;white-space:nowrap;overflow:hidden}
+.trow+.trow{margin-top:18px}
+.tk{display:inline-flex;align-items:center;flex:none;
+animation:tkA 36s linear infinite}
+.trow.rev .tk{animation-direction:reverse}
+.tk span{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
+font-size:clamp(19px,2.5vw,32px);letter-spacing:.01em;text-transform:uppercase;
+padding:0 20px}
+.trow+.trow .tk span{color:var(--mut)}
+.tk i{color:var(--acc);font-style:normal;font-size:22px}
+@keyframes tkA{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.still .tk{animation-play-state:paused}
+/* film strip */
+.stripsec{padding-bottom:26px}
+.filmwrap{padding:0 6vw 40px;overflow-x:auto;scrollbar-width:thin}
+.film{display:flex;gap:12px;width:max-content;padding-bottom:8px}
+.cellv{height:300px;border-radius:10px;overflow:hidden;
+border:1px solid var(--line);flex:none}
+.cellv video{height:100%;width:auto;display:block}
 /* subpages */
-.subhead{padding-top:110px;padding-bottom:8px}
+.subhead{padding-top:130px;padding-bottom:8px}
 .back{display:inline-block;margin-bottom:26px;font-size:11.5px;
 letter-spacing:.1em;color:var(--mut);text-decoration:none;text-transform:uppercase}
 .back:hover,.back:focus-visible{color:var(--acc)}
@@ -119,37 +186,20 @@ color:var(--mut);letter-spacing:.04em}
 font-size:12px;letter-spacing:.1em;color:var(--acc);text-decoration:none;
 border-bottom:1px solid var(--acc)}
 .plink:hover,.plink:focus-visible{color:#EE8A4F}
-/* experience */
-.xrow{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px 0;
-border-top:1px solid var(--line)}
-.xrow:last-of-type{border-bottom:1px solid var(--line)}
-.xwhen{color:var(--mut);font-size:12px;letter-spacing:.06em;padding-top:4px;
-white-space:nowrap}
-.xmain h4{font-weight:600;font-size:16.5px}
-.xorg{color:var(--mut);font-weight:400}
-.xmain p{color:var(--mut);font-size:14.5px;margin-top:6px}
-/* education */
-.edu{margin-top:34px;display:grid;gap:12px}
-.edurow{display:flex;gap:14px;align-items:center}
-.edurow p{color:var(--mut);font-size:14.5px}
-.edurow b{color:var(--ink);font-weight:600}
-.gpa{color:var(--acc)}
-.elogo{width:44px;height:44px;flex:none;object-fit:contain;
-background:rgba(237,239,243,.06);border:1px solid var(--line);
-border-radius:6px;padding:5px}
-.chipl{display:flex;align-items:center;justify-content:center;
-font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
-color:var(--acc);letter-spacing:.05em}
-.xdate{font-size:11px;letter-spacing:.06em;color:var(--mut)}
 /* contact */
-.contact{text-align:center;padding-bottom:60px}
-.strip{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
-font-size:clamp(22px,3.6vw,44px);line-height:1.15;max-width:900px;margin:0 auto 30px}
-.strip em{font-style:normal;color:var(--acc)}
+.contact .inner{text-align:center;padding-top:110px;padding-bottom:96px}
+.cstrip{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+text-transform:uppercase;font-size:clamp(24px,4.4vw,56px);line-height:1.06;
+letter-spacing:-.01em;max-width:980px;margin:0 auto 34px}
+.cstrip em{font-style:normal;color:var(--acc)}
 .meta{margin-top:40px;color:var(--mut);font-size:13px}
 footer{padding:26px 6vw;border-top:1px solid var(--line);display:flex;
-justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--mut);
-font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.06em}
+align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+color:var(--mut);font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+letter-spacing:.06em}
+footer .fbrand{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:17px;color:var(--ink);letter-spacing:-.02em}
+footer .fbrand span{color:var(--acc)}
 /* motion pause (accessibility) */
 .mbtn{position:fixed;right:12px;bottom:12px;z-index:60;cursor:pointer;
 font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;
@@ -162,29 +212,37 @@ transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   .js .reveal{opacity:1;transform:none;transition:none}
-  .js .hwrap>*{opacity:1;animation:none !important}
+  .js .hf{opacity:1;animation:none !important}
+  .tk{animation:none}
   html{scroll-behavior:auto}}
 @media (max-width:860px){
+  .statement{grid-template-columns:1fr;gap:36px}
+  .chap{grid-template-columns:1fr;gap:20px;padding:44px 0}
+  .chap.alt .ctext{order:1}
+  .chap.alt .cvid,.chap.alt .confpanel{order:2}
   .entry{grid-template-columns:1fr}
   .xrow{grid-template-columns:1fr;gap:4px}
+  .cellv{height:220px}
+  .hname span.ol{-webkit-text-stroke-width:1.6px}
   section{padding:64px 6vw}}
 </style>
 </head>
 <body>
-<button id="feed" class="mbtn" aria-pressed="false" aria-label="Pause or resume all background footage">❚❚ pause motion</button>
+<button id="feed" class="mbtn" aria-pressed="false" aria-label="Pause or resume all motion">❚❚ pause motion</button>
+<nav id="nav"><a class="brand" href="index.html" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="index.html#top">HOME</a><a href="index.html#work">WORK</a><a href="index.html#experience">EXPERIENCE</a><a href="index.html#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="index.html#contact">CONTACT</a></div></nav>
 <section class="subhead">
-  <a class="back mono" href="index.html#projects">← ALL PROJECTS</a>
+  <a class="back mono" href="index.html#work">← ALL WORK</a>
   <p class="eyebrow">PLANETARY AUTONOMY · ROS 2</p>
   <h2>Space Robotics &amp; AI</h2>
-  <p class="sub-tag">Autonomy on planetary terrain - cooperative drone-rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.</p>
+  <p class="sub-tag">Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.</p>
 </section>
 <section class="entries" style="padding-top:0">
   <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="720" height="540" poster="assets/mars.jpg" src="assets/mars.mp4"></video><span class="simtag">SIMULATION</span></div>
+    <div class="emedia"><video autoplay muted loop playsinline width="720" height="538" poster="assets/mars.jpg" src="assets/mars.mp4"></video><span class="simtag">SIMULATION</span></div>
     <div class="ebody">
-      <p class="eyebrow">FLAGSHIP · ROS 2 + GAZEBO</p>
+      <p class="eyebrow">ROS 2 + GAZEBO</p>
       <h3>Aerial-Ground Cooperative Autonomy on Mars Terrain</h3>
-      <div class="chips"><span class="chip">WAYPOINTS · 18/18</span><span class="chip">FINAL ACCURACY · 0.73 m</span><span class="chip">LOCALIZATION GAIN · +24 %</span></div><p class="blurb">A drone surveys real HiRISE Jezero Crater terrain and builds a Bayesian occupancy map; a six-wheel rover navigates it with terrain-relative localization and A* replanning. Every number physics-simulated, none scripted.</p><p class="tech">ROS 2 · Gazebo · Python · NumPy · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/midterm_and_final_project" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">WAYPOINTS · 18/18</span><span class="chip">FINAL ACCURACY · 0.73 m</span><span class="chip">LOCALIZATION GAIN · +24 %</span></div><p class="blurb">A drone surveys real HiRISE Jezero Crater terrain and builds a Bayesian occupancy map. A six wheel rover navigates it with terrain relative localization and A* replanning. Every number physics simulated, none scripted.</p><p class="tech">ROS 2 · Gazebo · Python · NumPy · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/midterm_and_final_project" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
     </div>
   </article>
   <article class="entry reveal nomedia">
@@ -192,7 +250,7 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">PX4 + RTAB-MAP SLAM</p>
       <h3>Autonomous Drone Search, Map &amp; Precision Landing</h3>
-      <div class="chips"><span class="chip">MISSION SCORE · 150/150</span><span class="chip">LIVE 3D MESH · 43,283 VERTICES</span></div><p class="blurb">A nine-state autonomous mission: search for rock formations, identify ArUco markers while orbiting, select the tallest, land on top - with RTAB-Map building a dense 3D mesh live during flight. Footage joining the dossier soon.</p><p class="tech">ROS 2 · PX4 · RTAB-Map · OpenCV · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/terrain_mapping_drone_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">MISSION SCORE · 150/150</span><span class="chip">LIVE 3D MESH · 43,283 VERTICES</span></div><p class="blurb">A nine state autonomous mission: search for rock formations, identify ArUco markers while orbiting, select the tallest, and land on top, with RTAB-Map building a dense 3D mesh live during flight. Footage joining the page soon.</p><p class="tech">ROS 2 · PX4 · RTAB-Map · OpenCV · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/terrain_mapping_drone_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
     </div>
   </article>
   <article class="entry reveal nomedia">
@@ -200,7 +258,7 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">NASA ARCHIVE · 3D RECONSTRUCTION</p>
       <h3>Photogrammetry &amp; 3D Gaussian Splatting on Apollo 17 Imagery</h3>
-      <div class="chips"><span class="chip">SPLAT FIDELITY · 33.93 dB PSNR</span><span class="chip">MESH CROSS-CHECK · F-SCORE 0.934</span></div><p class="blurb">The Apollo 17 boulder rebuilt two independent ways from 15 archival Hasselblad frames - COLMAP + custom PyTorch multi-view stereo vs 3D Gaussian Splatting - with a rigorous negative result on splat-rendered views in SIFT pipelines.</p><p class="tech">COLMAP · PyTorch · Open3D · Nerfstudio · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/photogrammetry_gaussian_splatting_apollo17" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">SPLAT FIDELITY · 33.93 dB PSNR</span><span class="chip">MESH CROSS-CHECK · F-SCORE 0.934</span></div><p class="blurb">The Apollo 17 boulder rebuilt two independent ways from 15 archival Hasselblad frames: COLMAP with custom PyTorch multi view stereo versus 3D Gaussian Splatting, including a rigorous negative result on splat rendered views in SIFT pipelines.</p><p class="tech">COLMAP · PyTorch · Open3D · Nerfstudio · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/photogrammetry_gaussian_splatting_apollo17" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
     </div>
   </article>
   <article class="entry reveal nomedia">
@@ -208,7 +266,7 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">OPTIMAL CONTROL · LQR VS RL</p>
       <h3>LQR Optimal Control of a Cart-Pole Under Seismic Disturbance</h3>
-      <div class="chips"><span class="chip">STABILITY · 9.69/10</span><span class="chip">DISTURBANCE · 15 N · 0.5-4 Hz</span></div><p class="blurb">An LQR tuned to hold an inverted pendulum through earthquake-class disturbances, benchmarked against a self-trained DQN - model-based control wins, and the numbers show why.</p><p class="tech">ROS 2 · Gazebo · Python · PyTorch · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/cart_pole_optimal_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">STABILITY · 9.69/10</span><span class="chip">DISTURBANCE · 15 N · 0.5-4 Hz</span></div><p class="blurb">An LQR tuned to hold an inverted pendulum through earthquake class disturbances, benchmarked against a self trained DQN. Model based control wins, and the numbers show why.</p><p class="tech">ROS 2 · Gazebo · Python · PyTorch · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/cart_pole_optimal_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
     </div>
   </article>
   <article class="entry reveal nomedia">
@@ -216,22 +274,48 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">COVERAGE CONTROL</p>
       <h3>First-Order Boustrophedon Coverage Controller</h3>
-      <div class="chips"><span class="chip">CROSS-TRACK ERROR · -96.5 %</span></div><p class="blurb">A lawnmower coverage controller rebuilt from coupled PD into a TURN/DRIVE state machine - proof that control structure, not gain tuning, was the fix.</p><p class="tech">ROS 2 · Python · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/first_order_boustrophedon_navigator" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">CROSS-TRACK ERROR · -96.5 %</span></div><p class="blurb">A lawnmower coverage controller rebuilt from coupled PD into a TURN and DRIVE state machine. Proof that control structure, not gain tuning, was the fix.</p><p class="tech">ROS 2 · Python · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/first_order_boustrophedon_navigator" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
     </div>
   </article></section>
 <footer>
   <span>© 2026 Jatin Satyam</span>
-  <span><a href="index.html#projects" style="text-decoration:none">← ALL PROJECTS</a></span>
-  <span>jatinsatyam.in</span>
+  <span class="fbrand">JS<span>.</span></span>
+  <span><a href="index.html#work" style="text-decoration:none">← ALL WORK</a></span>
 </footer>
 <script>
 (function(){
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var H=document.documentElement;H.classList.add('booted');
+var nav=document.getElementById('nav'),hw=document.querySelector('.hwrap');
+var hh=Math.max(window.innerHeight,1);
+window.addEventListener('scroll',function(){var y=window.scrollY;
+  if(nav)nav.classList.toggle('solid',y>40);
+  if(hw&&!RM){if(y<hh){hw.style.transform='translateY('+(y*0.22)+'px)';
+    hw.style.opacity=Math.max(0,1-y/(hh*0.72))}}},{passive:true});
+if(nav)nav.classList.toggle('solid',window.scrollY>40);
 var io=new IntersectionObserver(function(es){es.forEach(function(e){
   if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},
   {rootMargin:'0px 0px -10% 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+/* stat count-up */
+function pad(v,l){v=String(v);while(v.length<l)v='0'+v;return v}
+var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;sio.unobserve(e.target);
+  var el=e.target,raw=el.dataset.v,m=raw.match(/^([^0-9]*)([0-9,.]+)(.*)$/);
+  if(!m||RM){el.textContent=raw;return}
+  var digits=m[2].replace(/,/g,''),num=parseFloat(digits),
+      dec=(digits.split('.')[1]||'').length,t0=null;
+  function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/900);
+    p=1-Math.pow(1-p,3);var v=(num*p).toFixed(dec);
+    if(m[2].indexOf(',')>-1)v=Number(v).toLocaleString('en-US');
+    else if(digits.charAt(0)==='0'&&dec===0)v=pad(Math.round(num*p),digits.length);
+    el.textContent=m[1]+v+m[3];if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step)})},{threshold:.4});
+document.querySelectorAll('.stat b').forEach(function(el){
+  el.dataset.v=el.textContent;
+  if(!RM)el.textContent=el.dataset.v.replace(/[0-9]/g,'0');
+  sio.observe(el)});
+/* video visibility + motion toggle */
 var vids=[].slice.call(document.querySelectorAll('video')),held=RM;
 function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}
 vids.forEach(function(v){if(RM){v.pause();v.removeAttribute('autoplay')}});
@@ -239,10 +323,12 @@ var pio=new IntersectionObserver(function(es){es.forEach(function(e){
   var v=e.target;v.dataset.vis=e.isIntersecting?'1':'';
   if(held||!e.isIntersecting)v.pause();else tryPlay(v)})},{rootMargin:'80px'});
 vids.forEach(function(v){pio.observe(v)});
+if(RM)document.body.classList.add('still');
 var mb=document.getElementById('feed');
 function ui(){mb.textContent=held?'\u25B8 play motion':'\u275A\u275A pause motion';
   mb.setAttribute('aria-pressed',held?'true':'false')}
 if(mb){ui();mb.addEventListener('click',function(){held=!held;ui();
+  document.body.classList.toggle('still',held);
   vids.forEach(function(v){if(held)v.pause();else if(v.dataset.vis)tryPlay(v)})})}
 })();
 </script>
