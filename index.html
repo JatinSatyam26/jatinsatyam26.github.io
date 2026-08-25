@@ -274,6 +274,35 @@ transition:box-shadow .18s ease,border-color .18s ease,color .18s ease}
 border-color:rgba(224,118,60,.55);color:var(--ink)}
 .js .mbtn{opacity:0;transition:opacity .3s ease}
 .js.booted .mbtn{opacity:1}
+/* ------- extended roster ------- */
+.xhead{display:flex;align-items:center;gap:10px;margin:34px 0 14px;
+font-size:11px;letter-spacing:.14em;color:var(--mut);text-transform:uppercase}
+.xgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+.xcard{background:var(--panel);border:1px solid var(--line);border-radius:2px;
+overflow:hidden;transition:transform .18s ease,border-color .18s ease}
+.xcard:hover,.xcard:focus-within{transform:translateY(-3px);
+border-color:rgba(224,118,60,.55)}
+.xcard a{text-decoration:none;display:block;color:inherit}
+.xpost{display:block;width:100%;height:auto;
+filter:brightness(.86) saturate(.8)}
+.xcb{padding:13px 14px 15px}
+.xcb h5{font-weight:600;font-size:14px;line-height:1.35;margin:4px 0 10px}
+.xcb .rrow{font-size:10.5px}
+.xgo{font-size:10.5px;margin-top:10px;display:inline-block}
+/* multi-paragraph experience + per-role readout chip */
+.xmain p+p{margin-top:8px}
+.xro{margin-top:10px;max-width:150px}
+.xro .rrow{font-size:10px;flex-wrap:wrap}
+.xro .rval{white-space:normal;text-align:left}
+/* education rows with crest slot */
+.edurow{display:flex;gap:14px;align-items:flex-start}
+.edurow+.edurow{margin-top:12px}
+.elogo{width:44px;height:44px;flex:none;object-fit:contain;
+background:rgba(232,236,241,.06);border:1px solid var(--line);
+border-radius:2px;padding:5px}
+.chipl{display:flex;align-items:center;justify-content:center;
+font-family:"Space Mono",monospace;font-size:12px;font-weight:700;
+color:var(--acc);letter-spacing:.05em}
 /* ------- reveal ------- */
 .js .reveal{opacity:0;transform:translateY(14px);
 transition:opacity .5s ease,transform .5s ease}
@@ -355,65 +384,97 @@ transition:opacity .5s ease,transform .5s ease}
   <div class="lensrow"><span class="lenslab">FILTER:</span><button class="lens on" data-lens="all" aria-pressed="true">ALL</button><button class="lens" data-lens="robotics" aria-pressed="false">ROBOTICS</button><button class="lens" data-lens="mechatronics" aria-pressed="false">MECHATRONICS</button><button class="lens" data-lens="controls" aria-pressed="false">CONTROLS</button><button class="lens" data-lens="systems" aria-pressed="false">SYSTEMS</button><button class="lens" data-lens="mechanical" aria-pressed="false">MECHANICAL</button><span id="lenslive" class="vh" aria-live="polite"></span></div>
   
   <article class="feature reveal" data-lens="robotics systems">
-    <div class="vport"><video autoplay muted loop playsinline width="720" height="540" poster="assets/mars.jpg" src="assets/mars.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>JS-05 · JEZERO CRATER SIM · ROS 2 / GAZEBO</span><span class="vst"><i class="dot ok"></i>SIM NOMINAL</span></div></div>
+    <div class="vport"><video autoplay muted loop playsinline width="720" height="540" poster="assets/mars.jpg" src="assets/mars.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>JS-05 · MISSION SUPERCUT · SURVEY → LAND → TRAVERSE</span><span class="vst"><i class="dot ok"></i>SIM NOMINAL</span></div></div>
     <div class="fbody">
       <p class="eyebrow">PLANETARY AUTONOMY · ROS 2 + GAZEBO</p>
       <h3>Aerial-Ground Cooperative Autonomy on Mars Terrain</h3>
       <div class="readouts"><div class="rrow"><span class="rlab">WAYPOINTS</span><span class="rdots"></span><span class="rval" data-val="18" data-suf="/18">18/18</span></div><div class="rrow"><span class="rlab">FINAL ACCURACY</span><span class="rdots"></span><span class="rval" data-val="0.73" data-dec="2" data-suf=" m">0.73 m</span></div><div class="rrow"><span class="rlab">LOCALIZATION GAIN</span><span class="rdots"></span><span class="rval" data-val="24" data-pre="+" data-suf=" %">+24 %</span></div></div>
       <p class="blurb">A drone surveys real HiRISE Jezero Crater terrain and builds a Bayesian occupancy map; a six-wheel rover uses it to navigate with terrain-relative localization and A* replanning. Every number physics-simulated, none scripted.</p>
       <p class="tech">ROS 2 · Gazebo · Python · NumPy · 2026</p>
-      <a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026" target="_blank" rel="noopener">▸ CODE &amp; FULL REPORT</a>
+      <a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/midterm_and_final_project" target="_blank" rel="noopener">▸ CODE &amp; FULL REPORT</a>
     </div>
   </article>
   <div class="grid">
     <article class="card reveal" data-lens="robotics mechatronics">
       <div class="idbar"><span class="aid">JS-01</span><span class="ast"><i class="dot ok"></i>DEPLOYED</span></div>
       <a href="https://youtube.com/shorts/_HYQI9ThReQ" target="_blank" rel="noopener">
-        <div class="vport"><video autoplay muted loop playsinline width="640" height="482" poster="assets/dobot.jpg" src="assets/dobot.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 01 · REAL HARDWARE · PHONE FOOTAGE</span></div></div>
+        <div class="vport"><video autoplay muted loop playsinline width="640" height="482" poster="assets/dobot.jpg" src="assets/dobot.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 01 · REAL HARDWARE · LAB SUPERCUT</span></div></div>
         <div class="cbody">
           <p class="eyebrow">LLM × PHYSICAL ROBOT</p>
           <h4>Natural-Language Robotic Manipulation with LLM Control</h4>
-          <p class="cline">Talk to a robot arm - an LLM parses the command, vision finds the blocks, the arm executes at ±2 mm.</p>
+          <p class="cline">Talk to a robot arm - an LLM parses the command, vision finds the blocks, the arm executes at ±2 mm. Behind it: a semester of Dobot labs - vision tic-tac-toe, FK/IK, suction and gripper builds.</p>
           <div class="rrow"><span class="rlab">PRECISION</span><span class="rdots"></span><span class="rval" data-val="2" data-pre="±" data-suf=" mm">±2 mm</span></div>
-        </div>
-      </a>
+        </div></a>
     </article>
     <article class="card reveal" data-lens="robotics controls mechatronics">
       <div class="idbar"><span class="aid">JS-02</span><span class="ast"><i class="dot ok"></i>DEPLOYED</span></div>
-      <a href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">
-        <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/mambo.jpg" src="assets/mambo.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 02 · REAL HARDWARE · FLIGHT TEST</span></div></div>
+      <div class="nolink">
+        <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/mambo.jpg" src="assets/mambo.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 02 · REAL HARDWARE · TARGET LANDING</span></div></div>
         <div class="cbody">
           <p class="eyebrow">FLIGHT CONTROL · REAL HARDWARE</p>
           <h4>Quadrotor Flight Control Suite - Attitude, Hover &amp; Waypoint Following</h4>
-          <p class="cline">Simulink attitude, hover, and waypoint controllers - flight-tested on a physical Parrot Mambo.</p>
+          <p class="cline">Simulink attitude, hover, and waypoint controllers flight-tested on a physical Parrot Mambo - through to autonomous line-following and landing on a target platform.</p>
           <div class="rrow"><span class="rlab">PLATFORM</span><span class="rdots"></span><span class="rval txt">PARROT MAMBO / FLOWN</span></div>
-        </div>
-      </a>
+        </div></div>
     </article>
     <article class="card reveal" data-lens="mechanical systems">
       <div class="idbar"><span class="aid">JS-03</span><span class="ast"><i class="dot ok"></i>DEPLOYED</span></div>
-      <a href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">
+      <div class="nolink">
         <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/gyro.jpg" src="assets/gyro.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 03 · REAL HARDWARE · BENCH TEST</span></div></div>
         <div class="cbody">
           <p class="eyebrow">ROTORDYNAMICS · DEFENCE HARDWARE</p>
           <h4>Gyro Motor Rotor Development</h4>
           <p class="cline">8 rotor designs screened in ANSYS, the winner built and FFT-validated at a 28,000 rpm operating point.</p>
           <div class="rrow"><span class="rlab">ROTOR</span><span class="rdots"></span><span class="rval" data-val="28000" data-group="1" data-suf=" RPM">28,000 RPM</span></div>
-        </div>
-      </a>
+        </div></div>
     </article>
     <article class="card reveal" data-lens="controls systems robotics">
       <div class="idbar"><span class="aid">JS-04</span><span class="ast"><i class="dot ok"></i>SIM VERIFIED</span></div>
-      <a href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">
+      <div class="nolink">
         <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/stretch3.jpg" src="assets/stretch3.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>FIG. 04 · SIMULATION · MUJOCO</span></div></div>
         <div class="cbody">
           <p class="eyebrow">MODELING &amp; CONTROL · MUJOCO</p>
           <h4>Mobile-Manipulator Pick &amp; Place - State-Space Modeling and Control</h4>
           <p class="cline">A Stretch3 mobile manipulator modeled, formally proven controllable &amp; stable, and simulated across 8 DOF.</p>
-          <div class="rrow"><span class="rlab">LQR STABILITY</span><span class="rdots"></span><span class="rval" data-val="9.69" data-dec="2" data-suf="/10">9.69/10</span></div>
-        </div>
-      </a>
+          <div class="rrow"><span class="rlab">STATE-SPACE</span><span class="rdots"></span><span class="rval" data-val="8" data-suf=" DOF · PROVEN STABLE">8 DOF · PROVEN STABLE</span></div>
+        </div></div>
     </article></div>
+  <div class="xhead mono reveal"><span class="sidx">[ + ]</span> EXTENDED TELEMETRY — MORE UNITS</div><div class="xgrid">
+      <article class="xcard reveal" data-lens="robotics systems">
+        <div class="idbar"><span class="aid">JS-07</span><span class="ast"><i class="dot ok"></i>SIM VERIFIED</span></div>
+        <a href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/photogrammetry_gaussian_splatting_apollo17" target="_blank" rel="noopener"><div class="xcb">
+          <p class="eyebrow">3D RECONSTRUCTION · NASA ARCHIVE</p>
+          <h5>Photogrammetry &amp; 3D Gaussian Splatting on Apollo 17 Imagery</h5><div class="rrow"><span class="rlab">SPLAT FIDELITY</span><span class="rdots"></span><span class="rval" data-val="33.93" data-dec="2" data-suf=" dB PSNR">33.93 dB PSNR</span></div>
+          <span class="plink xgo">▸ OPEN</span></div></a>
+      </article>
+      <article class="xcard reveal" data-lens="robotics controls">
+        <div class="idbar"><span class="aid">JS-08</span><span class="ast"><i class="dot ok"></i>SIM VERIFIED</span></div>
+        <a href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/terrain_mapping_drone_control" target="_blank" rel="noopener"><div class="xcb">
+          <p class="eyebrow">AERIAL AUTONOMY · PX4 + RTAB-MAP</p>
+          <h5>Autonomous Drone Search, Map &amp; Precision Landing</h5><div class="rrow"><span class="rlab">MISSION SCORE</span><span class="rdots"></span><span class="rval" data-val="150" data-suf="/150">150/150</span></div>
+          <span class="plink xgo">▸ OPEN</span></div></a>
+      </article>
+      <article class="xcard reveal" data-lens="controls systems">
+        <div class="idbar"><span class="aid">JS-09</span><span class="ast"><i class="dot ok"></i>SIM VERIFIED</span></div>
+        <a href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/cart_pole_optimal_control" target="_blank" rel="noopener"><div class="xcb">
+          <p class="eyebrow">OPTIMAL CONTROL · LQR VS RL</p>
+          <h5>LQR Optimal Control of a Cart-Pole Under Seismic Disturbance</h5><div class="rrow"><span class="rlab">STABILITY</span><span class="rdots"></span><span class="rval" data-val="9.69" data-dec="2" data-suf="/10">9.69/10</span></div>
+          <span class="plink xgo">▸ OPEN</span></div></a>
+      </article>
+      <article class="xcard reveal" data-lens="mechanical">
+        <div class="idbar"><span class="aid">JS-10</span><span class="ast"><i class="dot ok"></i>ANALYZED</span></div>
+        <img class="xpost" src="assets/cfd.jpg" alt="" loading="lazy"><div class="xcb">
+          <p class="eyebrow">AERODYNAMICS · ANSYS FLUENT</p>
+          <h5>Aircraft Wing CFD - NACA Airfoil Study</h5><div class="rrow"><span class="rlab">CONDITION</span><span class="rdots"></span><span class="rval" data-val="10" data-suf="° AoA @ 48 m/s">10° AoA @ 48 m/s</span></div>
+          </div>
+      </article>
+      <article class="xcard reveal" data-lens="controls robotics">
+        <div class="idbar"><span class="aid">JS-11</span><span class="ast"><i class="dot ok"></i>SIM VERIFIED</span></div>
+        <a href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/first_order_boustrophedon_navigator" target="_blank" rel="noopener"><div class="xcb">
+          <p class="eyebrow">COVERAGE CONTROL · ROS 2</p>
+          <h5>First-Order Boustrophedon Coverage Controller</h5><div class="rrow"><span class="rlab">CROSS-TRACK ERROR</span><span class="rdots"></span><span class="rval" data-val="96.5" data-dec="1" data-pre="-" data-suf=" %">-96.5 %</span></div>
+          <span class="plink xgo">▸ OPEN</span></div></a>
+      </article></div>
   
   <article class="conf reveal" data-lens="mechanical systems">
     <div class="idbar"><span class="aid">JS-06</span><span class="ast rst"><i class="dot rd"></i>RESTRICTED</span></div>
@@ -434,21 +495,25 @@ transition:opacity .5s ease,transform .5s ease}
   <h2 class="wipe">Experience</h2>
   <div class="xwrap">
       <div class="xrow reveal">
-        <div class="xwhen mono"><span class="tick">▸</span> 2025.01–07</div>
+        <div class="xwhen mono"><span class="tick">▸</span> 2025.01–07<div class="readouts xro"><div class="rrow"><span class="rlab">SCOPE</span><span class="rdots"></span><span class="rval txt">DESIGN → TEST → PLM</span></div></div></div>
         <div class="xmain"><h4>Mechatronics Engineer Intern <span class="xorg">· Paras Defence &amp; Space Technologies</span></h4>
-        <p>Full-time at graduate-engineer scope: cryocooler mechanisms in SolidWorks/NX, 25+ instrumented thermal runs, design changes that cut prototype rework 12%.</p></div>
+        <p>Full-time at graduate-engineer scope on cryogenic cooling hardware for defence and space platforms: Gifford-McMahon cryocooler mechanisms designed and iterated in SolidWorks and NX.</p><p>Led performance testing across 3 cooling assemblies and 25+ instrumented thermal runs - the loss data drove mechanism-level design changes that cut prototype rework by 12%.</p><p>Built a vacuum-insulated LN2 generation unit, ran a UAV lightweighting study to an 8% mass cut, delivered 30+ CAD releases (review turnaround down 20%), and owned PLM lifecycles across 3 projects.</p></div>
       </div>
       <div class="xrow reveal">
-        <div class="xwhen mono"><span class="tick">▸</span> 2024.08–11</div>
+        <div class="xwhen mono"><span class="tick">▸</span> 2024.08–11<div class="readouts xro"><div class="rrow"><span class="rlab">WORKFLOW</span><span class="rdots"></span><span class="rval txt">MESH → SOLVE → ANALYZE</span></div></div></div>
         <div class="xmain"><h4>CFD Intern <span class="xorg">· MARS Exploration</span></h4>
-        <p>3D airfoil CFD in ANSYS Fluent - meshing, boundary layers, and lift/drag studies for aircraft wing efficiency.</p></div>
+        <p>3D CFD of NACA 23012 vs 4412 airfoils in ANSYS Fluent - aerodynamic efficiency of an aircraft wing at 10° angle of attack and 48 m/s.</p><p>Owned the full workflow: geometry, boundary-layer meshing with quality checks, solver convergence, and post-processing of pressure, turbulence, and pathline fields.</p></div>
       </div>
       <div class="xrow reveal">
-        <div class="xwhen mono"><span class="tick">▸</span> 2023.05–08</div>
+        <div class="xwhen mono"><span class="tick">▸</span> 2023.05–08<div class="readouts xro"><div class="rrow"><span class="rlab">DOMAIN</span><span class="rdots"></span><span class="rval" data-val="70" data-pre="CRYO · " data-suf=" K">CRYO · 70 K</span></div></div></div>
         <div class="xmain"><h4>R&amp;D Engineer Intern <span class="xorg">· TriQual Cryogenics</span></h4>
-        <p>Stirling-cycle cryocoolers near 70 K - mechanical design and vibration control on reciprocating assemblies.</p></div>
+        <p>Stirling-cycle cryocoolers operating near 70 K - mechanical design and vibration control on reciprocating assemblies, alongside senior engineers.</p><p>The gyro motor thread here became my year-long BE industry project: 8 rotor designs screened in ANSYS, the winner built and FFT-validated at 28,000 rpm.</p></div>
       </div></div>
-  <div class="edu reveal"><p><b>M.S. Robotics and Autonomous Systems (Systems Engineering)</b> — Arizona State University <span class="mono xdate">Expected May 2027</span></p><div class="readouts eduro"><div class="rrow"><span class="rlab">MS GPA</span><span class="rdots"></span><span class="rval" data-val="3.67" data-dec="2" data-suf="/4.0">3.67/4.0</span></div></div><p><b>B.E. Mechanical Engineering</b> — University of Mumbai <span class="mono xdate">2020 - 2024</span></p><p class="mono certs">MATLAB Onramp - MathWorks, 2026 · Simulink Onramp - MathWorks, 2026</p></div>
+  <div class="edu reveal"><div class="edurow"><span class="elogo chipl" aria-hidden="true">ASU</span>
+          <div><p><b>M.S. Robotics and Autonomous Systems (Systems Engineering)</b> — Arizona State University
+          <span class="mono xdate">Expected May 2027</span></p><div class="readouts eduro"><div class="rrow"><span class="rlab">MS GPA</span><span class="rdots"></span><span class="rval" data-val="3.67" data-dec="2" data-suf="/4.0">3.67/4.0</span></div></div></div></div><div class="edurow"><span class="elogo chipl" aria-hidden="true">UM</span>
+          <div><p><b>B.E. Mechanical Engineering</b> — University of Mumbai
+          <span class="mono xdate">2020 - 2024</span></p></div></div></div>
 </section>
 
 <section class="contact" id="contact" data-view="04 · ESTABLISH LINK">
