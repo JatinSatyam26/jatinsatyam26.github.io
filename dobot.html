@@ -4,24 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>Jatin Satyam — Robotics &amp; Autonomous Systems Engineer</title>
-<meta name="description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
-<link rel="canonical" href="https://jatinsatyam.in/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jatin Satyam — I build machines that move and think">
-<meta property="og:description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
-<meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
-<meta property="og:url" content="https://jatinsatyam.in/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jatin Satyam — I build machines that move and think">
-<meta name="twitter:description" content="Jatin Satyam builds machines that move and think — robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems @ ASU.">
-<meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
+<title>Robot Arm Manipulation Lab — Jatin Satyam</title>
+<meta name="description" content="A semester of physical robot-arm work on the Dobot Magician Lite - from natural-language control to drawing games, mazes, kinematics, and end-effector builds. — Jatin Satyam">
+<link rel="canonical" href="https://jatinsatyam.in/dobot.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%23070A0E'/%3E%3Cpath%20fill='none'%20stroke='%23E0763C'%20stroke-width='3'%20d='M10%2022V10h12M42%2010h12v12M54%2042v12H42M22%2054H10V42'/%3E%3Ccircle%20cx='32'%20cy='32'%20r='4'%20fill='%23E0763C'/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Space+Grotesk:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Jatin Satyam", "url": "https://jatinsatyam.in/", "email": "mailto:jsatyam@asu.edu", "sameAs": ["https://linkedin.com/in/jatin-satyam", "https://github.com/JatinSatyam26"], "jobTitle": "Robotics & Autonomous Systems Engineer", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Arizona State University"}, {"@type": "CollegeOrUniversity", "name": "University of Mumbai"}], "knowsAbout": ["Robotics", "Mechatronics", "Control Systems", "Mechanical Design", "Autonomous Systems"]}</script>
 <style>
 :root{--bg:#070A0E;--panel:#0D1117;--panel-2:#111722;--ink:#E8ECF1;
 --mut:#8B96A5;--line:rgba(139,150,165,.16);--grid:rgba(139,150,165,.05);
@@ -387,153 +376,91 @@ transition:opacity .5s ease,transform .5s ease}
   .hudbot{display:none}}
 </style>
 </head>
-<body>
+<body class="sub">
 
 <div class="hud" aria-hidden="true">
   <div class="hudframe"><i class="cnr"></i><i class="cnr x"></i></div>
   <div class="hudtop">
     <span>JSAT — GROUND STATION</span>
-    <span class="hc">33.42°N 111.93°W / TEMPE AZ</span>
+    <span class="hc">DOSSIER · DOBOT LAB</span>
     <span>T+ <span id="utc">--:--:--</span> UTC</span>
-  </div>
-  <div class="hudbot">
-    <span id="hview">VIEW: 00 · GROUND STATION</span>
-    <span id="hscroll">SCROLL 000%</span>
   </div>
 </div>
 
 <button id="feed" class="mbtn" aria-pressed="false"
   aria-label="Pause or resume all background footage">[ ⏸ FEED: LIVE ]</button>
 
-<header class="hero" data-view="00 · GROUND STATION">
-  <video class="hbg" autoplay muted loop playsinline width="1440" height="810"
-    poster="assets/hero_bg.jpg" src="assets/hero_bg.mp4"></video>
-  <div class="hshade"></div>
-  <div class="hwrap">
-    <p class="eyebrow hey">TRACKING: ROBOTICS &amp; AUTONOMOUS SYSTEMS — MS @ ASU</p>
-    <h1 class="hname"><span>JATIN</span><span>SATYAM</span></h1>
-    <p class="htag">I build machines that move and think.</p>
-    <div class="hcta">
-      <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">[ ↓ RESUME.PDF — 1 PAGE ]</a>
-      <a class="btn" href="#projects">[ OPEN THE DOSSIERS ]</a>
+<section class="subhead">
+  <a class="back mono" href="index.html#projects">◂ RETURN TO STATION</a>
+  <div class="shead"><span class="sidx">[ JS-01 ]</span>
+  <span class="slbl">DOBOT LAB DOSSIER</span><span class="srule"></span></div>
+  <h2 class="wipe in">Robot Arm Manipulation Lab</h2>
+  <p class="sub-tag">A semester of physical robot-arm work on the Dobot Magician Lite - from natural-language control to drawing games, mazes, kinematics, and end-effector builds.</p>
+</section>
+
+<section class="entries">
+  <article class="entry reveal">
+    <div class="emedia"><div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/d_llm.jpg" src="assets/d_llm.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>REAL HARDWARE · LLM COMMAND SESSION</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div></div>
+    <div class="ebody">
+      <p class="eidx mono">FILE 01</p>
+      <p class="eyebrow">LLM × PHYSICAL ROBOT · FINAL PROJECT</p>
+      <h3>Natural-Language Robotic Manipulation with LLM Control</h3>
+      <div class="readouts"><div class="rrow"><span class="rlab">XY PRECISION</span><span class="rdots"></span><span class="rval" data-val="2" data-pre="±" data-suf=" mm">±2 mm</span></div><div class="rrow"><span class="rlab">PICK-PLACE CYCLE</span><span class="rdots"></span><span class="rval" data-val="15" data-suf="-30 s">15-30 s</span></div></div><p class="blurb">Talk to the arm in plain English - an LLM parses the command, HSV vision locates the blocks, a least-squares affine calibration maps camera to robot coordinates, and stack-aware state memory survives multi-step instructions.</p><p class="tech">Python · OpenCV · LangChain · Dobot · 2025</p><a class="plink" href="https://youtube.com/shorts/_HYQI9ThReQ" target="_blank" rel="noopener">▸ CODE &amp; REPORT</a>
     </div>
-    <p class="hcredit">BG: AUTOMATE 2026 SHOW FLOOR</p>
-  </div>
-</header>
-
-<div class="stats" data-view="01 · TELEMETRY"><div class="stat reveal"><span class="slab"><i class="dot ok"></i>robots &amp; systems built</span><b data-val="09" data-pad="2">09</b></div><div class="stat reveal"><span class="slab"><i class="dot ok"></i>engineering internships</span><b data-val="03" data-pad="2">03</b></div><div class="stat reveal"><span class="slab"><i class="dot ok"></i>rpm rotor, flight-proven</span><b data-val="28000" data-group="1">28,000</b></div><div class="stat reveal"><span class="slab"><i class="dot ok"></i>vision-guided precision</span><b data-val="2" data-pre="±" data-suf=" mm">±2 mm</b></div></div>
-
-<section id="projects" data-view="02 · PROJECT DOSSIERS">
-  <div class="shead reveal"><span class="sidx">[ 02 ]</span><span class="slbl">PROJECT DOSSIERS</span><span class="srule"></span></div>
-  <h2 class="wipe">Robots I&#x27;ve built &amp; taught</h2>
-  <div class="folders"><a class="folder reveal" href="dobot.html"><span class="ftab mono">DOBOT LAB</span>
-      <div class="fbody">
-        <div class="idbar"><span class="aid">JS-01</span><span class="fcount">06 FILES</span></div>
-        <div class="vport"><video autoplay muted loop playsinline width="640" height="482" poster="assets/dobot.jpg" src="assets/dobot.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>REAL HARDWARE · LAB REEL</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div>
-        <div class="fmeta">
-          <h3>Robot Arm Manipulation Lab</h3>
-          <p class="feyebrow eyebrow">LLM CONTROL · VISION · KINEMATICS</p>
-          
-        </div>
-        <div class="fopen mono">▸ OPEN DOSSIER — ALL RELATED PROJECTS</div>
-      </div></a><a class="folder reveal" href="mambo.html"><span class="ftab mono">MAMBO FLIGHT</span>
-      <div class="fbody">
-        <div class="idbar"><span class="aid">JS-02</span><span class="fcount">04 FILES</span></div>
-        <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/mambo.jpg" src="assets/mambo.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>REAL HARDWARE · TARGET LANDING</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div>
-        <div class="fmeta">
-          <h3>Parrot Mambo Flight Test Program</h3>
-          <p class="feyebrow eyebrow">FLIGHT CONTROL · REAL DRONE</p>
-          
-        </div>
-        <div class="fopen mono">▸ OPEN DOSSIER — ALL RELATED PROJECTS</div>
-      </div></a><a class="folder reveal" href="space.html"><span class="ftab mono">SPACE ROBOTICS</span>
-      <div class="fbody">
-        <div class="idbar"><span class="aid">JS-03</span><span class="fcount">05 FILES</span></div>
-        <div class="vport"><video autoplay muted loop playsinline width="720" height="540" poster="assets/mars.jpg" src="assets/mars.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>MISSION SUPERCUT · SURVEY → LAND → TRAVERSE</span><span class="vst"><i class="dot ok"></i>SIM NOMINAL</span></div></div>
-        <div class="fmeta">
-          <h3>Space Robotics &amp; AI</h3>
-          <p class="feyebrow eyebrow">PLANETARY AUTONOMY · ROS 2</p>
-          
-        </div>
-        <div class="fopen mono">▸ OPEN DOSSIER — ALL RELATED PROJECTS</div>
-      </div></a><article class="folder reveal"><span class="ftab mono">CONTROLS</span>
-      <div class="fbody">
-        <div class="idbar"><span class="aid">JS-04</span><span class="fcount">SINGLE FILE</span></div>
-        <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/stretch3.jpg" src="assets/stretch3.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>SIMULATION · MUJOCO</span><span class="vst"><i class="dot ok"></i>SIM VERIFIED</span></div></div>
-        <div class="fmeta">
-          <h3>MuJoCo Mobile Manipulation</h3>
-          <p class="feyebrow eyebrow">STATE-SPACE · FORMALLY PROVEN</p>
-          <p class="fline">A Stretch3 mobile manipulator modeled analytically, formally proven controllable, observable, and stable, then simulated across 8 DOF with PD and LQR.</p><div class="readouts fro"><div class="rrow"><span class="rlab">STATE-SPACE</span><span class="rdots"></span><span class="rval" data-val="8" data-suf=" DOF · PROVEN STABLE">8 DOF · PROVEN STABLE</span></div></div>
-        </div>
-        
-      </div></article><article class="folder reveal"><span class="ftab mono">MECH / MECHATRONICS</span>
-      <div class="fbody">
-        <div class="idbar"><span class="aid">JS-05</span><span class="fcount">SINGLE FILE</span></div>
-        <div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/gyro.jpg" src="assets/gyro.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>REAL HARDWARE · FFT BENCH TEST</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div>
-        <div class="fmeta">
-          <h3>Gyro Motor Rotor Development</h3>
-          <p class="feyebrow eyebrow">ROTORDYNAMICS · DEFENCE HARDWARE</p>
-          <p class="fline">8 rotor designs screened in ANSYS rotordynamics; the winner built and FFT-validated on an instrumented bench at a 28,000 rpm operating point.</p><div class="readouts fro"><div class="rrow"><span class="rlab">ROTOR</span><span class="rdots"></span><span class="rval" data-val="28000" data-group="1" data-suf=" RPM">28,000 RPM</span></div></div>
-        </div>
-        
-      </div></article><article class="folder reveal rst"><span class="ftab mono">INNOVATION</span>
-      <div class="fbody">
-        <div class="idbar"><span class="aid">JS-06</span><span class="fcount">RESTRICTED</span></div>
-        <div class="fconf"><p class="ctext">An assistive smart cup for dysphagia patients, built with a clinical team at Dignity Health. I owned the initial concept and the complete mechanical design. Details stay under wraps while the invention disclosure is with ASU&#x27;s technology transfer office - ask me about it in person.</p><div class="redrows"><div class="rrow"><span class="rlab">MECHANISM</span><span class="rdots"></span><span class="rval blocks" aria-hidden="true">▓▓▓▓▓▓▓▓</span></div><div class="rrow"><span class="rlab">CLINICAL DATA</span><span class="rdots"></span><span class="rval blocks" aria-hidden="true">▓▓▓▓▓▓</span></div><span class="vh">details confidential</span></div><span class="badge">PATENT PROCESS UNDERWAY</span></div>
-        <div class="fmeta">
-          <h3>SipSafe Smart Cup</h3>
-          <p class="feyebrow eyebrow">ASSISTIVE DEVICE · WITH DIGNITY HEALTH</p>
-          
-        </div>
-        
-      </div></article></div>
-</section>
-
-<section id="about" data-view="03 · FLIGHT CREW RECORDS">
-  <div class="shead reveal"><span class="sidx">[ 03 ]</span><span class="slbl">FLIGHT CREW RECORDS</span><span class="srule"></span></div>
-  <h2 class="wipe">Experience</h2>
-  <div class="xwrap">
-      <div class="xrow reveal">
-        <div class="xwhen mono"><span class="tick">▸</span> 2025.01–07<div class="readouts xro"><div class="rrow"><span class="rlab">SCOPE</span><span class="rdots"></span><span class="rval txt">DESIGN → TEST → PLM</span></div></div></div>
-        <div class="xmain"><h4>Mechatronics Engineer Intern <span class="xorg">· Paras Defence &amp; Space Technologies</span></h4>
-        <p>Full-time at graduate-engineer scope on cryogenic cooling hardware for defence and space platforms: Gifford-McMahon cryocooler mechanisms designed and iterated in SolidWorks and NX.</p><p>Led performance testing across 3 cooling assemblies and 25+ instrumented thermal runs - the loss data drove mechanism-level design changes that cut prototype rework by 12%.</p><p>Built a vacuum-insulated LN2 generation unit, ran a UAV lightweighting study to an 8% mass cut, delivered 30+ CAD releases (review turnaround down 20%), and owned PLM lifecycles across 3 projects.</p></div>
-      </div>
-      <div class="xrow reveal">
-        <div class="xwhen mono"><span class="tick">▸</span> 2024.08–11<div class="readouts xro"><div class="rrow"><span class="rlab">WORKFLOW</span><span class="rdots"></span><span class="rval txt">MESH → SOLVE → ANALYZE</span></div></div></div>
-        <div class="xmain"><h4>CFD Intern <span class="xorg">· MARS Exploration</span></h4>
-        <p>3D CFD of NACA 23012 vs 4412 airfoils in ANSYS Fluent - aerodynamic efficiency of an aircraft wing at 10° angle of attack and 48 m/s.</p><p>Owned the full workflow: geometry, boundary-layer meshing with quality checks, solver convergence, and post-processing of pressure, turbulence, and pathline fields.</p></div>
-      </div>
-      <div class="xrow reveal">
-        <div class="xwhen mono"><span class="tick">▸</span> 2023.05–08<div class="readouts xro"><div class="rrow"><span class="rlab">DOMAIN</span><span class="rdots"></span><span class="rval" data-val="70" data-pre="CRYO · " data-suf=" K">CRYO · 70 K</span></div></div></div>
-        <div class="xmain"><h4>R&amp;D Engineer Intern <span class="xorg">· TriQual Cryogenics</span></h4>
-        <p>Stirling-cycle cryocoolers operating near 70 K - mechanical design and vibration control on reciprocating assemblies, alongside senior engineers.</p><p>The gyro motor thread here became my year-long BE industry project: 8 rotor designs screened in ANSYS, the winner built and FFT-validated at 28,000 rpm.</p></div>
-      </div></div>
-  <div class="edu reveal"><div class="edurow"><img class="elogo" src="assets/logo_asu.png" alt="" loading="lazy">
-          <div><p><b>M.S. Robotics and Autonomous Systems (Systems Engineering)</b> — Arizona State University
-          <span class="mono xdate">Expected May 2027</span></p><div class="readouts eduro"><div class="rrow"><span class="rlab">MS GPA</span><span class="rdots"></span><span class="rval" data-val="3.67" data-dec="2" data-suf="/4.0">3.67/4.0</span></div></div></div></div><div class="edurow"><img class="elogo" src="assets/logo_mumbai.png" alt="" loading="lazy">
-          <div><p><b>B.E. Mechanical Engineering</b> — University of Mumbai
-          <span class="mono xdate">2020 - 2024</span></p></div></div></div>
-</section>
-
-<section class="contact" id="contact" data-view="04 · ESTABLISH LINK">
-  <div class="shead reveal"><span class="sidx">[ 04 ]</span><span class="slbl">ESTABLISH LINK</span><span class="srule"></span></div>
-  <p class="strip reveal">OPEN TO <em>ROBOTICS</em> INTERNSHIPS &amp; FULL-TIME ROLES - GRADUATING MAY 2027</p>
-  <div class="hcta" style="justify-content:center">
-    <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">[ ↓ RESUME.PDF ]</a>
-    <a class="btn" href="mailto:jsatyam@asu.edu">[ EMAIL ]</a>
-    <a class="btn" href="https://linkedin.com/in/jatin-satyam" target="_blank" rel="noopener">[ LINKEDIN ]</a>
-    <a class="btn" href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">[ GITHUB ]</a>
-  </div>
-  <p class="meta reveal">NOTE: One memory file drives my resumes and this site - both generated by an agent pipeline I built.</p>
-</section>
+  </article>
+  <article class="entry reveal">
+    <div class="emedia"><div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/d_ttt.jpg" src="assets/d_ttt.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>REAL HARDWARE · PEN END-EFFECTOR</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div></div>
+    <div class="ebody">
+      <p class="eidx mono">FILE 02</p>
+      <p class="eyebrow">GAME AUTONOMY · MIDTERM</p>
+      <h3>Vision Tic-Tac-Toe - The Arm Draws Its Moves</h3>
+      <div class="readouts"><div class="rrow"><span class="rlab">END-EFFECTOR</span><span class="rdots"></span><span class="rval txt">PEN / DRAWN MOVES</span></div></div><p class="blurb">The midterm build: the arm plays tic-tac-toe against a human and physically draws its own moves with a pen end-effector.</p>
+    </div>
+  </article>
+  <article class="entry reveal">
+    <div class="emedia"><div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/d_maze.jpg" src="assets/d_maze.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>REAL HARDWARE · ARUCO-REGISTERED MAZE</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div></div>
+    <div class="ebody">
+      <p class="eidx mono">FILE 03</p>
+      <p class="eyebrow">PATH PLANNING ON PAPER</p>
+      <h3>Maze Solver</h3>
+      <div class="readouts"><div class="rrow"><span class="rlab">REGISTRATION</span><span class="rdots"></span><span class="rval txt">ARUCO CORNERS</span></div></div><p class="blurb">A printed maze is registered through ArUco markers; the arm traces the solved path through the physical maze.</p>
+    </div>
+  </article>
+  <article class="entry reveal">
+    <div class="emedia"><div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/d_fkik.jpg" src="assets/d_fkik.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>JOINT-SPACE CODE + MYCOBOT SIM</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div></div>
+    <div class="ebody">
+      <p class="eidx mono">FILE 04</p>
+      <p class="eyebrow">KINEMATICS · HARDWARE + SIM</p>
+      <h3>Forward &amp; Inverse Kinematics</h3>
+      <div class="readouts"><div class="rrow"><span class="rlab">METHODS</span><span class="rdots"></span><span class="rval txt">FK · IK · DUAL QUATERNIONS</span></div></div><p class="blurb">Joint-space control scripted from scratch on the physical arm, with FK validated against a MATLAB MyCobot simulation - including a dual-quaternion formulation compared against classic transforms.</p>
+    </div>
+  </article>
+  <article class="entry reveal">
+    <div class="emedia"><div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/d_grip.jpg" src="assets/d_grip.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>REAL HARDWARE · GRIPPER + CONVEYOR</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div></div>
+    <div class="ebody">
+      <p class="eidx mono">FILE 05</p>
+      <p class="eyebrow">END-EFFECTORS · CONVEYOR</p>
+      <h3>Gripper, Suction &amp; Motion-Field Runs</h3>
+      <div class="readouts"><div class="rrow"><span class="rlab">TOOLING</span><span class="rdots"></span><span class="rval txt">GRIPPER · SUCTION CUP</span></div></div><p class="blurb">Lab runs across the arm&#x27;s tooling: gripper and suction pick-and-place over the calibrated axis/movement field, with a conveyor in the loop.</p>
+    </div>
+  </article>
+  <article class="entry reveal">
+    <div class="emedia"><div class="vport"><video autoplay muted loop playsinline width="640" height="480" poster="assets/d_objdet.jpg" src="assets/d_objdet.mp4"></video><i class="cnr"></i><i class="cnr x"></i><div class="vcap"><span>REAL HARDWARE · HSV PIPELINE</span><span class="vst"><i class="dot ok"></i>DEPLOYED</span></div></div></div>
+    <div class="ebody">
+      <p class="eidx mono">FILE 06</p>
+      <p class="eyebrow">MACHINE VISION</p>
+      <h3>Colour Object Detection &amp; Sorting</h3>
+      <div class="readouts"><div class="rrow"><span class="rlab">PIPELINE</span><span class="rdots"></span><span class="rval txt">HSV + MORPHOLOGY</span></div></div><p class="blurb">HSV segmentation with morphological filtering finds and sorts coloured blocks in real time - the perception layer the LLM project stands on.</p>
+    </div>
+  </article></section>
 
 <footer>
   <div class="frow">
     <span>© 2026 Jatin Satyam</span>
+    <span><a class="back mono" href="index.html#projects" style="text-decoration:none">◂ RETURN TO STATION</a></span>
     <span>jatinsatyam.in</span>
-    <span>LAST DEPLOY: 2026.08</span>
   </div>
-  <p class="eot">END OF TRANSMISSION</p>
+  <p class="eot">END OF DOSSIER</p>
 </footer>
 
 <script>
