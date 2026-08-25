@@ -105,10 +105,11 @@ text-transform:uppercase;transition:border-color .2s ease,transform .15s ease}
 .js.booted .hf{animation:rise .55s ease forwards}
 @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 /* about: photo + statement + education + certs */
-.aboutgrid{display:grid;grid-template-columns:minmax(220px,330px) 1fr;
-gap:clamp(36px,5vw,76px);align-items:start}
-.pphoto{width:100%;max-width:320px;aspect-ratio:1/1;border-radius:50%;
-object-fit:cover;display:block;margin:0 auto}
+.aboutgrid{display:grid;grid-template-columns:minmax(220px,420px) 1fr;
+gap:clamp(36px,5vw,80px);align-items:center}
+.pwrap{width:200px;height:200px;border-radius:50%;overflow:hidden;
+flex:none;border:2px solid #222;margin:0 auto}
+.pphoto{width:100%;height:100%;object-fit:cover;display:block}
 .lead{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
 font-size:clamp(26px,3.6vw,46px);line-height:1.1;letter-spacing:-.01em}
 .lead em{font-style:normal;color:var(--acc)}
@@ -244,7 +245,6 @@ transition:opacity .6s ease,transform .6s ease}
   html{scroll-behavior:auto}}
 @media (max-width:860px){
   .aboutgrid{grid-template-columns:1fr;gap:36px}
-  .pphoto{max-width:220px}
   .chap{grid-template-columns:1fr;gap:20px;padding:44px 0}
   .chap.alt .ctext{order:1}
   .chap.alt .cvid,.chap.alt .confpanel{order:2}
