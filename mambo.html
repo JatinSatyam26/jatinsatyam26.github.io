@@ -217,10 +217,16 @@ letter-spacing:.04em;text-transform:uppercase}
 .blurb{color:var(--mut);font-size:14.5px}
 .tech{margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:11px;
 color:var(--mut);letter-spacing:.04em}
-.plink{display:inline-block;margin-top:14px;font-family:"IBM Plex Mono",monospace;
+.elinks{display:flex;gap:22px;flex-wrap:wrap;align-items:baseline;margin-top:16px}
+.plink{display:inline-block;font-family:"IBM Plex Mono",monospace;
 font-size:12px;letter-spacing:.1em;color:var(--acc);text-decoration:none;
-border-bottom:1px solid var(--acc)}
+border-bottom:1px solid var(--acc);padding-bottom:4px}
 .plink:hover,.plink:focus-visible{color:#EE8A4F}
+.vlink{display:inline-block;font-family:Syne,"Arial Black",sans-serif;
+font-weight:600;font-size:11.5px;letter-spacing:.14em;color:var(--ink);
+text-decoration:none;text-transform:uppercase;padding:0 1px 5px;
+border-bottom:1px solid rgba(255,255,255,.35);transition:border-color .2s ease}
+.vlink:hover,.vlink:focus-visible{border-bottom-color:var(--acc)}
 /* contact */
 .contact .inner{text-align:center;padding-top:110px;padding-bottom:96px}
 .cstrip{font-family:Syne,"Arial Black",sans-serif;font-weight:800;

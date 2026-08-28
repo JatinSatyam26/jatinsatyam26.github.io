@@ -217,10 +217,16 @@ letter-spacing:.04em;text-transform:uppercase}
 .blurb{color:var(--mut);font-size:14.5px}
 .tech{margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:11px;
 color:var(--mut);letter-spacing:.04em}
-.plink{display:inline-block;margin-top:14px;font-family:"IBM Plex Mono",monospace;
+.elinks{display:flex;gap:22px;flex-wrap:wrap;align-items:baseline;margin-top:16px}
+.plink{display:inline-block;font-family:"IBM Plex Mono",monospace;
 font-size:12px;letter-spacing:.1em;color:var(--acc);text-decoration:none;
-border-bottom:1px solid var(--acc)}
+border-bottom:1px solid var(--acc);padding-bottom:4px}
 .plink:hover,.plink:focus-visible{color:#EE8A4F}
+.vlink{display:inline-block;font-family:Syne,"Arial Black",sans-serif;
+font-weight:600;font-size:11.5px;letter-spacing:.14em;color:var(--ink);
+text-decoration:none;text-transform:uppercase;padding:0 1px 5px;
+border-bottom:1px solid rgba(255,255,255,.35);transition:border-color .2s ease}
+.vlink:hover,.vlink:focus-visible{border-bottom-color:var(--acc)}
 /* contact */
 .contact .inner{text-align:center;padding-top:110px;padding-bottom:96px}
 .cstrip{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
@@ -268,7 +274,7 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">ROS 2 + GAZEBO</p>
       <h3>Aerial-Ground Cooperative Autonomy on Mars Terrain</h3>
-      <div class="chips"><span class="chip">WAYPOINTS · 18/18</span><span class="chip">FINAL ACCURACY · 0.73 m</span><span class="chip">LOCALIZATION GAIN · +24 %</span></div><p class="blurb">A drone surveys real HiRISE Jezero Crater terrain and builds a Bayesian occupancy map. A six wheel rover navigates it with terrain relative localization and A* replanning. Every number physics simulated, none scripted.</p><p class="tech">ROS 2 · Gazebo · Python · NumPy · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/midterm_and_final_project" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">WAYPOINTS · 18/18</span><span class="chip">FINAL ACCURACY · 0.73 m</span><span class="chip">LOCALIZATION GAIN · +24 %</span></div><p class="blurb">A drone surveys real HiRISE Jezero Crater terrain and builds a Bayesian occupancy map. A six wheel rover navigates it with terrain relative localization and A* replanning. Every number physics simulated, none scripted.</p><p class="tech">ROS 2 · Gazebo · Python · NumPy · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/midterm_and_final_project" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
     </div>
   </article>
   <article class="entry reveal nomedia">
@@ -276,7 +282,7 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">PX4 + RTAB-MAP SLAM</p>
       <h3>Autonomous Drone Search, Map &amp; Precision Landing</h3>
-      <div class="chips"><span class="chip">MISSION SCORE · 150/150</span><span class="chip">LIVE 3D MESH · 43,283 VERTICES</span></div><p class="blurb">A nine state autonomous mission: search for rock formations, identify ArUco markers while orbiting, select the tallest, and land on top, with RTAB-Map building a dense 3D mesh live during flight. Footage joining the page soon.</p><p class="tech">ROS 2 · PX4 · RTAB-Map · OpenCV · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/terrain_mapping_drone_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">MISSION SCORE · 150/150</span><span class="chip">LIVE 3D MESH · 43,283 VERTICES</span></div><p class="blurb">A nine state autonomous mission: search for rock formations, identify ArUco markers while orbiting, select the tallest, and land on top, with RTAB-Map building a dense 3D mesh live during flight. Footage joining the page soon.</p><p class="tech">ROS 2 · PX4 · RTAB-Map · OpenCV · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/terrain_mapping_drone_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
     </div>
   </article>
   <article class="entry reveal nomedia">
@@ -284,7 +290,7 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">NASA ARCHIVE · 3D RECONSTRUCTION</p>
       <h3>Photogrammetry &amp; 3D Gaussian Splatting on Apollo 17 Imagery</h3>
-      <div class="chips"><span class="chip">SPLAT FIDELITY · 33.93 dB PSNR</span><span class="chip">MESH CROSS-CHECK · F-SCORE 0.934</span></div><p class="blurb">The Apollo 17 boulder rebuilt two independent ways from 15 archival Hasselblad frames: COLMAP with custom PyTorch multi view stereo versus 3D Gaussian Splatting, including a rigorous negative result on splat rendered views in SIFT pipelines.</p><p class="tech">COLMAP · PyTorch · Open3D · Nerfstudio · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/photogrammetry_gaussian_splatting_apollo17" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">SPLAT FIDELITY · 33.93 dB PSNR</span><span class="chip">MESH CROSS-CHECK · F-SCORE 0.934</span></div><p class="blurb">The Apollo 17 boulder rebuilt two independent ways from 15 archival Hasselblad frames: COLMAP with custom PyTorch multi view stereo versus 3D Gaussian Splatting, including a rigorous negative result on splat rendered views in SIFT pipelines.</p><p class="tech">COLMAP · PyTorch · Open3D · Nerfstudio · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/photogrammetry_gaussian_splatting_apollo17" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
     </div>
   </article>
   <article class="entry reveal nomedia">
@@ -292,7 +298,7 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">OPTIMAL CONTROL · LQR VS RL</p>
       <h3>LQR Optimal Control of a Cart-Pole Under Seismic Disturbance</h3>
-      <div class="chips"><span class="chip">STABILITY · 9.69/10</span><span class="chip">DISTURBANCE · 15 N · 0.5-4 Hz</span></div><p class="blurb">An LQR tuned to hold an inverted pendulum through earthquake class disturbances, benchmarked against a self trained DQN. Model based control wins, and the numbers show why.</p><p class="tech">ROS 2 · Gazebo · Python · PyTorch · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/cart_pole_optimal_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">STABILITY · 9.69/10</span><span class="chip">DISTURBANCE · 15 N · 0.5-4 Hz</span></div><p class="blurb">An LQR tuned to hold an inverted pendulum through earthquake class disturbances, benchmarked against a self trained DQN. Model based control wins, and the numbers show why.</p><p class="tech">ROS 2 · Gazebo · Python · PyTorch · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/cart_pole_optimal_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
     </div>
   </article>
   <article class="entry reveal nomedia">
@@ -300,7 +306,7 @@ transition:opacity .6s ease,transform .6s ease}
     <div class="ebody">
       <p class="eyebrow">COVERAGE CONTROL</p>
       <h3>First-Order Boustrophedon Coverage Controller</h3>
-      <div class="chips"><span class="chip">CROSS-TRACK ERROR · -96.5 %</span></div><p class="blurb">A lawnmower coverage controller rebuilt from coupled PD into a TURN and DRIVE state machine. Proof that control structure, not gain tuning, was the fix.</p><p class="tech">ROS 2 · Python · 2026</p><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/first_order_boustrophedon_navigator" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a>
+      <div class="chips"><span class="chip">CROSS-TRACK ERROR · -96.5 %</span></div><p class="blurb">A lawnmower coverage controller rebuilt from coupled PD into a TURN and DRIVE state machine. Proof that control structure, not gain tuning, was the fix.</p><p class="tech">ROS 2 · Python · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/first_order_boustrophedon_navigator" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
     </div>
   </article></section>
 <footer>
