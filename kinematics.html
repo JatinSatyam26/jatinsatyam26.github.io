@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>Robot Arm Manipulation Lab · Jatin Satyam</title>
-<meta name="description" content="A semester of physical robot arm work on the Dobot Magician Lite: natural language control, a tic-tac-toe playing robot, vision guided maze runs, YOLO palletizing, kinematics from first principles, and end effector studies.">
-<link rel="canonical" href="https://jatinsatyam.in/dobot.html">
+<title>Forward &amp; Inverse Kinematics · Jatin Satyam</title>
+<meta name="description" content="The arm&#x27;s kinematics derived from first principles three ways: symbolic MATLAB validated on hardware, a CAD accurate URDF model, and dual quaternions.">
+<link rel="canonical" href="https://jatinsatyam.in/kinematics.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatin Satyam — Robotics Engineer">
-<meta property="og:description" content="A semester of physical robot arm work on the Dobot Magician Lite: natural language control, a tic-tac-toe playing robot, vision guided maze runs, YOLO palletizing, kinematics from first principles, and end effector studies.">
+<meta property="og:description" content="The arm&#x27;s kinematics derived from first principles three ways: symbolic MATLAB validated on hardware, a CAD accurate URDF model, and dual quaternions.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
-<meta property="og:url" content="https://jatinsatyam.in/dobot.html">
+<meta property="og:url" content="https://jatinsatyam.in/kinematics.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
-<meta name="twitter:description" content="A semester of physical robot arm work on the Dobot Magician Lite: natural language control, a tic-tac-toe playing robot, vision guided maze runs, YOLO palletizing, kinematics from first principles, and end effector studies.">
+<meta name="twitter:description" content="The arm&#x27;s kinematics derived from first principles three ways: symbolic MATLAB validated on hardware, a CAD accurate URDF model, and dual quaternions.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -196,6 +196,54 @@ padding:0 20px}
 .tk i{color:var(--acc);font-style:normal;font-size:22px}
 @keyframes tkA{from{transform:translateX(0)}to{transform:translateX(-100%)}}
 .still .tk{animation-play-state:paused}
+/* project tile grid (Joyal-style hover reveal) */
+.chap.gridchap{display:block}
+.gridchap .chead{max-width:820px;margin-bottom:26px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ptile{position:relative;border-radius:10px;overflow:hidden;display:block;
+border:1px solid var(--line);background:var(--panel);text-decoration:none}
+.ptile video{width:100%;display:block;height:auto;
+transition:filter .35s ease,transform .35s ease}
+.ptile:hover video,.ptile:focus-visible video{filter:brightness(.3);
+transform:scale(1.04)}
+.tover{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;
+justify-content:flex-end;padding:16px;opacity:0;transition:opacity .35s ease}
+.ptile:hover .tover,.ptile:focus-visible .tover{opacity:1}
+.tcat{font-family:Syne,"Arial Black",sans-serif;font-weight:600;font-size:10px;
+letter-spacing:.14em;color:var(--acc);text-transform:uppercase;margin-bottom:5px}
+.tover h4{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
+font-size:15.5px;line-height:1.25;color:#fff;margin:0}
+@media (hover:none){.tover{opacity:1;
+background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.82))}}
+/* project pages */
+.phead{padding-top:130px;padding-bottom:0}
+.ptitle{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
+font-size:clamp(28px,4.2vw,50px);line-height:1.05;letter-spacing:-.01em;
+margin:6px 0 14px}
+.plead{color:var(--mut);font-size:16.5px;max-width:62ch}
+.pbody{padding-top:32px}
+.ytwrap{position:relative;aspect-ratio:16/9;border:1px solid var(--line);
+border-radius:12px;overflow:hidden;background:#000}
+.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.pvwrap{border:1px solid var(--line);border-radius:12px;overflow:hidden;
+background:#000;display:flex;justify-content:center}
+.pvwrap video{max-height:70vh;width:auto;max-width:100%}
+.mrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;border-bottom:1px solid var(--line);padding:22px 0;margin:30px 0 4px}
+.mk{font-family:Syne,"Arial Black",sans-serif;font-weight:600;font-size:10.5px;
+letter-spacing:.14em;color:var(--mut);text-transform:uppercase;margin-bottom:5px}
+.mv{font-size:14.5px;font-weight:500}
+.psec{padding:28px 0 0;margin:0;max-width:860px}
+.psec h2{font-size:clamp(19px,2.3vw,26px);text-transform:none;letter-spacing:0;
+margin-bottom:14px}
+.dashlist{margin:0;padding:0}
+.dashlist li{list-style:none;position:relative;padding-left:26px;
+color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:10px}
+.dashlist li::before{content:"—";position:absolute;left:0;color:var(--acc)}
+.dashlist b{color:var(--ink);font-weight:600}
+.skillrow{display:flex;flex-wrap:wrap;gap:10px}
+.schip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
+font-size:12.5px;font-weight:500}
 /* subpages */
 .subhead{padding-top:130px;padding-bottom:8px}
 .back{display:inline-block;margin-bottom:26px;font-size:11.5px;
@@ -257,66 +305,31 @@ transition:opacity .6s ease,transform .6s ease}
   .entry{grid-template-columns:1fr}
   .xrow{grid-template-columns:1fr;gap:4px}
   .ol{-webkit-text-stroke-width:1.6px}
+  .pgrid{grid-template-columns:1fr 1fr}
   section{padding:64px 6vw}}
+@media (max-width:540px){
+  .pgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <nav id="nav"><a class="brand" href="index.html" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="index.html#top">HOME</a><a href="index.html#work">WORK</a><a href="index.html#experience">EXPERIENCE</a><a href="index.html#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="index.html#contact">CONTACT</a></div></nav>
-<section class="subhead">
-  <a class="back mono" href="index.html#work">← ALL WORK</a>
-  <p class="eyebrow">MANIPULATION · MACHINE VISION</p>
-  <h2>Robot Arm Manipulation Lab</h2>
-  <p class="sub-tag">A semester of physical robot arm work on the Dobot Magician Lite: natural language control, a tic-tac-toe playing robot, vision guided maze runs, YOLO palletizing, kinematics from first principles, and end effector studies.</p>
+<section class="phead">
+  <a class="back" href="index.html#work">← ALL WORK</a>
+  <p class="eyebrow">KINEMATICS · LAB 4 + TWO PAPERS · ROBOT ARM MANIPULATION LAB</p>
+  <h1 class="ptitle">Forward &amp; Inverse Kinematics of the Dobot Magician Lite, Three Ways</h1>
+  <p class="plead">The arm&#x27;s kinematics derived from first principles three ways: symbolic MATLAB validated on hardware, a CAD accurate URDF model, and dual quaternions.</p>
 </section>
-<section class="entries" style="padding-top:0">
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="800" height="600" poster="assets/d_llm.jpg" src="assets/d_llm.mp4"></video><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">LLM × PHYSICAL ROBOT · FINAL PROJECT</p>
-      <h3>Natural-Language Robotic Manipulation with LLM Control</h3>
-      <div class="chips"><span class="chip">XY PRECISION · ±2 mm</span><span class="chip">PICK-PLACE CYCLE · 15-30 s</span></div><p class="blurb">Talk to the arm in plain English. An LLM parses the command, HSV vision locates the blocks, a least-squares affine calibration maps camera to robot coordinates, and stack-aware state memory survives multi-step instructions.</p><p class="tech">Python · OpenCV · LangChain · Dobot · 2025</p><div class="elinks"><a class="vlink" href="https://youtube.com/shorts/_HYQI9ThReQ" target="_blank" rel="noopener">SEE FULL VIDEO ↗</a><a class="plink" href="assets/reports/report_llm_manipulation.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal">
-    <div class="emedia"><img src="assets/d_ttt.jpg" alt="" loading="lazy"><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">GAME AUTONOMY · MIDTERM 1</p>
-      <h3>Tic-Tac-Toe Robot with Minimax &amp; OpenCV</h3>
-      <div class="chips"><span class="chip">POLICY · MINIMAX · OPTIMAL PLAY</span></div><p class="blurb">The arm plays tic-tac-toe in the physical world. It draws its own board, reads the marks through an overhead camera with classical vision, validates every human move, and answers with Minimax optimal play.</p><div class="elinks"><a class="vlink" href="https://youtu.be/YnNlS2I5-H8" target="_blank" rel="noopener">SEE FULL VIDEO ↗</a><a class="plink" href="assets/reports/report_tictactoe.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="800" height="600" poster="assets/d_maze.jpg" src="assets/d_maze.mp4"></video><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">PATH PLANNING · MIDTERM 2</p>
-      <h3>Vision-Guided Maze Navigation</h3>
-      <div class="chips"><span class="chip">PLANNER · BFS · OPTIMAL ROUTE</span></div><p class="blurb">An overhead camera captures a printed 4x4 maze. Homography rectifies the view, breadth-first search computes the shortest route, and a calibrated affine map converts maze cells into workspace waypoints the arm traverses.</p><div class="elinks"><a class="vlink" href="https://youtube.com/shorts/H3ajnkFFPhU" target="_blank" rel="noopener">SEE FULL VIDEO ↗</a><a class="plink" href="assets/reports/report_maze_navigation.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="800" height="600" poster="assets/d_yolo.jpg" src="assets/d_yolo.mp4"></video><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">MACHINE VISION · REAL TIME</p>
-      <h3>YOLO Object Detection &amp; Palletizing</h3>
-      <div class="chips"><span class="chip">DETECTOR · YOLO · LIVE CLASSIFICATION</span></div><p class="blurb">YOLO classifies objects in real time, then the arm picks each one with suction and palletizes it into the matching bin. Perception driven, closed loop automation on real hardware.</p><div class="elinks"><a class="vlink" href="https://youtu.be/TPjBcd7Wd1E" target="_blank" rel="noopener">SEE FULL VIDEO ↗</a><a class="plink" href="assets/reports/report_yolo_palletizing.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal">
-    <div class="emedia"><img src="assets/d_kin.jpg" alt="" loading="lazy"><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">KINEMATICS · MATLAB + HARDWARE</p>
-      <h3>Forward &amp; Inverse Kinematics, Three Ways</h3>
-      <div class="chips"><span class="chip">HARDWARE MATCH · 1-3 mm</span><span class="chip">HTM VS DQ · AGREE TO 1e-14</span></div><p class="blurb">The arm&#x27;s kinematics derived from first principles three ways: symbolic MATLAB FK and IK validated on the physical arm, a CAD accurate URDF rigid body model, and a dual quaternion formulation that matches homogeneous transforms to machine precision.</p><div class="elinks"><a class="plink" href="assets/reports/report_fk_ik_dobot.pdf" target="_blank" rel="noopener">FK/IK REPORT ↗</a><a class="plink" href="assets/reports/report_urdf_matlab.pdf" target="_blank" rel="noopener">URDF MODEL ↗</a><a class="plink" href="assets/reports/report_dual_quaternions.pdf" target="_blank" rel="noopener">DUAL QUATERNIONS ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="800" height="600" poster="assets/d_grip.jpg" src="assets/d_grip.mp4"></video><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">END-EFFECTORS · CYCLE TIME</p>
-      <h3>Suction vs Gripper End-Effector Study</h3>
-      <div class="chips"><span class="chip">TOOLING · SUCTION CUP · GRIPPER</span></div><p class="blurb">Pallet to pallet pick and place with two interchangeable end effectors, compared on cycle time, reliability, and handling consistency through waypoint teaching and Python control.</p><div class="elinks"><a class="plink" href="assets/reports/report_end_effectors.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
-    </div>
-  </article></section>
+<section class="pbody">
+  <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="480" height="854" poster="assets/pv_kin.jpg" src="assets/pv_kin.mp4"></video></div>
+  <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Theory + hardware validation</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: derivation to verification</p></div><div><p class="mk">AGREEMENT</p><p class="mv">HTM vs DQ identical to 1e-14</p></div></div>
+  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A complete kinematic treatment of the arm: homogeneous transformation matrices built from DH parameters, symbolic forward and inverse kinematics, and experimental validation on the physical robot.</li><li>Extended with a MATLAB rigid body tree plus corrected CAD derived URDF model, and an independent dual quaternion formulation.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Symbolic FK/IK:</b> MATLAB symbolic math composes the link transforms into closed forms; vpasolve inverts them, handling elbow up and elbow down branches.</li><li><b>Hardware validation:</b> Computed joint angles executed on the physical Dobot through a Scratch control program, comparing predicted and measured end effector positions.</li><li><b>URDF model:</b> The CAD derived URDF is debugged (zero joint axes fixed) and imported into MATLAB Robotics System Toolbox with an IK solver and visualization.</li><li><b>Dual quaternions:</b> The same kinematics rebuilt in the DQ Robotics toolbox, benchmarked against the homogeneous transform solution.</li></ul></section>
+  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Multiple valid IK branches and choosing the physical one.</li><li>Invalid joint axes in the CAD exported URDF.</li><li>Reconciling lab frame conventions with the base frame model.</li></ul></section>
+  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Predictions matched the physical arm within 1 to 3 mm.</li><li>Homogeneous transforms and dual quaternions agreed to roughly 1e-14 mm: machine precision equivalence, formally documented.</li></ul></section>
+  <section class="psec"><h2>Skills &amp; Tools</h2>
+  <div class="skillrow"><span class="schip">MATLAB</span><span class="schip">Robotics System Toolbox</span><span class="schip">DH Parameters</span><span class="schip">Dual Quaternions</span><span class="schip">URDF</span><span class="schip">Symbolic Math</span></div></section>
+  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_fk_ik_dobot.pdf" target="_blank" rel="noopener">FK/IK REPORT ↗</a><a class="plink" href="assets/reports/report_urdf_matlab.pdf" target="_blank" rel="noopener">URDF MODEL ↗</a><a class="plink" href="assets/reports/report_dual_quaternions.pdf" target="_blank" rel="noopener">DUAL QUATERNIONS ↗</a></div>
+</section>
 <footer>
   <span>© 2026 Jatin Satyam</span>
   <span class="fbrand">JS<span>.</span></span>

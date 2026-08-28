@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>Parrot Mambo Flight Test Program · Jatin Satyam</title>
-<meta name="description" content="Simulink flight controllers deployed to a physical Parrot Mambo: attitude, hover, waypoints, line following, and autonomous landings.">
-<link rel="canonical" href="https://jatinsatyam.in/mambo.html">
+<title>Maze Navigation · Jatin Satyam</title>
+<meta name="description" content="An overhead camera reads a printed maze, breadth first search finds the shortest route, and the arm drives it in the physical world.">
+<link rel="canonical" href="https://jatinsatyam.in/maze-navigation.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatin Satyam — Robotics Engineer">
-<meta property="og:description" content="Simulink flight controllers deployed to a physical Parrot Mambo: attitude, hover, waypoints, line following, and autonomous landings.">
+<meta property="og:description" content="An overhead camera reads a printed maze, breadth first search finds the shortest route, and the arm drives it in the physical world.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
-<meta property="og:url" content="https://jatinsatyam.in/mambo.html">
+<meta property="og:url" content="https://jatinsatyam.in/maze-navigation.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
-<meta name="twitter:description" content="Simulink flight controllers deployed to a physical Parrot Mambo: attitude, hover, waypoints, line following, and autonomous landings.">
+<meta name="twitter:description" content="An overhead camera reads a printed maze, breadth first search finds the shortest route, and the arm drives it in the physical world.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -313,45 +313,23 @@ transition:opacity .6s ease,transform .6s ease}
 </head>
 <body>
 <nav id="nav"><a class="brand" href="index.html" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="index.html#top">HOME</a><a href="index.html#work">WORK</a><a href="index.html#experience">EXPERIENCE</a><a href="index.html#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="index.html#contact">CONTACT</a></div></nav>
-<section class="subhead">
-  <a class="back mono" href="index.html#work">← ALL WORK</a>
-  <p class="eyebrow">FLIGHT CONTROL · REAL DRONE</p>
-  <h2>Parrot Mambo Flight Test Program</h2>
-  <p class="sub-tag">Simulink flight controllers deployed to a physical Parrot Mambo: attitude, hover, waypoints, line following, and autonomous landings.</p>
+<section class="phead">
+  <a class="back" href="index.html#work">← ALL WORK</a>
+  <p class="eyebrow">PATH PLANNING · MIDTERM 2 · ROBOT ARM MANIPULATION LAB</p>
+  <h1 class="ptitle">Vision Based Robotic Navigation Through Grid Mazes</h1>
+  <p class="plead">An overhead camera reads a printed maze, breadth first search finds the shortest route, and the arm drives it in the physical world.</p>
 </section>
-<section class="entries" style="padding-top:0">
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="640" height="480" poster="assets/b_hover.jpg" src="assets/b_hover.mp4"></video><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">SIMULINK · 6 MODEL ITERATIONS</p>
-      <h3>Attitude &amp; Hover Control</h3>
-      <div class="chips"><span class="chip">TRACKING · ROLL · PITCH · YAW</span></div><p class="blurb">A Simulink attitude controller tracking roll, pitch, and yaw setpoints, iterated through six model versions, then holding a steady indoor hover on the real drone.</p>
-    </div>
-  </article>
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="640" height="480" poster="assets/b_wpt.jpg" src="assets/b_wpt.mp4"></video><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">TRAJECTORY CONTROL</p>
-      <h3>Waypoint Following</h3>
-      <div class="chips"><span class="chip">COURSE · MULTI-WAYPOINT</span></div><p class="blurb">The MathWorks minidrone waypoint stack tuned and flown over a marked course. Trajectory tracking on real hardware, not just in the model.</p>
-    </div>
-  </article>
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="640" height="480" poster="assets/mambo.jpg" src="assets/mambo.mp4"></video><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">VISION-GUIDED FLIGHT</p>
-      <h3>Line Following &amp; Target Landing</h3>
-      <div class="chips"><span class="chip">TERMINAL PHASE · AUTONOMOUS TOUCHDOWN</span></div><p class="blurb">The downward camera tracks a taped line to a target platform and the drone lands on it autonomously. The full detect, track, land loop.</p>
-    </div>
-  </article>
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="640" height="480" poster="assets/b_plat.jpg" src="assets/b_plat.mp4"></video><span class="simtag">HARDWARE</span></div>
-    <div class="ebody">
-      <p class="eyebrow">PRECISION LANDING</p>
-      <h3>Platform Landing Trials</h3>
-      <div class="chips"><span class="chip">TARGET · RAISED PLATFORMS</span></div><p class="blurb">Landing trials on raised platforms across a checkerboard arena. Repeatability testing for the terminal phase controller.</p>
-    </div>
-  </article></section>
+<section class="pbody">
+  <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/H3ajnkFFPhU" title="Maze Navigation" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+  <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware · Vision · Planning</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: vision to motion pipeline</p></div><div><p class="mk">PLANNER</p><p class="mv">BFS, minimal length routes</p></div></div>
+  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>The Dobot autonomously navigates 4x4 grid mazes printed on rigid plastic: capture, interpret, plan, and physically execute, with no predefined waypoints.</li><li>Color coded markers set start and goal; wall density classifies each cell as navigable or obstructed.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Vision:</b> Contour analysis with polygonal approximation finds the maze boundary; a homography converts the perspective view into a clean orthographic grid.</li><li><b>Planning:</b> The rectified maze becomes an occupancy grid; breadth first search returns the minimal length path as a sequence of cell centroid waypoints.</li><li><b>Execution:</b> Inverse perspective plus calibrated affine mapping turns image waypoints into workspace coordinates; the arm interpolates through them at constant clearance with homing and emergency interrupt safeguards.</li></ul></section>
+  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Illumination shifts forcing dynamic HSV threshold adjustment.</li><li>Pixel level calibration errors showing up at the end effector.</li><li>Keeping constant clearance across the whole traverse.</li></ul></section>
+  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Validated across multiple randomly configured 4x4 mazes; executed trajectories matched the computed optimal paths.</li><li>Boundary detection and rectification stayed consistent across tests.</li></ul></section>
+  <section class="psec"><h2>Skills &amp; Tools</h2>
+  <div class="skillrow"><span class="schip">OpenCV</span><span class="schip">Homography</span><span class="schip">BFS</span><span class="schip">Affine Calibration</span><span class="schip">Python</span><span class="schip">pydobot</span></div></section>
+  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_maze_navigation.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
+</section>
 <footer>
   <span>© 2026 Jatin Satyam</span>
   <span class="fbrand">JS<span>.</span></span>
