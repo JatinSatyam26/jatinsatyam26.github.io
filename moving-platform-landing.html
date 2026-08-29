@@ -343,14 +343,14 @@ transition:opacity .6s ease,transform .6s ease}
 </section>
 <section class="pbody">
   <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="480" height="854" poster="assets/pv_moveland.jpg" src="assets/pv_moveland.mp4"></video></div>
-  <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">STACK</p><p class="mv">Simulink, deployed to hardware</p></div><div><p class="mk">TARGET</p><p class="mv">Platform moving on a track</p></div></div>
+  <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">TRACKING</p><p class="mv">Within ~5 cm in simulation</p></div><div><p class="mk">TARGET</p><p class="mv">Platform moving on a track</p></div></div>
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A landing platform travels along a straight track while the drone holds station above, follows its motion, and executes a controlled descent onto it.</li><li>The flight closes the full loop: track the target, match its motion, and time the touchdown, all on real hardware.</li></ul></section>
-  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Control:</b> A Simulink flight control model deployed to the Mambo handles attitude and position while the landing logic manages the descent.</li><li><b>Tracking:</b> The drone follows the platform&#x27;s motion along the track, keeping itself positioned above the target through the approach.</li><li><b>Touchdown:</b> Descent is committed while the platform is in motion, ending with the drone standing on the moving target.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Control:</b> A Simulink flight control model deployed to the Mambo handles attitude and position while the landing logic manages the descent.</li><li><b>Tracking:</b> The drone follows the platform&#x27;s motion along the track, keeping itself positioned above the target through the approach.</li><li><b>Touchdown:</b> Descent runs as a sequence of small altitude steps, each gated on the velocity error, so the drone never drops toward empty floor beside a moving target. After contact the motors ramp down gradually to prevent bounce.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Timing a descent onto a target that keeps moving beneath the drone.</li><li>Holding lateral alignment with the platform during the drop.</li><li>The Mambo&#x27;s small control authority against air disturbance.</li></ul></section>
-  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>The drone lands on the moving platform, on camera, in a single continuous take.</li></ul></section>
+  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>In simulation testing with tuned gains, the drone held position within roughly 5 cm of the moving platform.</li><li>The deployed flight lands on the platform while it travels along its track, in a single continuous take.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>
   <div class="skillrow"><span class="schip">Simulink</span><span class="schip">Flight Control</span><span class="schip">Target Tracking</span><span class="schip">Parrot Mambo</span><span class="schip">Hardware Deployment</span></div></section>
-  
+  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_mambo_moveland.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
 </section>
 <footer>
   <span>© 2026 Jatin Satyam</span>

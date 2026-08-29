@@ -345,12 +345,12 @@ transition:opacity .6s ease,transform .6s ease}
   <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="848" height="480" poster="assets/pv_hover.jpg" src="assets/pv_hover.mp4"></video></div>
   <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">STACK</p><p class="mv">Simulink, 6 model iterations</p></div><div><p class="mk">TRACKING</p><p class="mv">Roll · pitch · yaw setpoints</p></div></div>
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>The controller everything else stands on: attitude stabilization tracking roll, pitch, and yaw setpoints, refined across six Simulink model iterations, then deployed to hold a steady indoor hover.</li></ul></section>
-  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Modeling:</b> The flight control model was developed and tuned in Simulink, iterating six versions before hardware deployment.</li><li><b>Deployment:</b> The controller runs onboard the Mambo, stabilizing attitude against drift and disturbance in ground effect.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Modeling:</b> The flight control model was developed and tuned in Simulink, iterating six versions before hardware deployment.</li><li><b>Estimation:</b> State comes from onboard fusion of ultrasound altitude, pressure, IMU rates and accelerations, and optical flow from the downward camera.</li><li><b>Deployment:</b> The controller runs onboard the Mambo, stabilizing attitude against drift and disturbance in ground effect.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Tuning gains that behave in simulation and survive real airframes.</li><li>Indoor air disturbance and ground effect near the floor.</li></ul></section>
   <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Steady, sustained indoor hover on the physical drone.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>
   <div class="skillrow"><span class="schip">Simulink</span><span class="schip">Control Design</span><span class="schip">PID Tuning</span><span class="schip">Parrot Mambo</span></div></section>
-  
+  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_mambo_hover.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
 </section>
 <footer>
   <span>© 2026 Jatin Satyam</span>

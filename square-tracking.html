@@ -345,12 +345,12 @@ transition:opacity .6s ease,transform .6s ease}
   <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="854" height="480" poster="assets/pv_square.jpg" src="assets/pv_square.mp4"></video></div>
   <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">REFERENCE</p><p class="mv">10 cm square, two laps</p></div><div><p class="mk">STACK</p><p class="mv">Simulink, deployed to hardware</p></div></div>
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>The drone flies a 10 cm square reference trajectory two consecutive times over the checkerboard arena, holding altitude through the corners.</li><li>Small trajectories are unforgiving: at this scale, controller sloppiness is immediately visible as rounded or overshot corners.</li></ul></section>
-  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Reference:</b> The square is defined as a timed position reference fed to the position controller.</li><li><b>Control:</b> The Simulink control model tracks the reference through four sharp heading changes per lap, twice.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Reference:</b> Built on the minidrone waypoint follower project: the square&#x27;s corners become waypoints in a timed position reference fed to the position controller.</li><li><b>Control:</b> The Simulink control model tracks the reference through four sharp heading changes per lap, twice.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Corner overshoot at a trajectory scale close to the drone&#x27;s size.</li><li>Position drift accumulating between the first and second lap.</li></ul></section>
   <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Two consecutive laps of the square flown on hardware in one take.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>
   <div class="skillrow"><span class="schip">Simulink</span><span class="schip">Trajectory Control</span><span class="schip">Flight Control</span><span class="schip">Parrot Mambo</span></div></section>
-  
+  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_mambo_square.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
 </section>
 <footer>
   <span>© 2026 Jatin Satyam</span>

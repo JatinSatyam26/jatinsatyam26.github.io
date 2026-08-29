@@ -344,13 +344,13 @@ transition:opacity .6s ease,transform .6s ease}
 <section class="pbody">
   <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="480" height="854" poster="assets/pv_scan.jpg" src="assets/pv_scan.mp4"></video></div>
   <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">SENSOR</p><p class="mv">Downward facing camera</p></div><div><p class="mk">MISSION</p><p class="mv">Search, detect, land</p></div></div>
-  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A search and land mission over a checkerboard arena: the drone scans the area in flight, detects the colored landing pad below, and transitions from search to a precision landing on it.</li></ul></section>
+  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A search and land mission over a checkerboard arena: the drone scans the area in flight, detects the colored landing pad below, and transitions from search to a precision landing on it.</li><li>Built on the MathWorks Minidrone Competition project structure, with custom scanning references, detection thresholds, and the search to landing handover logic.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Search:</b> A scanning flight pattern covers the arena while the downward camera watches for the target color.</li><li><b>Detection:</b> Color segmentation on the camera feed identifies the landing pad and its position under the drone.</li><li><b>Landing:</b> Once centered over the detection, the controller hands over to a vertical landing sequence.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Detecting a small colored pad from a moving, vibrating camera.</li><li>Transitioning cleanly from search flight to a centered descent.</li></ul></section>
   <section class="psec"><h2>Result</h2><ul class="dashlist"><li>The drone scans, finds the spot, and lands on it autonomously in a single continuous flight.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>
   <div class="skillrow"><span class="schip">Simulink</span><span class="schip">Machine Vision</span><span class="schip">Color Segmentation</span><span class="schip">Flight Control</span><span class="schip">Parrot Mambo</span></div></section>
-  
+  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_mambo_scan.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
 </section>
 <footer>
   <span>© 2026 Jatin Satyam</span>
