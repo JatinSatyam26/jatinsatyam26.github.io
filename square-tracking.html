@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
 <title>Square Trajectory, Twice · Jatin Satyam</title>
-<meta name="description" content="A small, sharp reference trajectory flown twice in a row over the arena. Repeatability is the test.">
+<meta name="description" content="A square roughly five to six feet per side, flown twice in a row over the arena. Repeatability is the test.">
 <link rel="canonical" href="https://jatinsatyam.in/square-tracking.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatin Satyam — Robotics Engineer">
-<meta property="og:description" content="A small, sharp reference trajectory flown twice in a row over the arena. Repeatability is the test.">
+<meta property="og:description" content="A square roughly five to six feet per side, flown twice in a row over the arena. Repeatability is the test.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
 <meta property="og:url" content="https://jatinsatyam.in/square-tracking.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
-<meta name="twitter:description" content="A small, sharp reference trajectory flown twice in a row over the arena. Repeatability is the test.">
+<meta name="twitter:description" content="A square roughly five to six feet per side, flown twice in a row over the arena. Repeatability is the test.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -338,15 +338,15 @@ transition:opacity .6s ease,transform .6s ease}
 <section class="phead">
   <a class="back" href="index.html#work">← ALL WORK</a>
   <p class="eyebrow">TRAJECTORY TRACKING · PARROT MAMBO FLIGHT TEST PROGRAM</p>
-  <h1 class="ptitle">Tracking a 10 cm Square Trajectory, Twice</h1>
-  <p class="plead">A small, sharp reference trajectory flown twice in a row over the arena. Repeatability is the test.</p>
+  <h1 class="ptitle">Tracking a Square Trajectory, Twice</h1>
+  <p class="plead">A square roughly five to six feet per side, flown twice in a row over the arena. Repeatability is the test.</p>
 </section>
 <section class="pbody">
   <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="854" height="480" poster="assets/pv_square.jpg" src="assets/pv_square.mp4"></video></div>
-  <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">REFERENCE</p><p class="mv">10 cm square, two laps</p></div><div><p class="mk">STACK</p><p class="mv">Simulink, deployed to hardware</p></div></div>
-  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>The drone flies a 10 cm square reference trajectory two consecutive times over the checkerboard arena, holding altitude through the corners.</li><li>Small trajectories are unforgiving: at this scale, controller sloppiness is immediately visible as rounded or overshot corners.</li></ul></section>
+  <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">REFERENCE</p><p class="mv">~5 to 6 ft square, two laps</p></div><div><p class="mk">STACK</p><p class="mv">Simulink, deployed to hardware</p></div></div>
+  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>The drone flies a square reference roughly five to six feet per side, two consecutive times over the checkerboard arena, holding altitude through eight sharp corner transitions.</li><li>Flying the same lap twice back to back makes lap to lap consistency, and any accumulated drift, directly visible against the arena floor.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Reference:</b> Built on the minidrone waypoint follower project: the square&#x27;s corners become waypoints in a timed position reference fed to the position controller.</li><li><b>Control:</b> The Simulink control model tracks the reference through four sharp heading changes per lap, twice.</li></ul></section>
-  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Corner overshoot at a trajectory scale close to the drone&#x27;s size.</li><li>Position drift accumulating between the first and second lap.</li></ul></section>
+  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Corner overshoot at each of the eight sharp heading changes.</li><li>Position drift accumulating between the first and second lap.</li></ul></section>
   <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Two consecutive laps of the square flown on hardware in one take.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>
   <div class="skillrow"><span class="schip">Simulink</span><span class="schip">Trajectory Control</span><span class="schip">Flight Control</span><span class="schip">Parrot Mambo</span></div></section>
