@@ -140,9 +140,9 @@ align-items:center;padding:58px 0;border-top:1px solid var(--line)}
 .cnum{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
 font-size:clamp(42px,5.6vw,72px);line-height:1;color:transparent;
 -webkit-text-stroke:1.5px rgba(237,239,243,.26);margin-bottom:16px}
-.ctext h3{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
-font-size:clamp(23px,2.9vw,36px);line-height:1.08;text-transform:uppercase;
-letter-spacing:-.01em;margin-bottom:14px}
+.ctext h3,.gridchap .chead h3{font-family:Syne,"Arial Black",sans-serif;
+font-weight:700;font-size:clamp(23px,2.9vw,36px);line-height:1.08;
+text-transform:uppercase;letter-spacing:-.01em;margin-bottom:14px}
 .cline{color:var(--mut);font-size:15px;max-width:58ch}
 .cvid{position:relative;border-radius:12px;overflow:hidden;
 border:1px solid var(--line)}
@@ -228,6 +228,11 @@ border-radius:12px;overflow:hidden;background:#000}
 .pvwrap{border:1px solid var(--line);border-radius:12px;overflow:hidden;
 background:#000;display:flex;justify-content:center}
 .pvwrap video{max-height:70vh;width:auto;max-width:100%}
+.ytduo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ytlabel{font-family:Syne,"Arial Black",sans-serif;font-weight:600;
+font-size:10.5px;letter-spacing:.14em;color:var(--mut);
+text-transform:uppercase;text-align:center;margin-top:10px}
+@media (max-width:760px){.ytduo{grid-template-columns:1fr}}
 .mrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;border-bottom:1px solid var(--line);padding:22px 0;margin:30px 0 4px}
 .mk{font-family:Syne,"Arial Black",sans-serif;font-weight:600;font-size:10.5px;
@@ -320,7 +325,7 @@ transition:opacity .6s ease,transform .6s ease}
   <p class="plead">The arm&#x27;s kinematics derived from first principles three ways: symbolic MATLAB validated on hardware, a CAD accurate URDF model, and dual quaternions.</p>
 </section>
 <section class="pbody">
-  <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="480" height="854" poster="assets/pv_kin.jpg" src="assets/pv_kin.mp4"></video></div>
+  <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/yv8jnr0F6vA" title="Forward &amp; Inverse Kinematics" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
   <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Theory + hardware validation</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: derivation to verification</p></div><div><p class="mk">AGREEMENT</p><p class="mv">HTM vs DQ identical to 1e-14</p></div></div>
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A complete kinematic treatment of the arm: homogeneous transformation matrices built from DH parameters, symbolic forward and inverse kinematics, and experimental validation on the physical robot.</li><li>Extended with a MATLAB rigid body tree plus corrected CAD derived URDF model, and an independent dual quaternion formulation.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Symbolic FK/IK:</b> MATLAB symbolic math composes the link transforms into closed forms; vpasolve inverts them, handling elbow up and elbow down branches.</li><li><b>Hardware validation:</b> Computed joint angles executed on the physical Dobot through a Scratch control program, comparing predicted and measured end effector positions.</li><li><b>URDF model:</b> The CAD derived URDF is debugged (zero joint axes fixed) and imported into MATLAB Robotics System Toolbox with an IK solver and visualization.</li><li><b>Dual quaternions:</b> The same kinematics rebuilt in the DQ Robotics toolbox, benchmarked against the homogeneous transform solution.</li></ul></section>

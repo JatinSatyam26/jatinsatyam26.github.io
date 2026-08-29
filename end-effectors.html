@@ -140,9 +140,9 @@ align-items:center;padding:58px 0;border-top:1px solid var(--line)}
 .cnum{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
 font-size:clamp(42px,5.6vw,72px);line-height:1;color:transparent;
 -webkit-text-stroke:1.5px rgba(237,239,243,.26);margin-bottom:16px}
-.ctext h3{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
-font-size:clamp(23px,2.9vw,36px);line-height:1.08;text-transform:uppercase;
-letter-spacing:-.01em;margin-bottom:14px}
+.ctext h3,.gridchap .chead h3{font-family:Syne,"Arial Black",sans-serif;
+font-weight:700;font-size:clamp(23px,2.9vw,36px);line-height:1.08;
+text-transform:uppercase;letter-spacing:-.01em;margin-bottom:14px}
 .cline{color:var(--mut);font-size:15px;max-width:58ch}
 .cvid{position:relative;border-radius:12px;overflow:hidden;
 border:1px solid var(--line)}
@@ -228,6 +228,11 @@ border-radius:12px;overflow:hidden;background:#000}
 .pvwrap{border:1px solid var(--line);border-radius:12px;overflow:hidden;
 background:#000;display:flex;justify-content:center}
 .pvwrap video{max-height:70vh;width:auto;max-width:100%}
+.ytduo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ytlabel{font-family:Syne,"Arial Black",sans-serif;font-weight:600;
+font-size:10.5px;letter-spacing:.14em;color:var(--mut);
+text-transform:uppercase;text-align:center;margin-top:10px}
+@media (max-width:760px){.ytduo{grid-template-columns:1fr}}
 .mrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;border-bottom:1px solid var(--line);padding:22px 0;margin:30px 0 4px}
 .mk{font-family:Syne,"Arial Black",sans-serif;font-weight:600;font-size:10.5px;
@@ -320,7 +325,7 @@ transition:opacity .6s ease,transform .6s ease}
   <p class="plead">Two tools, one task. Suction cup and parallel gripper compared on cycle time, reliability, and handling consistency.</p>
 </section>
 <section class="pbody">
-  <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="848" height="570" poster="assets/pv_grip.jpg" src="assets/pv_grip.mp4"></video></div>
+  <div class="ytduo"><div class="ytcell"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/cRmamC6WOwo" title="PARALLEL GRIPPER" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div><p class="ytlabel">PARALLEL GRIPPER</p></div><div class="ytcell"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/4O1vtqpEcjQ" title="SUCTION CUP" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div><p class="ytlabel">SUCTION CUP</p></div></div>
   <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware study</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: teach, program, measure</p></div><div><p class="mk">TOOLING</p><p class="mv">Suction cup · parallel gripper</p></div></div>
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>Pallet to pallet transfer of plastic cubes with both of the arm&#x27;s interchangeable end effectors, quantified rather than eyeballed: cycle times recorded per trial for a direct comparison.</li><li>Ten taught waypoints per run: home, clearance, and eight pallet corners, reused identically across both tools.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Teaching:</b> Waypoints captured by jogging the arm and reading poses back through pydobot, with z heights tuned for reliable contact.</li><li><b>Control:</b> Python routines drive MOVJ motions with suction and gripper commands, with settle delays matched to each tool&#x27;s response.</li><li><b>Measurement:</b> Cycle time logged from first pickup to final placement across repeated four cube transfers.</li></ul></section>
