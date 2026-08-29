@@ -272,6 +272,14 @@ margin-bottom:14px}
 color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:10px}
 .dashlist li::before{content:"—";position:absolute;left:0;color:var(--acc)}
 .dashlist b{color:var(--ink);font-weight:600}
+.figgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pfig{margin:0;border:1px solid var(--line);border-radius:10px;
+overflow:hidden;background:#fff}
+.pfig.wide{grid-column:1/-1}
+.pfig img{width:100%;display:block}
+.pfig figcaption{font-size:12px;color:var(--mut);padding:10px 14px;
+background:var(--panel);line-height:1.5}
+@media (max-width:760px){.figgrid{grid-template-columns:1fr}}
 .skillrow{display:flex;flex-wrap:wrap;gap:10px}
 .schip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
 font-size:12.5px;font-weight:500}
@@ -479,10 +487,10 @@ transition:opacity .6s ease,transform .6s ease}
   <article class="chap reveal" id="w-mechanical">
     <div class="ctext">
       <div class="cnum" aria-hidden="true">03</div>
-      <p class="eyebrow">ROTORDYNAMICS · DEFENCE HARDWARE</p>
-      <h3>Gyro Motor Rotor Development</h3>
-      <p class="cline">8 rotor designs screened in ANSYS rotordynamics. The winner was built and FFT validated on an instrumented bench at a 28,000 rpm operating point.</p>
-      
+      <p class="eyebrow">ROTORDYNAMICS · BE INDUSTRIAL PROJECT</p>
+      <h3>Gyro Motor for Gyro-Stabilized Platforms</h3>
+      <p class="cline">My BE industrial final year project with TriQual Cryogenics: an indigenous gyro motor rotor for stabilized defence platforms. Eight designs screened in ANSYS rotordynamics, the winner built and FFT validated on an instrumented bench at a 28,000 rpm operating point.</p>
+      <a class="btn sm" href="gyro-motor.html">OPEN PROJECT →</a>
     </div>
     <div class="cvid"><video autoplay muted loop playsinline width="640" height="480" poster="assets/gyro.jpg" src="assets/gyro.mp4"></video><span class="simtag">HARDWARE</span></div>
   </article>

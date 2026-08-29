@@ -271,6 +271,14 @@ margin-bottom:14px}
 color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:10px}
 .dashlist li::before{content:"—";position:absolute;left:0;color:var(--acc)}
 .dashlist b{color:var(--ink);font-weight:600}
+.figgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pfig{margin:0;border:1px solid var(--line);border-radius:10px;
+overflow:hidden;background:#fff}
+.pfig.wide{grid-column:1/-1}
+.pfig img{width:100%;display:block}
+.pfig figcaption{font-size:12px;color:var(--mut);padding:10px 14px;
+background:var(--panel);line-height:1.5}
+@media (max-width:760px){.figgrid{grid-template-columns:1fr}}
 .skillrow{display:flex;flex-wrap:wrap;gap:10px}
 .schip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
 font-size:12.5px;font-weight:500}
@@ -353,6 +361,7 @@ transition:opacity .6s ease,transform .6s ease}
 <section class="pbody">
   <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/H3ajnkFFPhU" title="Maze Navigation" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
   <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware · Vision · Planning</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: vision to motion pipeline</p></div><div><p class="mk">PLANNER</p><p class="mv">BFS, minimal length routes</p></div></div>
+  
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>The Dobot autonomously navigates 4x4 grid mazes printed on rigid plastic: capture, interpret, plan, and physically execute, with no predefined waypoints.</li><li>Color coded markers set start and goal; wall density classifies each cell as navigable or obstructed.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Vision:</b> Contour analysis with polygonal approximation finds the maze boundary; a homography converts the perspective view into a clean orthographic grid.</li><li><b>Planning:</b> The rectified maze becomes an occupancy grid; breadth first search returns the minimal length path as a sequence of cell centroid waypoints.</li><li><b>Execution:</b> Inverse perspective plus calibrated affine mapping turns image waypoints into workspace coordinates; the arm interpolates through them at constant clearance with homing and emergency interrupt safeguards.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Illumination shifts forcing dynamic HSV threshold adjustment.</li><li>Pixel level calibration errors showing up at the end effector.</li><li>Keeping constant clearance across the whole traverse.</li></ul></section>

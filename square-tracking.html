@@ -271,6 +271,14 @@ margin-bottom:14px}
 color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:10px}
 .dashlist li::before{content:"—";position:absolute;left:0;color:var(--acc)}
 .dashlist b{color:var(--ink);font-weight:600}
+.figgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pfig{margin:0;border:1px solid var(--line);border-radius:10px;
+overflow:hidden;background:#fff}
+.pfig.wide{grid-column:1/-1}
+.pfig img{width:100%;display:block}
+.pfig figcaption{font-size:12px;color:var(--mut);padding:10px 14px;
+background:var(--panel);line-height:1.5}
+@media (max-width:760px){.figgrid{grid-template-columns:1fr}}
 .skillrow{display:flex;flex-wrap:wrap;gap:10px}
 .schip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
 font-size:12.5px;font-weight:500}
@@ -353,6 +361,7 @@ transition:opacity .6s ease,transform .6s ease}
 <section class="pbody">
   <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/flX979tMJmU" title="Square Trajectory, Twice" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
   <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">REFERENCE</p><p class="mv">~5 to 6 ft square, two laps</p></div><div><p class="mk">STACK</p><p class="mv">Simulink, deployed to hardware</p></div></div>
+  
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>The drone flies a square reference roughly five to six feet per side, two consecutive times over the checkerboard arena, holding altitude through eight sharp corner transitions.</li><li>Flying the same lap twice back to back makes lap to lap consistency, and any accumulated drift, directly visible against the arena floor.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Reference:</b> Built on the minidrone waypoint follower project: the square&#x27;s corners become waypoints in a timed position reference fed to the position controller.</li><li><b>Control:</b> The Simulink control model tracks the reference through four sharp heading changes per lap, twice.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Corner overshoot at each of the eight sharp heading changes.</li><li>Position drift accumulating between the first and second lap.</li></ul></section>

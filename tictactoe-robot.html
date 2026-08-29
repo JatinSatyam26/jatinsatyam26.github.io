@@ -271,6 +271,14 @@ margin-bottom:14px}
 color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:10px}
 .dashlist li::before{content:"—";position:absolute;left:0;color:var(--acc)}
 .dashlist b{color:var(--ink);font-weight:600}
+.figgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pfig{margin:0;border:1px solid var(--line);border-radius:10px;
+overflow:hidden;background:#fff}
+.pfig.wide{grid-column:1/-1}
+.pfig img{width:100%;display:block}
+.pfig figcaption{font-size:12px;color:var(--mut);padding:10px 14px;
+background:var(--panel);line-height:1.5}
+@media (max-width:760px){.figgrid{grid-template-columns:1fr}}
 .skillrow{display:flex;flex-wrap:wrap;gap:10px}
 .schip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
 font-size:12.5px;font-weight:500}
@@ -353,6 +361,7 @@ transition:opacity .6s ease,transform .6s ease}
 <section class="pbody">
   <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/YnNlS2I5-H8" title="Tic-Tac-Toe Robot" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
   <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware · Classical vision</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: perception to action loop</p></div><div><p class="mk">POLICY</p><p class="mv">Depth aware Minimax, optimal</p></div></div>
+  
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A complete perception action loop played on real paper: the robot draws the grid, detects it visually, interprets human moves, and responds, with every outcome written physically on the page.</li><li>No fiducials and no manual calibration. The system self aligns to the grid the robot itself drew.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Drawing:</b> The arm draws the board from predefined physical coordinates; captured frames then define the region of interest boundaries.</li><li><b>Perception:</b> Canny edges and probabilistic Hough transforms find the grid, a homography rectifies it, and each cell is classified: HoughCircles for O, line pairs for X, ink density as fallback, with an N frame stabilization filter.</li><li><b>Rules:</b> Frame differencing validates each human turn: exactly one new symbol, nothing erased. Invalid moves get an E written beside the grid.</li><li><b>Decision:</b> Depth aware Minimax scores terminal states so the robot prefers faster wins, guaranteeing optimal play in the small search space.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Scan loop stalls during frame acquisition under CPU load.</li><li>Paper reflections and camera tilt disturbing homography estimation.</li><li>Race conditions between drawing motion and classification.</li></ul></section>

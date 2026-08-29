@@ -271,6 +271,14 @@ margin-bottom:14px}
 color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:10px}
 .dashlist li::before{content:"—";position:absolute;left:0;color:var(--acc)}
 .dashlist b{color:var(--ink);font-weight:600}
+.figgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pfig{margin:0;border:1px solid var(--line);border-radius:10px;
+overflow:hidden;background:#fff}
+.pfig.wide{grid-column:1/-1}
+.pfig img{width:100%;display:block}
+.pfig figcaption{font-size:12px;color:var(--mut);padding:10px 14px;
+background:var(--panel);line-height:1.5}
+@media (max-width:760px){.figgrid{grid-template-columns:1fr}}
 .skillrow{display:flex;flex-wrap:wrap;gap:10px}
 .schip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
 font-size:12.5px;font-weight:500}
@@ -353,6 +361,7 @@ transition:opacity .6s ease,transform .6s ease}
 <section class="pbody">
   <div class="ytduo"><div class="ytcell"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/cRmamC6WOwo" title="PARALLEL GRIPPER" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div><p class="ytlabel">PARALLEL GRIPPER</p></div><div class="ytcell"><div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/4O1vtqpEcjQ" title="SUCTION CUP" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div><p class="ytlabel">SUCTION CUP</p></div></div>
   <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware study</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: teach, program, measure</p></div><div><p class="mk">TOOLING</p><p class="mv">Suction cup · parallel gripper</p></div></div>
+  
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>Pallet to pallet transfer of plastic cubes with both of the arm&#x27;s interchangeable end effectors, quantified rather than eyeballed: cycle times recorded per trial for a direct comparison.</li><li>Ten taught waypoints per run: home, clearance, and eight pallet corners, reused identically across both tools.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Teaching:</b> Waypoints captured by jogging the arm and reading poses back through pydobot, with z heights tuned for reliable contact.</li><li><b>Control:</b> Python routines drive MOVJ motions with suction and gripper commands, with settle delays matched to each tool&#x27;s response.</li><li><b>Measurement:</b> Cycle time logged from first pickup to final placement across repeated four cube transfers.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Vacuum seal loss from small z height miscalibrations.</li><li>Gripper alignment drift on irregular grasps.</li><li>Intermittent serial communication mid sequence.</li></ul></section>

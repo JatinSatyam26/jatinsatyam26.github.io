@@ -271,6 +271,14 @@ margin-bottom:14px}
 color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:10px}
 .dashlist li::before{content:"—";position:absolute;left:0;color:var(--acc)}
 .dashlist b{color:var(--ink);font-weight:600}
+.figgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pfig{margin:0;border:1px solid var(--line);border-radius:10px;
+overflow:hidden;background:#fff}
+.pfig.wide{grid-column:1/-1}
+.pfig img{width:100%;display:block}
+.pfig figcaption{font-size:12px;color:var(--mut);padding:10px 14px;
+background:var(--panel);line-height:1.5}
+@media (max-width:760px){.figgrid{grid-template-columns:1fr}}
 .skillrow{display:flex;flex-wrap:wrap;gap:10px}
 .schip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
 font-size:12.5px;font-weight:500}
@@ -353,6 +361,7 @@ transition:opacity .6s ease,transform .6s ease}
 <section class="pbody">
   <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/HR9v5bqEzTY" title="Scan the Area, Land on the Spot" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
   <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">SENSOR</p><p class="mv">Downward facing camera</p></div><div><p class="mk">MISSION</p><p class="mv">Search, detect, land</p></div></div>
+  
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A search and land mission over a checkerboard arena: the drone scans the area in flight, detects the colored landing pad below, and transitions from search to a precision landing on it.</li><li>Built on the MathWorks Minidrone Competition project structure, with custom scanning references, detection thresholds, and the search to landing handover logic.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Search:</b> A scanning flight pattern covers the arena while the downward camera watches for the target color.</li><li><b>Detection:</b> Color segmentation on the camera feed identifies the landing pad and its position under the drone.</li><li><b>Landing:</b> Once centered over the detection, the controller hands over to a vertical landing sequence.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Detecting a small colored pad from a moving, vibrating camera.</li><li>Transitioning cleanly from search flight to a centered descent.</li></ul></section>

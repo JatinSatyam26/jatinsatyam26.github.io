@@ -271,6 +271,14 @@ margin-bottom:14px}
 color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:10px}
 .dashlist li::before{content:"—";position:absolute;left:0;color:var(--acc)}
 .dashlist b{color:var(--ink);font-weight:600}
+.figgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.pfig{margin:0;border:1px solid var(--line);border-radius:10px;
+overflow:hidden;background:#fff}
+.pfig.wide{grid-column:1/-1}
+.pfig img{width:100%;display:block}
+.pfig figcaption{font-size:12px;color:var(--mut);padding:10px 14px;
+background:var(--panel);line-height:1.5}
+@media (max-width:760px){.figgrid{grid-template-columns:1fr}}
 .skillrow{display:flex;flex-wrap:wrap;gap:10px}
 .schip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
 font-size:12.5px;font-weight:500}
@@ -353,6 +361,7 @@ transition:opacity .6s ease,transform .6s ease}
 <section class="pbody">
   <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/y6R4FiUsnlY" title="Line Following &amp; Landing" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
   <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">SENSOR</p><p class="mv">Downward facing camera</p></div><div><p class="mk">MISSION</p><p class="mv">Follow line, detect end, land</p></div></div>
+  
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A vision guided flight along a taped line: the drone tracks the path with its downward camera, recognizes the end-of-line marker, and executes an autonomous landing at the path&#x27;s end.</li></ul></section>
   <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Line tracking:</b> Frames stream YUV from the camera and convert to RGB; a color threshold isolates the line, a median filter cleans the mask, and blob analysis returns the centroid whose offset from the image center steers the drone.</li><li><b>End detection:</b> The end-of-line marker triggers the switch from path following to the landing sequence.</li><li><b>Landing:</b> A controlled descent puts the drone down at the end of the path.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Keeping the narrow line in frame against drift and vibration.</li><li>Distinguishing the end marker from the line reliably.</li></ul></section>
