@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>YOLO Palletizing · Jatin Satyam</title>
-<meta name="description" content="YOLO classifies objects in real time and the arm palletizes each one into its matching bin. Perception driven closed loop automation.">
-<link rel="canonical" href="https://jatinsatyam.in/yolo-palletizing.html">
+<title>Stable Hover · Jatin Satyam</title>
+<meta name="description" content="The foundation flight: a Simulink attitude controller, iterated through six model versions, holding the Mambo in a steady indoor hover.">
+<link rel="canonical" href="https://jatinsatyam.in/hover-control.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatin Satyam — Robotics Engineer">
-<meta property="og:description" content="YOLO classifies objects in real time and the arm palletizes each one into its matching bin. Perception driven closed loop automation.">
+<meta property="og:description" content="The foundation flight: a Simulink attitude controller, iterated through six model versions, holding the Mambo in a steady indoor hover.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
-<meta property="og:url" content="https://jatinsatyam.in/yolo-palletizing.html">
+<meta property="og:url" content="https://jatinsatyam.in/hover-control.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
-<meta name="twitter:description" content="YOLO classifies objects in real time and the arm palletizes each one into its matching bin. Perception driven closed loop automation.">
+<meta name="twitter:description" content="The foundation flight: a Simulink attitude controller, iterated through six model versions, holding the Mambo in a steady indoor hover.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -337,20 +337,20 @@ transition:opacity .6s ease,transform .6s ease}
 <nav id="nav"><a class="brand" href="index.html" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="index.html#top">HOME</a><a href="index.html#work">WORK</a><a href="index.html#experience">EXPERIENCE</a><a href="index.html#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="index.html#contact">CONTACT</a></div></nav>
 <section class="phead">
   <a class="back" href="index.html#work">← ALL WORK</a>
-  <p class="eyebrow">MACHINE VISION · ROBOT ARM MANIPULATION LAB</p>
-  <h1 class="ptitle">Vision Based Object Detection &amp; Palletizing with YOLO</h1>
-  <p class="plead">YOLO classifies objects in real time and the arm palletizes each one into its matching bin. Perception driven closed loop automation.</p>
+  <p class="eyebrow">FLIGHT CONTROL · PARROT MAMBO FLIGHT TEST PROGRAM</p>
+  <h1 class="ptitle">Attitude Control &amp; Stable Indoor Hover</h1>
+  <p class="plead">The foundation flight: a Simulink attitude controller, iterated through six model versions, holding the Mambo in a steady indoor hover.</p>
 </section>
 <section class="pbody">
-  <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/TPjBcd7Wd1E" title="YOLO Palletizing" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
-  <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware · Deep learning vision</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: detection to placement</p></div><div><p class="mk">DETECTOR</p><p class="mv">YOLO, live classification</p></div></div>
-  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>An automated sorting cell: an external camera feeds YOLO, objects are classified into categories, and the Dobot picks each with suction and places it into the category pallet.</li><li>Closed loop autonomy combining lightweight object detection with code driven motion routines.</li></ul></section>
-  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Detection:</b> Ultralytics YOLO classifies workspace objects in real time from the camera feed, gating every pick decision.</li><li><b>Motion:</b> pydobot motion primitives across four taught poses: home, pickup, and two category drop zones, with suction engagement timed around the vacuum response.</li><li><b>Loop:</b> Detect, classify, pick, palletize, repeat, with each cycle logged for accuracy and consistency.</li></ul></section>
-  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Serial communication delays between detections and motion.</li><li>Suction grip consistency across repeated cycles.</li><li>Detection confidence under varying lighting.</li></ul></section>
-  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Objects consistently detected, classified, and placed into the correct pallets across repeated trials, with stable cycle times and placement accuracy within a few millimeters.</li></ul></section>
+  <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="848" height="480" poster="assets/pv_hover.jpg" src="assets/pv_hover.mp4"></video></div>
+  <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">STACK</p><p class="mv">Simulink, 6 model iterations</p></div><div><p class="mk">TRACKING</p><p class="mv">Roll · pitch · yaw setpoints</p></div></div>
+  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>The controller everything else stands on: attitude stabilization tracking roll, pitch, and yaw setpoints, refined across six Simulink model iterations, then deployed to hold a steady indoor hover.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Modeling:</b> The flight control model was developed and tuned in Simulink, iterating six versions before hardware deployment.</li><li><b>Deployment:</b> The controller runs onboard the Mambo, stabilizing attitude against drift and disturbance in ground effect.</li></ul></section>
+  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Tuning gains that behave in simulation and survive real airframes.</li><li>Indoor air disturbance and ground effect near the floor.</li></ul></section>
+  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Steady, sustained indoor hover on the physical drone.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>
-  <div class="skillrow"><span class="schip">YOLO</span><span class="schip">OpenCV</span><span class="schip">Python</span><span class="schip">pydobot</span><span class="schip">Suction EOAT</span></div></section>
-  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_yolo_palletizing.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
+  <div class="skillrow"><span class="schip">Simulink</span><span class="schip">Control Design</span><span class="schip">PID Tuning</span><span class="schip">Parrot Mambo</span></div></section>
+  
 </section>
 <footer>
   <span>© 2026 Jatin Satyam</span>

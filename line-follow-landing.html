@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>YOLO Palletizing · Jatin Satyam</title>
-<meta name="description" content="YOLO classifies objects in real time and the arm palletizes each one into its matching bin. Perception driven closed loop automation.">
-<link rel="canonical" href="https://jatinsatyam.in/yolo-palletizing.html">
+<title>Line Following &amp; Landing · Jatin Satyam</title>
+<meta name="description" content="The downward camera locks onto a taped line, the drone follows it, detects the end-of-line marker, and lands there on its own.">
+<link rel="canonical" href="https://jatinsatyam.in/line-follow-landing.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatin Satyam — Robotics Engineer">
-<meta property="og:description" content="YOLO classifies objects in real time and the arm palletizes each one into its matching bin. Perception driven closed loop automation.">
+<meta property="og:description" content="The downward camera locks onto a taped line, the drone follows it, detects the end-of-line marker, and lands there on its own.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
-<meta property="og:url" content="https://jatinsatyam.in/yolo-palletizing.html">
+<meta property="og:url" content="https://jatinsatyam.in/line-follow-landing.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
-<meta name="twitter:description" content="YOLO classifies objects in real time and the arm palletizes each one into its matching bin. Perception driven closed loop automation.">
+<meta name="twitter:description" content="The downward camera locks onto a taped line, the drone follows it, detects the end-of-line marker, and lands there on its own.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -337,20 +337,20 @@ transition:opacity .6s ease,transform .6s ease}
 <nav id="nav"><a class="brand" href="index.html" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="index.html#top">HOME</a><a href="index.html#work">WORK</a><a href="index.html#experience">EXPERIENCE</a><a href="index.html#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="index.html#contact">CONTACT</a></div></nav>
 <section class="phead">
   <a class="back" href="index.html#work">← ALL WORK</a>
-  <p class="eyebrow">MACHINE VISION · ROBOT ARM MANIPULATION LAB</p>
-  <h1 class="ptitle">Vision Based Object Detection &amp; Palletizing with YOLO</h1>
-  <p class="plead">YOLO classifies objects in real time and the arm palletizes each one into its matching bin. Perception driven closed loop automation.</p>
+  <p class="eyebrow">VISION GUIDED FLIGHT · PARROT MAMBO FLIGHT TEST PROGRAM</p>
+  <h1 class="ptitle">Line Following with End-of-Line Detection &amp; Landing</h1>
+  <p class="plead">The downward camera locks onto a taped line, the drone follows it, detects the end-of-line marker, and lands there on its own.</p>
 </section>
 <section class="pbody">
-  <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/TPjBcd7Wd1E" title="YOLO Palletizing" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
-  <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware · Deep learning vision</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: detection to placement</p></div><div><p class="mk">DETECTOR</p><p class="mv">YOLO, live classification</p></div></div>
-  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>An automated sorting cell: an external camera feeds YOLO, objects are classified into categories, and the Dobot picks each with suction and places it into the category pallet.</li><li>Closed loop autonomy combining lightweight object detection with code driven motion routines.</li></ul></section>
-  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Detection:</b> Ultralytics YOLO classifies workspace objects in real time from the camera feed, gating every pick decision.</li><li><b>Motion:</b> pydobot motion primitives across four taught poses: home, pickup, and two category drop zones, with suction engagement timed around the vacuum response.</li><li><b>Loop:</b> Detect, classify, pick, palletize, repeat, with each cycle logged for accuracy and consistency.</li></ul></section>
-  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Serial communication delays between detections and motion.</li><li>Suction grip consistency across repeated cycles.</li><li>Detection confidence under varying lighting.</li></ul></section>
-  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Objects consistently detected, classified, and placed into the correct pallets across repeated trials, with stable cycle times and placement accuracy within a few millimeters.</li></ul></section>
+  <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="480" height="854" poster="assets/pv_line.jpg" src="assets/pv_line.mp4"></video></div>
+  <div class="mrow"><div><p class="mk">PLATFORM</p><p class="mv">Parrot Mambo minidrone</p></div><div><p class="mk">SENSOR</p><p class="mv">Downward facing camera</p></div><div><p class="mk">MISSION</p><p class="mv">Follow line, detect end, land</p></div></div>
+  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A vision guided flight along a taped line: the drone tracks the path with its downward camera, recognizes the end-of-line marker, and executes an autonomous landing at the path&#x27;s end.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Line tracking:</b> The camera feed is segmented to extract the line; steering corrections keep the drone centered over it in flight.</li><li><b>End detection:</b> The end-of-line marker triggers the switch from path following to the landing sequence.</li><li><b>Landing:</b> A controlled descent puts the drone down at the end of the path.</li></ul></section>
+  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Keeping the narrow line in frame against drift and vibration.</li><li>Distinguishing the end marker from the line reliably.</li></ul></section>
+  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Full detect, follow, land behavior demonstrated end to end on real hardware.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>
-  <div class="skillrow"><span class="schip">YOLO</span><span class="schip">OpenCV</span><span class="schip">Python</span><span class="schip">pydobot</span><span class="schip">Suction EOAT</span></div></section>
-  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_yolo_palletizing.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
+  <div class="skillrow"><span class="schip">Simulink</span><span class="schip">Machine Vision</span><span class="schip">Flight Control</span><span class="schip">Parrot Mambo</span></div></section>
+  
 </section>
 <footer>
   <span>© 2026 Jatin Satyam</span>

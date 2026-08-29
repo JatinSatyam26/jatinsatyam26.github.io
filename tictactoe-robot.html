@@ -227,6 +227,10 @@ letter-spacing:.14em;color:var(--acc);text-transform:uppercase;margin-bottom:5px
 font-size:15.5px;line-height:1.25;color:#fff;margin:0}
 @media (hover:none){.tover{opacity:1;
 background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.82))}}
+/* 5-tile layout: 3 on top, 2 centered below */
+.pgrid.c5{grid-template-columns:repeat(6,1fr)}
+.pgrid.c5 .ptile{grid-column:span 2}
+.pgrid.c5 .ptile:nth-child(4){grid-column:2/span 2}
 /* project pages */
 .phead{padding-top:130px;padding-bottom:0}
 .ptitle{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
@@ -322,10 +326,11 @@ transition:opacity .6s ease,transform .6s ease}
   .entry{grid-template-columns:1fr}
   .xrow{grid-template-columns:1fr;gap:4px}
   .ol{-webkit-text-stroke-width:1.6px}
-  .pgrid{grid-template-columns:1fr 1fr}
+  .pgrid,.pgrid.c5{grid-template-columns:1fr 1fr}
+  .pgrid.c5 .ptile,.pgrid.c5 .ptile:nth-child(4){grid-column:auto}
   section{padding:64px 6vw}}
 @media (max-width:540px){
-  .pgrid{grid-template-columns:1fr}}
+  .pgrid,.pgrid.c5{grid-template-columns:1fr}}
 </style>
 </head>
 <body>

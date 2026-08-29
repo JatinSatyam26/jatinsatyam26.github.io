@@ -228,6 +228,10 @@ letter-spacing:.14em;color:var(--acc);text-transform:uppercase;margin-bottom:5px
 font-size:15.5px;line-height:1.25;color:#fff;margin:0}
 @media (hover:none){.tover{opacity:1;
 background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.82))}}
+/* 5-tile layout: 3 on top, 2 centered below */
+.pgrid.c5{grid-template-columns:repeat(6,1fr)}
+.pgrid.c5 .ptile{grid-column:span 2}
+.pgrid.c5 .ptile:nth-child(4){grid-column:2/span 2}
 /* project pages */
 .phead{padding-top:130px;padding-bottom:0}
 .ptitle{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
@@ -323,10 +327,11 @@ transition:opacity .6s ease,transform .6s ease}
   .entry{grid-template-columns:1fr}
   .xrow{grid-template-columns:1fr;gap:4px}
   .ol{-webkit-text-stroke-width:1.6px}
-  .pgrid{grid-template-columns:1fr 1fr}
+  .pgrid,.pgrid.c5{grid-template-columns:1fr 1fr}
+  .pgrid.c5 .ptile,.pgrid.c5 .ptile:nth-child(4){grid-column:auto}
   section{padding:64px 6vw}}
 @media (max-width:540px){
-  .pgrid{grid-template-columns:1fr}}
+  .pgrid,.pgrid.c5{grid-template-columns:1fr}}
 </style>
 </head>
 <body id="top">
@@ -415,15 +420,39 @@ transition:opacity .6s ease,transform .6s ease}
         <h4>Suction vs Gripper</h4></div>
       </a></div>
   </article>
-  <article class="chap reveal alt" id="w-mambo">
-    <div class="ctext">
+  <article class="chap gridchap reveal" id="w-mambo">
+    <div class="chead">
       <div class="cnum" aria-hidden="true">02</div>
       <p class="eyebrow">FLIGHT CONTROL · REAL DRONE</p>
       <h3>Parrot Mambo Flight Test Program</h3>
-      <p class="cline">Simulink flight controllers deployed to a physical Parrot Mambo: attitude, hover, waypoints, line following, and autonomous landings.</p>
-      <a class="btn sm" href="mambo.html">ALL 4 PROJECTS →</a>
+      <p class="cline">Simulink flight controllers deployed to a physical Parrot Mambo minidrone: stable hover, trajectory tracking, vision guided line following, area scanning, and autonomous landings, including touchdown on a moving platform. Five flights, each with its own page.</p>
     </div>
-    <div class="cvid"><video autoplay muted loop playsinline width="640" height="480" poster="assets/mambo.jpg" src="assets/mambo.mp4"></video><span class="simtag">HARDWARE</span></div>
+    <div class="pgrid c5">
+      <a class="ptile" href="moving-platform-landing.html" aria-label="Landing on a Moving Platform">
+        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_moveland.jpg" src="assets/t_moveland.mp4"></video>
+        <div class="tover"><p class="tcat">PRECISION LANDING</p>
+        <h4>Landing on a Moving Platform</h4></div>
+      </a>
+      <a class="ptile" href="scan-and-land.html" aria-label="Scan the Area, Land on the Spot">
+        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_scan.jpg" src="assets/t_scan.mp4"></video>
+        <div class="tover"><p class="tcat">SEARCH &amp; LAND</p>
+        <h4>Scan the Area, Land on the Spot</h4></div>
+      </a>
+      <a class="ptile" href="line-follow-landing.html" aria-label="Line Following &amp; Landing">
+        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_line.jpg" src="assets/t_line.mp4"></video>
+        <div class="tover"><p class="tcat">VISION GUIDED FLIGHT</p>
+        <h4>Line Following &amp; Landing</h4></div>
+      </a>
+      <a class="ptile" href="square-tracking.html" aria-label="Square Trajectory, Twice">
+        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_square.jpg" src="assets/t_square.mp4"></video>
+        <div class="tover"><p class="tcat">TRAJECTORY TRACKING</p>
+        <h4>Square Trajectory, Twice</h4></div>
+      </a>
+      <a class="ptile" href="hover-control.html" aria-label="Stable Hover">
+        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_hover.jpg" src="assets/t_hover.mp4"></video>
+        <div class="tover"><p class="tcat">FLIGHT CONTROL</p>
+        <h4>Stable Hover</h4></div>
+      </a></div>
   </article>
   <article class="chap reveal" id="w-mechanical">
     <div class="ctext">
