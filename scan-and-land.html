@@ -214,9 +214,10 @@ padding:0 20px}
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .ptile{position:relative;border-radius:10px;overflow:hidden;display:block;
 border:1px solid var(--line);background:var(--panel);text-decoration:none}
-.ptile video{width:100%;display:block;height:auto;
+.ptile video,.ptile img{width:100%;display:block;height:auto;
 transition:filter .35s ease,transform .35s ease}
-.ptile:hover video,.ptile:focus-visible video{filter:brightness(.3);
+.ptile:hover video,.ptile:focus-visible video,
+.ptile:hover img,.ptile:focus-visible img{filter:brightness(.3);
 transform:scale(1.04)}
 .tover{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;
 justify-content:flex-end;padding:16px;opacity:0;transition:opacity .35s ease}

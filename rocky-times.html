@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>Space Robotics &amp; AI · Jatin Satyam</title>
-<meta name="description" content="Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
-<link rel="canonical" href="https://jatinsatyam.in/space.html">
+<title>Drone Search, Map &amp; Land · Jatin Satyam</title>
+<meta name="description" content="A simulated PX4 drone searches the scene, measures the rock formations, reads their ArUco markers, picks the tallest, and lands on it, while RTAB-Map builds a live 3D mesh.">
+<link rel="canonical" href="https://jatinsatyam.in/rocky-times.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatin Satyam — Robotics Engineer">
-<meta property="og:description" content="Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
+<meta property="og:description" content="A simulated PX4 drone searches the scene, measures the rock formations, reads their ArUco markers, picks the tallest, and lands on it, while RTAB-Map builds a live 3D mesh.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
-<meta property="og:url" content="https://jatinsatyam.in/space.html">
+<meta property="og:url" content="https://jatinsatyam.in/rocky-times.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
-<meta name="twitter:description" content="Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.">
+<meta name="twitter:description" content="A simulated PX4 drone searches the scene, measures the rock formations, reads their ArUco markers, picks the tallest, and lands on it, while RTAB-Map builds a live 3D mesh.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -214,9 +214,10 @@ padding:0 20px}
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .ptile{position:relative;border-radius:10px;overflow:hidden;display:block;
 border:1px solid var(--line);background:var(--panel);text-decoration:none}
-.ptile video{width:100%;display:block;height:auto;
+.ptile video,.ptile img{width:100%;display:block;height:auto;
 transition:filter .35s ease,transform .35s ease}
-.ptile:hover video,.ptile:focus-visible video{filter:brightness(.3);
+.ptile:hover video,.ptile:focus-visible video,
+.ptile:hover img,.ptile:focus-visible img{filter:brightness(.3);
 transform:scale(1.04)}
 .tover{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;
 justify-content:flex-end;padding:16px;opacity:0;transition:opacity .35s ease}
@@ -353,53 +354,24 @@ transition:opacity .6s ease,transform .6s ease}
 </head>
 <body>
 <nav id="nav"><a class="brand" href="index.html" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="index.html#top">HOME</a><a href="index.html#work">WORK</a><a href="index.html#experience">EXPERIENCE</a><a href="index.html#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="index.html#contact">CONTACT</a></div></nav>
-<section class="subhead">
-  <a class="back mono" href="index.html#work">← ALL WORK</a>
-  <p class="eyebrow">PLANETARY AUTONOMY · ROS 2</p>
-  <h2>Space Robotics &amp; AI</h2>
-  <p class="sub-tag">Autonomy on planetary terrain: cooperative drone and rover missions on real HiRISE Mars data, lunar reconstruction from Apollo archives, and the control theory underneath.</p>
+<section class="phead">
+  <a class="back" href="index.html#work">← ALL WORK</a>
+  <p class="eyebrow">AUTONOMOUS FLIGHT MISSION · SPACE ROBOTICS &AMP; AI</p>
+  <h1 class="ptitle">Autonomous Drone Search, Mapping &amp; Precision Landing</h1>
+  <p class="plead">A simulated PX4 drone searches the scene, measures the rock formations, reads their ArUco markers, picks the tallest, and lands on it, while RTAB-Map builds a live 3D mesh.</p>
 </section>
-<section class="entries" style="padding-top:0">
-  <article class="entry reveal">
-    <div class="emedia"><video autoplay muted loop playsinline width="720" height="538" poster="assets/mars.jpg" src="assets/mars.mp4"></video><span class="simtag">SIMULATION</span></div>
-    <div class="ebody">
-      <p class="eyebrow">ROS 2 + GAZEBO</p>
-      <h3>Aerial-Ground Cooperative Autonomy on Mars Terrain</h3>
-      <div class="chips"><span class="chip">WAYPOINTS · 18/18</span><span class="chip">FINAL ACCURACY · 0.73 m</span><span class="chip">LOCALIZATION GAIN · +24 %</span></div><p class="blurb">A drone surveys real HiRISE Jezero Crater terrain and builds a Bayesian occupancy map. A six wheel rover navigates it with terrain relative localization and A* replanning. Every number physics simulated, none scripted.</p><p class="tech">ROS 2 · Gazebo · Python · NumPy · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/midterm_and_final_project" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal nomedia">
-    
-    <div class="ebody">
-      <p class="eyebrow">PX4 + RTAB-MAP SLAM</p>
-      <h3>Autonomous Drone Search, Map &amp; Precision Landing</h3>
-      <div class="chips"><span class="chip">MISSION SCORE · 150/150</span><span class="chip">LIVE 3D MESH · 43,283 VERTICES</span></div><p class="blurb">A nine state autonomous mission: search for rock formations, identify ArUco markers while orbiting, select the tallest, and land on top, with RTAB-Map building a dense 3D mesh live during flight. Footage joining the page soon.</p><p class="tech">ROS 2 · PX4 · RTAB-Map · OpenCV · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/terrain_mapping_drone_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal nomedia">
-    
-    <div class="ebody">
-      <p class="eyebrow">NASA ARCHIVE · 3D RECONSTRUCTION</p>
-      <h3>Photogrammetry &amp; 3D Gaussian Splatting on Apollo 17 Imagery</h3>
-      <div class="chips"><span class="chip">SPLAT FIDELITY · 33.93 dB PSNR</span><span class="chip">MESH CROSS-CHECK · F-SCORE 0.934</span></div><p class="blurb">The Apollo 17 boulder rebuilt two independent ways from 15 archival Hasselblad frames: COLMAP with custom PyTorch multi view stereo versus 3D Gaussian Splatting, including a rigorous negative result on splat rendered views in SIFT pipelines.</p><p class="tech">COLMAP · PyTorch · Open3D · Nerfstudio · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/photogrammetry_gaussian_splatting_apollo17" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal nomedia">
-    
-    <div class="ebody">
-      <p class="eyebrow">OPTIMAL CONTROL · LQR VS RL</p>
-      <h3>LQR Optimal Control of a Cart-Pole Under Seismic Disturbance</h3>
-      <div class="chips"><span class="chip">STABILITY · 9.69/10</span><span class="chip">DISTURBANCE · 15 N · 0.5-4 Hz</span></div><p class="blurb">An LQR tuned to hold an inverted pendulum through earthquake class disturbances, benchmarked against a self trained DQN. Model based control wins, and the numbers show why.</p><p class="tech">ROS 2 · Gazebo · Python · PyTorch · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/cart_pole_optimal_control" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
-    </div>
-  </article>
-  <article class="entry reveal nomedia">
-    
-    <div class="ebody">
-      <p class="eyebrow">COVERAGE CONTROL</p>
-      <h3>First-Order Boustrophedon Coverage Controller</h3>
-      <div class="chips"><span class="chip">CROSS-TRACK ERROR · -96.5 %</span></div><p class="blurb">A lawnmower coverage controller rebuilt from coupled PD into a TURN and DRIVE state machine. Proof that control structure, not gain tuning, was the fix.</p><p class="tech">ROS 2 · Python · 2026</p><div class="elinks"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/first_order_boustrophedon_navigator" target="_blank" rel="noopener">CODE &amp; REPORT ↗</a></div>
-    </div>
-  </article></section>
+<section class="pbody">
+  <div class="pvwrap"><video autoplay muted loop playsinline preload="none" width="960" height="540" poster="assets/pv_rocky.jpg" src="assets/pv_rocky.mp4"></video></div>
+  <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Simulation · PX4 SITL + Gazebo</p></div><div><p class="mk">SCORE</p><p class="mv">150/150 incl. extra credit</p></div><div><p class="mk">SLAM</p><p class="mv">43,283 vertex live 3D mesh</p></div></div>
+  <div class="figgrid"><figure class="pfig"><img src="assets/sp_rocky_landed.jpg" alt="Touchdown: the drone landed on the ArUco pad atop the tall cylinder, mission log confirming completion." loading="lazy"><figcaption>Touchdown: the drone landed on the ArUco pad atop the tall cylinder, mission log confirming completion.</figcaption></figure><figure class="pfig"><img src="assets/sp_rocky_detect.jpg" alt="The perception pipeline measuring a cylinder live: RGB detection with depth derived dimensions." loading="lazy"><figcaption>The perception pipeline measuring a cylinder live: RGB detection with depth derived dimensions.</figcaption></figure><figure class="pfig wide"><img src="assets/sp_rocky_scene.jpg" alt="The mission scene: both rock formations in the lunar style arena before the search begins." loading="lazy"><figcaption>The mission scene: both rock formations in the lunar style arena before the search begins.</figcaption></figure></div>
+  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>A full autonomous mission in one flight: take off, circle the scene, detect two cylindrical rock formations with an RGB plus depth pipeline, measure their dimensions, identify the ArUco markers on top, select the tallest, and precision land on it.</li><li>Extra credit added RTAB-Map RGB-D SLAM producing a textured 3D mesh of the scene live during the mission.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Mission logic:</b> A state machine drives the flight through circling, visual servoing, hover, marker alignment, and landing.</li><li><b>Perception:</b> OpenCV RGB and depth processing measures each cylinder&#x27;s height and diameter in flight and reads the ArUco markers for identification.</li><li><b>SLAM bridge:</b> RTAB-Map needed odometry PX4 does not publish the ROS 2 way, so a self written bridge handles NED to ENU conversion, camera timestamp sync, QoS alignment, and TF: six debugging sessions, nine root causes, from 0 valid poses to 78.</li></ul></section>
+  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Reliable marker reads at altitude against simulated lighting.</li><li>The PX4 to ROS 2 odometry gap: the entire extra credit hinged on a bridge that took six documented debugging sessions to get right.</li></ul></section>
+  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>3 of 3 trials successful, about 111 seconds per mission on the recorded runs, with landings on the correct, taller formation every time.</li><li>A 43,283 vertex, 55,072 polygon textured mesh built live during flight, plus full trial documentation and screencasts.</li></ul></section>
+  <section class="psec"><h2>Skills &amp; Tools</h2>
+  <div class="skillrow"><span class="schip">PX4</span><span class="schip">ROS 2</span><span class="schip">Gazebo</span><span class="schip">OpenCV</span><span class="schip">ArUco</span><span class="schip">RTAB-Map</span><span class="schip">RGB-D SLAM</span><span class="schip">State Machines</span></div></section>
+  <div class="elinks" style="margin-top:30px"><a class="plink" href="https://github.com/JatinSatyam26/ses598-space-robotics-and-ai-2026/tree/main/assignments/terrain_mapping_drone_control" target="_blank" rel="noopener">CODE &amp; DOCS ↗</a></div>
+</section>
 <footer>
   <span>© 2026 Jatin Satyam</span>
   <span class="fbrand">JS<span>.</span></span>
