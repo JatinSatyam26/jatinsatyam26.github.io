@@ -4,24 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>Jatin Satyam · Robotics Engineer</title>
-<meta name="description" content="Jatin Satyam builds machines that move and think. Robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems at ASU.">
-<link rel="canonical" href="https://jatinsatyam.in/">
+<title>Stretch3 Pick &amp; Place · Jatin Satyam</title>
+<meta name="description" content="A Hello Robot Stretch3 mobile manipulator: lift and arm extension modeled in state space and formally shown controllable, observable, and stable in MATLAB, then the full 8-DOF robot driven through pick-and-place in MuJoCo with a tuned PD controller and an LQR benchmarked against it.">
+<link rel="canonical" href="https://jatinsatyam.in/stretch3-mobile-manipulation.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatin Satyam — Robotics Engineer">
-<meta property="og:description" content="Jatin Satyam builds machines that move and think. Robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems at ASU.">
+<meta property="og:description" content="A Hello Robot Stretch3 mobile manipulator: lift and arm extension modeled in state space and formally shown controllable, observable, and stable in MATLAB, then the full 8-DOF robot driven through pick-and-place in MuJoCo with a tuned PD controller and an LQR benchmarked against it.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
-<meta property="og:url" content="https://jatinsatyam.in/">
+<meta property="og:url" content="https://jatinsatyam.in/stretch3-mobile-manipulation.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
-<meta name="twitter:description" content="Jatin Satyam builds machines that move and think. Robotics, mechatronics, and autonomous systems. MS Robotics &amp; Autonomous Systems at ASU.">
+<meta name="twitter:description" content="A Hello Robot Stretch3 mobile manipulator: lift and arm extension modeled in state space and formally shown controllable, observable, and stable in MATLAB, then the full 8-DOF robot driven through pick-and-place in MuJoCo with a tuned PD controller and an LQR benchmarked against it.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Jatin Satyam", "url": "https://jatinsatyam.in/", "email": "mailto:jsatyam@asu.edu", "sameAs": ["https://linkedin.com/in/jatin-satyam", "https://github.com/JatinSatyam26"], "jobTitle": "Robotics & Autonomous Systems Engineer", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Arizona State University"}, {"@type": "CollegeOrUniversity", "name": "University of Mumbai"}], "knowsAbout": ["Robotics", "Mechatronics", "Control Systems", "Mechanical Design", "Autonomous Systems"]}</script>
 <style>
 :root{--bg:#0A0D12;--panel:#10141B;--ink:#EDEFF3;--mut:#98A2B3;
 --line:rgba(255,255,255,.09);--acc:#E0763C;--acc-dim:rgba(224,118,60,.13)}
@@ -353,262 +352,31 @@ transition:opacity .6s ease,transform .6s ease}
   .pgrid,.pgrid.c5{grid-template-columns:1fr}}
 </style>
 </head>
-<body id="top">
-<nav id="nav"><a class="brand" href="#top" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="#top">HOME</a><a href="#work">WORK</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="#contact">CONTACT</a></div></nav>
-<div class="heropin">
-<header class="hero">
-  <video autoplay muted loop playsinline width="1600" height="900" poster="assets/hero5.jpg" src="assets/hero5.mp4"></video>
-  <div class="hwrap">
-    <div class="hstage">
-      <h1 class="hname" id="hname"><span class="hf" style="animation-delay:0.10s">JATIN</span><span class="hf ol" style="animation-delay:0.20s">SATYAM</span></h1>
-      <div class="hrole" id="hrole" aria-hidden="true">
-        <div class="hpersona"><div class="hroller" id="hroller"><span>ROBOTICS</span><span>MECHATRONICS</span><span>AUTOMATION</span></div></div>
-        <div class="hengineer ol">ENGINEER</div>
-      </div>
-      <p class="visually-hidden">Robotics, Mechatronics and Automation Engineer</p>
-    </div>
-    <div class="hcta hf" style="animation-delay:.45s">
-      <a class="btn steal" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">STEAL MY RESUME ↗</a>
-    </div>
-  </div>
-</header>
-</div>
-
-<section id="about">
-  <div class="aboutgrid">
-    <div class="pwrap reveal"><img class="pphoto" src="assets/photo.jpg"
-      alt="Jatin Satyam" width="640" height="640"></div>
-    <div class="reveal">
-      <p class="lead">I build machines that move and <em>think</em>.</p>
-      <p class="sbody">I am a mechanical engineer who crossed into robotics and stayed. My work runs from cryocooler mechanisms and rotor dynamics on defence hardware to robot arms, drones, and autonomous systems at Arizona State. I like my engineering physical: designed, built, tested, and proven on real machines.</p>
-      <hr class="arule">
-      <p class="eyebrow">EDUCATION</p>
-      <div class="edugrid"><div class="edurow"><img class="elogo" src="assets/logo_asu.png" alt="" loading="lazy">
-          <div><p class="eduname">Arizona State University</p>
-          <p class="edudeg">MS Robotics &amp; Autonomous Systems</p>
-          <p class="edudates">Expected May 2027</p></div></div><div class="edurow"><img class="elogo" src="assets/logo_mumbai.png" alt="" loading="lazy">
-          <div><p class="eduname">University of Mumbai</p>
-          <p class="edudeg">BE Mechanical Engineering</p>
-          <p class="edudates">2020 · 2024</p></div></div></div>
-      <p class="eyebrow">CERTIFICATIONS &amp; AWARDS</p>
-      <div class="certrow"><div class="certghost" aria-hidden="true">+</div><div class="certghost" aria-hidden="true">+</div></div>
-    </div>
-  </div>
+<body>
+<nav id="nav"><a class="brand" href="index.html" aria-label="Jatin Satyam, home">JS<span>.</span></a><div class="nlinks"><a href="index.html#top">HOME</a><a href="index.html#work">WORK</a><a href="index.html#experience">EXPERIENCE</a><a href="index.html#skills">SKILLS</a><a href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME</a><a href="index.html#contact">CONTACT</a></div></nav>
+<section class="phead">
+  <a class="back" href="index.html#work">← ALL WORK</a>
+  <p class="eyebrow">STATE-SPACE CONTROL · LQR · MUJOCO MOBILE MANIPULATION</p>
+  <h1 class="ptitle">State-Space Analysis of a Stretch3 Robot for Pick and Place</h1>
+  <p class="plead">A Hello Robot Stretch3 mobile manipulator: lift and arm extension modeled in state space and formally shown controllable, observable, and stable in MATLAB, then the full 8-DOF robot driven through pick-and-place in MuJoCo with a tuned PD controller and an LQR benchmarked against it.</p>
 </section>
-
-<section id="work" style="padding-top:24px">
-  <p class="eyebrow">SELECTED WORK</p>
-  <h2>The work</h2>
+<section class="pbody">
   
-  <article class="chap gridchap reveal" id="w-dobot">
-    <div class="chead">
-      <div class="cnum" aria-hidden="true">01</div>
-      <p class="eyebrow">MANIPULATION · MACHINE VISION</p>
-      <h3>Robot Arm Manipulation Lab</h3>
-      <p class="cline">Hands-on robot arm work on the Dobot Magician Lite: natural language control, a tic-tac-toe playing robot, vision guided maze runs, YOLO palletizing, kinematics from first principles, and end effector studies. Six projects, each with its own page.</p>
-      <p class="ghint">HOVER OVER A PROJECT · CLICK TO EXPLORE ↗</p>
-    </div>
-    <div class="pgrid">
-      <a class="ptile" href="llm-manipulation.html" aria-label="Natural Language Manipulation">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_llm.jpg" src="assets/t_llm.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">LLM CONTROL</p>
-        <h4>Natural Language Manipulation</h4></div>
-      </a>
-      <a class="ptile" href="tictactoe-robot.html" aria-label="Tic-Tac-Toe Robot">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_ttt.jpg" src="assets/t_ttt.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">GAME AUTONOMY</p>
-        <h4>Tic-Tac-Toe Robot</h4></div>
-      </a>
-      <a class="ptile" href="maze-navigation.html" aria-label="Maze Navigation">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_maze.jpg" src="assets/t_maze.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">PATH PLANNING</p>
-        <h4>Maze Navigation</h4></div>
-      </a>
-      <a class="ptile" href="yolo-palletizing.html" aria-label="YOLO Palletizing">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_yolo.jpg" src="assets/t_yolo.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">MACHINE VISION</p>
-        <h4>YOLO Palletizing</h4></div>
-      </a>
-      <a class="ptile" href="kinematics.html" aria-label="Forward &amp; Inverse Kinematics">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_kin.jpg" src="assets/t_kin.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">KINEMATICS</p>
-        <h4>Forward &amp; Inverse Kinematics</h4></div>
-      </a>
-      <a class="ptile" href="end-effectors.html" aria-label="Suction vs Gripper">
-        <video autoplay muted loop playsinline preload="none" width="640" height="480" poster="assets/t_grip.jpg" src="assets/t_grip.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">END-EFFECTORS</p>
-        <h4>Suction vs Gripper</h4></div>
-      </a></div>
-  </article>
-  <article class="chap gridchap reveal" id="w-mambo">
-    <div class="chead">
-      <div class="cnum" aria-hidden="true">02</div>
-      <p class="eyebrow">FLIGHT CONTROL · REAL DRONE</p>
-      <h3>Parrot Mambo Flight Test Program</h3>
-      <p class="cline">Simulink flight controllers deployed to a physical Parrot Mambo minidrone: stable hover, trajectory tracking, vision guided line following, area scanning, and autonomous landings, including touchdown on a moving platform. Five flights, each with its own page.</p>
-      <p class="ghint">HOVER OVER A PROJECT · CLICK TO EXPLORE ↗</p>
-    </div>
-    <div class="pgrid c5">
-      <a class="ptile" href="moving-platform-landing.html" aria-label="Landing on a Moving Platform">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_moveland.jpg" src="assets/t_moveland.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">PRECISION LANDING</p>
-        <h4>Landing on a Moving Platform</h4></div>
-      </a>
-      <a class="ptile" href="scan-and-land.html" aria-label="Scan the Area, Land on the Spot">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_scan.jpg" src="assets/t_scan.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">SEARCH &amp; LAND</p>
-        <h4>Scan the Area, Land on the Spot</h4></div>
-      </a>
-      <a class="ptile" href="line-follow-landing.html" aria-label="Line Following &amp; Landing">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_line.jpg" src="assets/t_line.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">VISION GUIDED FLIGHT</p>
-        <h4>Line Following &amp; Landing</h4></div>
-      </a>
-      <a class="ptile" href="square-tracking.html" aria-label="Square Trajectory, Twice">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_square.jpg" src="assets/t_square.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">TRAJECTORY TRACKING</p>
-        <h4>Square Trajectory, Twice</h4></div>
-      </a>
-      <a class="ptile" href="hover-control.html" aria-label="Stable Hover">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_hover.jpg" src="assets/t_hover.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">FLIGHT CONTROL</p>
-        <h4>Stable Hover</h4></div>
-      </a></div>
-  </article>
-  <article class="chap gridchap reveal" id="w-space">
-    <div class="chead">
-      <div class="cnum" aria-hidden="true">03</div>
-      <p class="eyebrow">PLANETARY AUTONOMY · ROS 2</p>
-      <h3>Space Robotics &amp; AI</h3>
-      <p class="cline">Autonomy on planetary terrain, all physics simulated on real archival data: cooperative drone and rover missions on HiRISE Mars terrain, lunar reconstruction from Apollo archives, and the control theory underneath. Five projects, each with its own page.</p>
-      <p class="ghint">HOVER OVER A PROJECT · CLICK TO EXPLORE ↗</p>
-    </div>
-    <div class="pgrid c5">
-      <a class="ptile" href="mars-mission.html" aria-label="Mars Aerial-Ground Mission">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_mars.jpg" src="assets/t_mars.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">PLANETARY AUTONOMY</p>
-        <h4>Mars Aerial-Ground Mission</h4></div>
-      </a>
-      <a class="ptile" href="cartpole.html" aria-label="Cart-Pole Under Earthquakes">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_cart.jpg" src="assets/t_cart.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">OPTIMAL CONTROL</p>
-        <h4>Cart-Pole Under Earthquakes</h4></div>
-      </a>
-      <a class="ptile" href="rocky-times.html" aria-label="Drone Search, Map &amp; Land">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_rocky.jpg" src="assets/t_rocky.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">AUTONOMOUS FLIGHT MISSION</p>
-        <h4>Drone Search, Map &amp; Land</h4></div>
-      </a>
-      <a class="ptile" href="apollo17.html" aria-label="Apollo 17 Reconstruction">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_apollo.jpg" src="assets/t_apollo.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">NASA ARCHIVE · 3D RECONSTRUCTION</p>
-        <h4>Apollo 17 Reconstruction</h4></div>
-      </a>
-      <a class="ptile" href="boustrophedon.html" aria-label="Boustrophedon Navigator">
-        <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_bous.jpg" src="assets/t_bous.mp4"></video>
-        <span class="topen" aria-hidden="true">↗</span>
-        <div class="tover"><p class="tcat">COVERAGE CONTROL</p>
-        <h4>Boustrophedon Navigator</h4></div>
-      </a></div>
-  </article>
-  <article class="chap reveal alt" id="w-controls">
-    <div class="ctext">
-      <div class="cnum" aria-hidden="true">04</div>
-      <p class="eyebrow">STATE-SPACE · FORMALLY PROVEN</p>
-      <h3>MuJoCo Mobile Manipulation</h3>
-      <p class="cline">A Stretch3 mobile manipulator modeled analytically, the modeled axes formally proven controllable, observable, and stable, then driven through 8-DOF pick-and-place in MuJoCo with a tuned PD controller and an LQR proof of concept on the modeled axes.</p>
-      <a class="btn sm" href="stretch3-mobile-manipulation.html">OPEN PROJECT →</a>
-    </div>
-    <div class="cvid"><video autoplay muted loop playsinline width="640" height="480" poster="assets/stretch3.jpg" src="assets/stretch3.mp4"></video><span class="simtag">SIMULATION</span></div>
-  </article>
-  <article class="chap reveal" id="w-mechanical">
-    <div class="ctext">
-      <div class="cnum" aria-hidden="true">05</div>
-      <p class="eyebrow">ROTORDYNAMICS · BE INDUSTRIAL PROJECT</p>
-      <h3>Gyro Motor for Gyro-Stabilized Platforms</h3>
-      <p class="cline">My BE industrial final year project with TriQual Cryogenics: an indigenous gyro motor rotor for stabilized defence platforms. Eight designs screened in ANSYS rotordynamics, the winner built and FFT validated on an instrumented bench at a 28,000 rpm operating point.</p>
-      <a class="btn sm" href="gyro-motor.html">OPEN PROJECT →</a>
-    </div>
-    <div class="cvid"><video autoplay muted loop playsinline width="640" height="480" poster="assets/gyro.jpg" src="assets/gyro.mp4"></video><span class="simtag">HARDWARE</span></div>
-  </article>
-  <article class="chap reveal alt" id="w-innovation">
-    <div class="ctext">
-      <div class="cnum" aria-hidden="true">06</div>
-      <p class="eyebrow">ASSISTIVE DEVICE · WITH DIGNITY HEALTH</p>
-      <h3>SipSafe Smart Cup</h3>
-      <p class="cline">An assistive smart cup for dysphagia patients, built with a clinical team at Dignity Health. I owned the initial concept and the complete mechanical design. Details stay under wraps while the invention disclosure is with ASU&#x27;s technology transfer office. Ask me about it in person.</p>
-      
-    </div>
-    <div class="confpanel"><span class="badge">PATENT PROCESS UNDERWAY</span></div>
-  </article>
+  <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Mobile manipulation · Optimal control</p></div><div><p class="mk">ROLE</p><p class="mv">Solo course project · Advanced System Modeling &amp; Control</p></div><div><p class="mk">STACK</p><p class="mv">MuJoCo · MATLAB · Python · 8 DOF</p></div></div>
+  <div class="figgrid"><figure class="pfig wide"><img src="assets/mj_fig_pdlqr.jpg" alt="PD vs LQR closed-loop response on the two modeled axes. The LQR settles faster on both lift and arm extension, with a small undershoot on the lift." loading="lazy"><figcaption>PD vs LQR closed-loop response on the two modeled axes. The LQR settles faster on both lift and arm extension, with a small undershoot on the lift.</figcaption></figure><figure class="pfig"><img src="assets/mj_fig_pick.jpg" alt="The wrist positioning the gripper over the cuboid and cylinder during the MuJoCo pick-and-place run." loading="lazy"><figcaption>The wrist positioning the gripper over the cuboid and cylinder during the MuJoCo pick-and-place run.</figcaption></figure><figure class="pfig"><img src="assets/mj_fig_proof.jpg" alt="The MATLAB verdict: every eigenvalue in the left half-plane, and controllability and observability matrices both full rank." loading="lazy"><figcaption>The MATLAB verdict: every eigenvalue in the left half-plane, and controllability and observability matrices both full rank.</figcaption></figure></div>
+  <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>Fixed-base industrial arms do pick-and-place precisely, but they are locked into fixed workcells and fixed capital. This project explores the flexible-automation alternative: Hello Robot&#x27;s Stretch3 mobile manipulator, simulated in MuJoCo, picking and placing a cuboid and a cylinder anywhere its base can drive.</li><li>Under the simulation sits the control theory. The lift and arm extension were modeled as a six-state state-space system, built symbolically in MATLAB and formally checked for controllability, observability, and stability, then a PD controller drove all eight degrees of freedom and an LQR took on the modeled axes to see how much performance optimal control buys.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Model:</b> Lift and arm extension as mass-spring-damper joints with first-order actuator dynamics: six states, two inputs, with the A, B, C, D matrices constructed symbolically in MATLAB from assumed numerical parameters.</li><li><b>Proof:</b> Controllability and observability matrices both computed at full rank six, every eigenvalue of A with strictly negative real part: the modeled system is controllable, observable, asymptotically stable, and BIBO stable.</li><li><b>Control:</b> A Python PD controller drives all 8 DOF of Hello Robot&#x27;s Stretch3 MuJoCo model - base x and y, prismatic lift, telescopic extension, three wrist axes, and gripper - with gains tuned iteratively in the model XML.</li><li><b>Benchmark:</b> An LQR designed on the two modeled axes as a proof of concept, its Q and R weights tuned for speed, then compared head-to-head against the PD on the same step response.</li></ul></section>
+  <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Tuning eight joints at once: each stiffness-damping pair traded speed against overshoot, and pick-and-place punishes both the slow and the bouncy.</li><li>Keeping the analytical model tractable - reducing eight degrees of freedom to the two that carry the pick height and reach without losing the structure worth proving things about.</li><li>Grasping under contact: closed-loop feedback at every simulation step so the robot compensates for small disturbances and contact forces instead of fumbling the object.</li></ul></section>
+  <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Complete pick-and-place of both objects in MuJoCo with all eight degrees of freedom driven by the tuned PD controller.</li><li>The modeled system formally shown controllable, observable, asymptotically stable, and BIBO stable in MATLAB - the analysis that argues the concept is fit to carry onto Stretch3 hardware.</li><li>The LQR settled faster than the tuned PD at higher control aggressiveness, with a small undershoot on the lift - and MPC and hardware validation flagged as the next steps.</li></ul></section>
+  <section class="psec"><h2>Skills &amp; Tools</h2>
+  <div class="skillrow"><span class="schip">State-Space Modeling</span><span class="schip">MATLAB</span><span class="schip">MuJoCo</span><span class="schip">Python</span><span class="schip">PD Control</span><span class="schip">LQR</span><span class="schip">Controllability &amp; Observability</span><span class="schip">Stability Analysis</span></div></section>
+  <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_stretch3_statespace.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
 </section>
-
-<div class="band">
-  <video autoplay muted loop playsinline preload="none" width="1280" height="720" poster="assets/amb_floor.jpg" src="assets/amb_floor.mp4"></video>
-  <div class="inner"><div class="stats"><div class="stat reveal"><b>09</b><span>robots &amp; systems built</span></div><div class="stat reveal"><b>03</b><span>engineering internships</span></div><div class="stat reveal"><b>28,000</b><span>rpm rotor built &amp; proven</span></div><div class="stat reveal"><b>±2 mm</b><span>vision guided pick precision</span></div></div></div>
-</div>
-
-<section id="experience">
-  <p class="eyebrow">THE ENGINEER</p>
-  <h2>Experience</h2>
-  
-      <div class="xrow reveal">
-        <div class="xwhen">JAN 2025 · JUL 2025</div>
-        <div class="xmain"><h4>Mechatronics Engineer Intern <span class="xorg">· Paras Defence &amp; Space Technologies</span></h4>
-        <p>Full time at graduate engineer scope on cryogenic cooling hardware for defence and space platforms: Gifford-McMahon cryocooler mechanisms designed and iterated in SolidWorks and NX.</p><p>Led performance testing across 3 cooling assemblies and 25+ instrumented thermal runs. The loss data drove mechanism level design changes that cut prototype rework by 12%.</p><p>Built a vacuum insulated LN2 generation unit, ran a UAV lightweighting study to an 8% mass cut, delivered 30+ CAD releases with review turnaround down 20%, and owned PLM lifecycles across 3 projects.</p></div>
-      </div>
-      <div class="xrow reveal">
-        <div class="xwhen">AUG 2024 · NOV 2024</div>
-        <div class="xmain"><h4>CFD Intern <span class="xorg">· MARS Exploration</span></h4>
-        <p>3D CFD of NACA 23012 vs 4412 airfoils in ANSYS Fluent: aerodynamic efficiency of an aircraft wing at 10° angle of attack and 48 m/s.</p><p>Owned the full workflow: geometry, boundary layer meshing with quality checks, solver convergence, and post processing of pressure, turbulence, and pathline fields.</p></div>
-      </div>
-      <div class="xrow reveal">
-        <div class="xwhen">MAY 2023 · AUG 2023</div>
-        <div class="xmain"><h4>R&amp;D Engineer Intern <span class="xorg">· TriQual Cryogenics</span></h4>
-        <p>Stirling cycle cryocoolers operating near 70 K. Mechanical design and vibration control on reciprocating assemblies, alongside senior engineers.</p><p>The gyro motor thread here became my year long BE industry project: 8 rotor designs screened in ANSYS, the winner built and FFT validated at 28,000 rpm.</p></div>
-      </div>
-</section>
-
-<section id="skills" >
-  <p class="eyebrow">TOOLBOX</p>
-  <h2>Skills</h2>
-</section>
-<div class="tickers"><div class="trow" aria-hidden="true"><div class="tk"><span>PYTHON</span><i>·</i><span>C++</span><i>·</i><span>MATLAB</span><i>·</i><span>SIMULINK</span><i>·</i><span>ROS 2</span><i>·</i><span>GAZEBO</span><i>·</i><span>MUJOCO</span><i>·</i><span>OPENCV</span><i>·</i><span>PYTORCH</span><i>·</i><span>SOLIDWORKS</span><i>·</i><span>SIEMENS NX</span><i>·</i><span>ANSYS</span><i>·</i><span>FLUENT</span><i>·</i><span>GIT</span><i>·</i></div><div class="tk"><span>PYTHON</span><i>·</i><span>C++</span><i>·</i><span>MATLAB</span><i>·</i><span>SIMULINK</span><i>·</i><span>ROS 2</span><i>·</i><span>GAZEBO</span><i>·</i><span>MUJOCO</span><i>·</i><span>OPENCV</span><i>·</i><span>PYTORCH</span><i>·</i><span>SOLIDWORKS</span><i>·</i><span>SIEMENS NX</span><i>·</i><span>ANSYS</span><i>·</i><span>FLUENT</span><i>·</i><span>GIT</span><i>·</i></div></div><div class="trow rev" aria-hidden="true"><div class="tk"><span>KINEMATICS</span><i>·</i><span>CONTROL SYSTEMS</span><i>·</i><span>STATE ESTIMATION</span><i>·</i><span>MACHINE VISION</span><i>·</i><span>SLAM</span><i>·</i><span>MECHANICAL DESIGN</span><i>·</i><span>GD&amp;T</span><i>·</i><span>FEA</span><i>·</i><span>CFD</span><i>·</i><span>RAPID PROTOTYPING</span><i>·</i><span>PLM</span><i>·</i></div><div class="tk"><span>KINEMATICS</span><i>·</i><span>CONTROL SYSTEMS</span><i>·</i><span>STATE ESTIMATION</span><i>·</i><span>MACHINE VISION</span><i>·</i><span>SLAM</span><i>·</i><span>MECHANICAL DESIGN</span><i>·</i><span>GD&amp;T</span><i>·</i><span>FEA</span><i>·</i><span>CFD</span><i>·</i><span>RAPID PROTOTYPING</span><i>·</i><span>PLM</span><i>·</i></div></div></div>
-
-<div class="band contact" id="contact">
-  <video autoplay muted loop playsinline preload="none" width="1280" height="720" poster="assets/amb_walk.jpg" src="assets/amb_walk.mp4"></video>
-  <div class="inner">
-    <p class="cstrip reveal">OPEN TO <em>INTERNSHIPS</em> &amp; <em>FULL-TIME</em> ROLES. AVAILABLE FROM <em>JANUARY 2027</em>.</p>
-    <div class="hcta" style="justify-content:center">
-      <a class="btn acc" href="assets/Jatin_Satyam_Resume.pdf" target="_blank" rel="noopener">RESUME ↗</a>
-      <a class="btn" href="mailto:jsatyam@asu.edu">EMAIL</a>
-      <a class="btn" href="https://linkedin.com/in/jatin-satyam" target="_blank" rel="noopener">LINKEDIN</a>
-      <a class="btn" href="https://github.com/JatinSatyam26" target="_blank" rel="noopener">GITHUB</a>
-    </div>
-  </div>
-</div>
-
 <footer>
   <span>© 2026 Jatin Satyam</span>
   <span class="fbrand">JS<span>.</span></span>
-  <span>jatinsatyam.in · UPDATED 2026.08</span>
+  <span><a href="index.html#work" style="text-decoration:none">← ALL WORK</a></span>
 </footer>
-
 <script>
 (function(){
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
