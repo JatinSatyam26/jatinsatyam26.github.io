@@ -222,6 +222,15 @@ transform:scale(1.04)}
 .tover{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;
 justify-content:flex-end;padding:16px;opacity:0;transition:opacity .35s ease}
 .ptile:hover .tover,.ptile:focus-visible .tover{opacity:1}
+.ghint{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+letter-spacing:.14em;color:var(--acc);margin-top:12px}
+.topen{position:absolute;top:10px;right:10px;z-index:3;width:27px;height:27px;
+border-radius:50%;display:flex;align-items:center;justify-content:center;
+font-size:13px;color:rgba(237,239,243,.9);background:rgba(10,13,18,.7);
+border:1px solid rgba(255,255,255,.28);
+transition:background .25s ease,color .25s ease,border-color .25s ease}
+.ptile:hover .topen,.ptile:focus-visible .topen{background:var(--acc);
+color:#14100C;border-color:var(--acc)}
 .tcat{font-family:Syne,"Arial Black",sans-serif;font-weight:600;font-size:10px;
 letter-spacing:.14em;color:var(--acc);text-transform:uppercase;margin-bottom:5px}
 .tover h4{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
@@ -387,35 +396,42 @@ transition:opacity .6s ease,transform .6s ease}
       <p class="eyebrow">MANIPULATION · MACHINE VISION</p>
       <h3>Robot Arm Manipulation Lab</h3>
       <p class="cline">Hands-on robot arm work on the Dobot Magician Lite: natural language control, a tic-tac-toe playing robot, vision guided maze runs, YOLO palletizing, kinematics from first principles, and end effector studies. Six projects, each with its own page.</p>
+      <p class="ghint">HOVER OVER A PROJECT · CLICK TO EXPLORE ↗</p>
     </div>
     <div class="pgrid">
       <a class="ptile" href="llm-manipulation.html" aria-label="Natural Language Manipulation">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_llm.jpg" src="assets/t_llm.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">LLM CONTROL</p>
         <h4>Natural Language Manipulation</h4></div>
       </a>
       <a class="ptile" href="tictactoe-robot.html" aria-label="Tic-Tac-Toe Robot">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_ttt.jpg" src="assets/t_ttt.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">GAME AUTONOMY</p>
         <h4>Tic-Tac-Toe Robot</h4></div>
       </a>
       <a class="ptile" href="maze-navigation.html" aria-label="Maze Navigation">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_maze.jpg" src="assets/t_maze.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">PATH PLANNING</p>
         <h4>Maze Navigation</h4></div>
       </a>
       <a class="ptile" href="yolo-palletizing.html" aria-label="YOLO Palletizing">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_yolo.jpg" src="assets/t_yolo.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">MACHINE VISION</p>
         <h4>YOLO Palletizing</h4></div>
       </a>
       <a class="ptile" href="kinematics.html" aria-label="Forward &amp; Inverse Kinematics">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_kin.jpg" src="assets/t_kin.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">KINEMATICS</p>
         <h4>Forward &amp; Inverse Kinematics</h4></div>
       </a>
       <a class="ptile" href="end-effectors.html" aria-label="Suction vs Gripper">
         <video autoplay muted loop playsinline preload="none" width="640" height="480" poster="assets/t_grip.jpg" src="assets/t_grip.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">END-EFFECTORS</p>
         <h4>Suction vs Gripper</h4></div>
       </a></div>
@@ -426,30 +442,36 @@ transition:opacity .6s ease,transform .6s ease}
       <p class="eyebrow">FLIGHT CONTROL · REAL DRONE</p>
       <h3>Parrot Mambo Flight Test Program</h3>
       <p class="cline">Simulink flight controllers deployed to a physical Parrot Mambo minidrone: stable hover, trajectory tracking, vision guided line following, area scanning, and autonomous landings, including touchdown on a moving platform. Five flights, each with its own page.</p>
+      <p class="ghint">HOVER OVER A PROJECT · CLICK TO EXPLORE ↗</p>
     </div>
     <div class="pgrid c5">
       <a class="ptile" href="moving-platform-landing.html" aria-label="Landing on a Moving Platform">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_moveland.jpg" src="assets/t_moveland.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">PRECISION LANDING</p>
         <h4>Landing on a Moving Platform</h4></div>
       </a>
       <a class="ptile" href="scan-and-land.html" aria-label="Scan the Area, Land on the Spot">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_scan.jpg" src="assets/t_scan.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">SEARCH &amp; LAND</p>
         <h4>Scan the Area, Land on the Spot</h4></div>
       </a>
       <a class="ptile" href="line-follow-landing.html" aria-label="Line Following &amp; Landing">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_line.jpg" src="assets/t_line.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">VISION GUIDED FLIGHT</p>
         <h4>Line Following &amp; Landing</h4></div>
       </a>
       <a class="ptile" href="square-tracking.html" aria-label="Square Trajectory, Twice">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_square.jpg" src="assets/t_square.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">TRAJECTORY TRACKING</p>
         <h4>Square Trajectory, Twice</h4></div>
       </a>
       <a class="ptile" href="hover-control.html" aria-label="Stable Hover">
         <video autoplay muted loop playsinline preload="none" width="720" height="540" poster="assets/t_hover.jpg" src="assets/t_hover.mp4"></video>
+        <span class="topen" aria-hidden="true">↗</span>
         <div class="tover"><p class="tcat">FLIGHT CONTROL</p>
         <h4>Stable Hover</h4></div>
       </a></div>
