@@ -159,14 +159,18 @@ background:rgba(10,13,18,.62);border-radius:4px;padding:3px 8px}
 /* bands (video-backed) */
 .band{position:relative;overflow:hidden;border-block:1px solid var(--line)}
 .band>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-filter:brightness(.32) saturate(.85)}
+object-position:50% 72%;filter:brightness(.45) saturate(.9)}
+.band::after{content:"";position:absolute;inset:0;background:rgba(10,13,18,.25)}
 .band .inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;
-padding:64px 6vw}
+padding:70px 6vw}
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:26px}
+.stat{text-align:center}
 .stat b{font-family:Syne,"Arial Black",sans-serif;font-weight:800;
-font-size:clamp(32px,4.2vw,54px);letter-spacing:-.01em;line-height:1}
-.stat span{display:block;margin-top:8px;font-family:"IBM Plex Mono",monospace;
+font-size:clamp(26px,3.4vw,46px);letter-spacing:-.01em;line-height:1;
+white-space:nowrap}
+.stat span{display:block;margin-top:9px;font-family:"IBM Plex Mono",monospace;
 font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
 /* experience */
 .xrow{display:grid;grid-template-columns:170px 1fr;gap:22px;padding:24px 0;
@@ -457,7 +461,7 @@ transition:opacity .6s ease,transform .6s ease}
 
 <div class="band">
   <video autoplay muted loop playsinline preload="none" width="1280" height="720" poster="assets/amb_floor.jpg" src="assets/amb_floor.mp4"></video>
-  <div class="inner"><div class="stats"><div class="stat reveal"><b>09</b><span>robots &amp; systems built</span></div><div class="stat reveal"><b>03</b><span>engineering internships</span></div><div class="stat reveal"><b>28,000</b><span>rpm rotor, flight proven</span></div><div class="stat reveal"><b>±2 mm</b><span>vision guided precision</span></div></div></div>
+  <div class="inner"><div class="stats"><div class="stat reveal"><b>09</b><span>robots &amp; systems built</span></div><div class="stat reveal"><b>03</b><span>engineering internships</span></div><div class="stat reveal"><b>28,000</b><span>rpm rotor built &amp; proven</span></div><div class="stat reveal"><b>±2 mm</b><span>vision guided pick precision</span></div></div></div>
 </div>
 
 <section id="experience">
