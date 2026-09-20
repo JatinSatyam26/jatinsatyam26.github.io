@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
 <title>Natural Language Manipulation · Jatin Satyam</title>
-<meta name="description" content="Talk to the arm in plain English. A Groq-hosted LLM interprets the command, vision finds the blocks, and the Dobot executes precise pick and place.">
+<meta name="description" content="Talk to the arm in plain English. Llama 3.3 70B on Groq interprets the command, vision finds the blocks, and the Dobot executes precise pick and place.">
 <link rel="canonical" href="https://jatinsatyam.in/llm-manipulation.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jatin Satyam — Robotics Engineer">
-<meta property="og:description" content="Talk to the arm in plain English. A Groq-hosted LLM interprets the command, vision finds the blocks, and the Dobot executes precise pick and place.">
+<meta property="og:description" content="Talk to the arm in plain English. Llama 3.3 70B on Groq interprets the command, vision finds the blocks, and the Dobot executes precise pick and place.">
 <meta property="og:image" content="https://jatinsatyam.in/assets/og.jpg">
 <meta property="og:url" content="https://jatinsatyam.in/llm-manipulation.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jatin Satyam — Robotics Engineer">
-<meta name="twitter:description" content="Talk to the arm in plain English. A Groq-hosted LLM interprets the command, vision finds the blocks, and the Dobot executes precise pick and place.">
+<meta name="twitter:description" content="Talk to the arm in plain English. Llama 3.3 70B on Groq interprets the command, vision finds the blocks, and the Dobot executes precise pick and place.">
 <meta name="twitter:image" content="https://jatinsatyam.in/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2713%27%20fill=%27%230A0D12%27/%3E%3Ctext%20x=%2732%27%20y=%2734%27%20text-anchor=%27middle%27%20dominant-baseline=%27central%27%20font-family=%27Arial%20Black,Arial,sans-serif%27%20font-weight=%27900%27%20font-size=%2727%27%20fill=%27%23E0763C%27%3EJS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -367,14 +367,14 @@ transition:opacity .6s ease,transform .6s ease}
   <a class="back" href="index.html#work">← ALL WORK</a>
   <p class="eyebrow">LLM CONTROL · ROBOT ARM MANIPULATION LAB</p>
   <h1 class="ptitle">Natural Language Driven Robotic Manipulation with Computer Vision &amp; LLM Control</h1>
-  <p class="plead">Talk to the arm in plain English. A Groq-hosted LLM interprets the command, vision finds the blocks, and the Dobot executes precise pick and place.</p>
+  <p class="plead">Talk to the arm in plain English. Llama 3.3 70B on Groq interprets the command, vision finds the blocks, and the Dobot executes precise pick and place.</p>
 </section>
 <section class="pbody">
   <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/_HYQI9ThReQ" title="Natural Language Manipulation" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
   <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware · Vision · AI</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: design, code &amp; validation</p></div><div><p class="mk">PRECISION</p><p class="mv">±2 mm in the xy plane</p></div></div>
   
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>An intelligent manipulation framework on the Dobot Magician Lite that executes conversational commands like &quot;take the farthest blue block and stack it on the yellow piece&quot;.</li><li>Modular pipeline: LLM command parsing, HSV based object detection, calibrated coordinate transformation, and kinematically validated motion control.</li></ul></section>
-  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Language:</b> LLM subsystem parses instructions, classifies actions (stacking, positioning, rotation), generates validated execution code, and keeps conversational context so &quot;that block&quot; resolves across turns.</li><li><b>Vision:</b> HSV color segmentation with adaptive thresholding extracts per color object IDs, pixel centroids, and contour areas, serialized to JSON in real time.</li><li><b>Calibration:</b> Least squares affine transformation over multiple reference points maps camera pixels to robot coordinates with sub millimeter reference accuracy.</li><li><b>Motion:</b> Safe approach trajectories, height aware descent, vacuum gripper control, and stack aware placement with persistent state that survives system restarts.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Language:</b> A Llama 3.3 70B subsystem, served on Groq through LangChain, parses instructions, classifies actions (stacking, positioning, rotation), generates validated execution code, and keeps conversational context so &quot;that block&quot; resolves across turns.</li><li><b>Vision:</b> HSV color segmentation with adaptive thresholding extracts per color object IDs, pixel centroids, and contour areas, serialized to JSON in real time.</li><li><b>Calibration:</b> Least squares affine transformation over multiple reference points maps camera pixels to robot coordinates with sub millimeter reference accuracy.</li><li><b>Motion:</b> Safe approach trajectories, height aware descent, vacuum gripper control, and stack aware placement with persistent state that survives system restarts.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Ambient lighting variations breaking HSV color detection.</li><li>Periodic recalibration of the camera to robot transformation.</li><li>Stack aware z height management for multi block towers.</li><li>Validating LLM generated commands before physical execution.</li></ul></section>
   <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Successful execution of multi step natural language operations: retrieval, stacking, directional placement, and color based selection.</li><li>±2 mm positioning precision in the xy plane, 15 to 30 second cycle per pick and place.</li><li>State memory persists across sequential commands and restarts.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>

@@ -371,14 +371,14 @@ transition:opacity .6s ease,transform .6s ease}
 </section>
 <section class="pbody">
   <div class="ytwrap"><iframe src="https://www.youtube-nocookie.com/embed/TPjBcd7Wd1E" title="YOLO Palletizing" loading="lazy" allowfullscreen allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
-  <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware · Deep learning vision</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: detection to placement</p></div><div><p class="mk">DETECTOR</p><p class="mv">YOLO, live classification</p></div></div>
+  <div class="mrow"><div><p class="mk">TYPE</p><p class="mv">Hardware · Deep learning vision</p></div><div><p class="mk">ROLE</p><p class="mv">Solo: detection to placement</p></div><div><p class="mk">DETECTOR</p><p class="mv">YOLOv8s, live classification</p></div></div>
   
   <section class="psec"><h2>Overview</h2><ul class="dashlist"><li>An automated sorting cell: an external camera feeds YOLO, objects are classified into categories, and the Dobot picks each with suction and places it into the category pallet.</li><li>Closed loop autonomy combining lightweight object detection with code driven motion routines.</li></ul></section>
-  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Detection:</b> Ultralytics YOLO classifies workspace objects in real time from the camera feed, gating every pick decision.</li><li><b>Motion:</b> pydobot motion primitives across four taught poses: home, pickup, and two category drop zones, with suction engagement timed around the vacuum response.</li><li><b>Loop:</b> Detect, classify, pick, palletize, repeat, with each cycle logged for accuracy and consistency.</li></ul></section>
+  <section class="psec"><h2>Design &amp; Build</h2><ul class="dashlist"><li><b>Detection:</b> Ultralytics YOLOv8s classifies workspace objects in real time from the camera feed, gating every pick decision.</li><li><b>Motion:</b> pydobot motion primitives across four taught poses: home, pickup, and two category drop zones, with suction engagement timed around the vacuum response.</li><li><b>Loop:</b> Detect, classify, pick, palletize, repeat, with each cycle logged for accuracy and consistency.</li></ul></section>
   <section class="psec"><h2>Challenges</h2><ul class="dashlist"><li>Serial communication delays between detections and motion.</li><li>Suction grip consistency across repeated cycles.</li><li>Detection confidence under varying lighting.</li></ul></section>
   <section class="psec"><h2>Result</h2><ul class="dashlist"><li>Objects consistently detected, classified, and placed into the correct pallets across repeated trials, with stable cycle times and placement accuracy within a few millimeters.</li></ul></section>
   <section class="psec"><h2>Skills &amp; Tools</h2>
-  <div class="skillrow"><span class="schip">YOLO</span><span class="schip">OpenCV</span><span class="schip">Python</span><span class="schip">pydobot</span><span class="schip">Suction EOAT</span></div></section>
+  <div class="skillrow"><span class="schip">YOLOv8s</span><span class="schip">OpenCV</span><span class="schip">Python</span><span class="schip">pydobot</span><span class="schip">Suction End-of-Arm Tooling</span></div></section>
   <div class="elinks" style="margin-top:30px"><a class="plink" href="assets/reports/report_yolo_palletizing.pdf" target="_blank" rel="noopener">READ REPORT ↗</a></div>
 </section>
 <footer>
