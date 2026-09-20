@@ -116,7 +116,7 @@ font-size:clamp(26px,3.6vw,46px);line-height:1.1;letter-spacing:-.01em}
 .lead em{font-style:normal;color:var(--acc)}
 .sbody{color:var(--mut);font-size:16px;margin-top:22px;max-width:58ch}
 .arule{border:0;border-top:1px solid var(--line);margin:34px 0 28px}
-.edugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+.edugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:18px;margin-bottom:34px}
 .edurow{display:flex;gap:14px;align-items:center}
 .eduname{font-family:Syne,"Arial Black",sans-serif;font-weight:700;
@@ -124,6 +124,11 @@ font-size:15px;color:var(--ink);line-height:1.3}
 .edudeg{font-size:12.5px;font-weight:500;color:#C0C4CC;margin-top:2px}
 .edudates{font-size:11.5px;color:var(--mut);margin-top:1px}
 .credgrid{margin-bottom:4px}
+.credwide{grid-column:1/-1}
+.credlink{color:inherit;text-decoration:none;
+border-bottom:1px solid transparent;transition:border-color .2s ease}
+.credlink:hover,.credlink:focus-visible{border-bottom-color:var(--acc)}
+.credarrow{color:var(--acc);font-size:.85em}
 .certrow{display:flex;gap:26px;flex-wrap:wrap}
 .certcell{display:flex;flex-direction:column;align-items:center;gap:9px;
 max-width:120px;text-align:center}
@@ -408,11 +413,14 @@ transition:opacity .6s ease,transform .6s ease}
           <div><p class="eduname">Invention Disclosure Filed</p>
           <p class="edudeg">Skysong Innovations, ASU · SipSafe Smart Cup</p>
           <p class="edudates">2026</p></div></div><div class="edurow"><span class="elogo chipl" aria-hidden="true">MLH</span>
-          <div><p class="eduname">Winner · Best Use of Auth0</p>
+          <div><p class="eduname"><a class="credlink" href="https://devpost.com/software/meridian-dpzs6b" target="_blank" rel="noopener">Winner · Best Use of Auth0<span class="credarrow" aria-hidden="true">&nbsp;↗</span></a></p>
           <p class="edudeg">Major League Hacking · Innovation Hacks 2.0, ASU</p>
           <p class="edudates">Apr 2026</p></div></div><div class="edurow"><span class="elogo chipl" aria-hidden="true">MW</span>
-          <div><p class="eduname">MathWorks Academy · Self-Paced Training</p>
-          <p class="edudeg">Advanced MATLAB Programming Skills · Machine Learning Techniques in MATLAB · Deep Learning Techniques in MATLAB for Image Applications · Simulink Fundamentals</p>
+          <div><p class="eduname"><a class="credlink" href="assets/reports/cert_mathworks_matlab_associate_exam_prep_path.pdf">MATLAB for the MathWorks Certified MATLAB Associate Exam<span class="credarrow" aria-hidden="true">&nbsp;↗</span></a></p>
+          <p class="edudeg">Self-paced exam-preparation path · 14 courses</p>
+          <p class="edudates">Sep 2025</p></div></div><div class="edurow"><span class="elogo chipl" aria-hidden="true">MW</span>
+          <div><p class="eduname"><a class="credlink" href="assets/reports/cert_mathworks_selfpaced_training.pdf">MathWorks Academy · Self-Paced Training<span class="credarrow" aria-hidden="true">&nbsp;↗</span></a></p>
+          <p class="edudeg">MATLAB programming, machine learning, deep learning, Simulink</p>
           <p class="edudates">Sep 2025</p></div></div></div>
     </div>
   </div>
